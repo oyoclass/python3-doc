@@ -22,3 +22,9 @@ nav:
         - 'string': 'modules/string.md'
         - 'time': 'modules/time.md'
         - 'urllib': 'modules/urllib.md'
+        - 'turtle': 'modules/turtle.md'
+        - 'tkinter': 'modules/tkinter.md'
+    - 'Extra Python Libraries':
+        - 'Intro': 'extralibs/index.md'
+        - 'requests': 'extralibs/requests.md'
+        - 'bottle': 'extralibs/bottle.md'
