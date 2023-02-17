@@ -97,6 +97,10 @@
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">bottle</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#quick-examples">Quick Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#say-hello">Say hello</a>
+    </li>
+        </ul>
     </li>
     </ul>
                   </li>
@@ -130,6 +134,26 @@
                 <h2 id="bottle">bottle</h2>
 <p>bottle is xxx</p>
 <h3 id="quick-examples">Quick Examples</h3>
+<h4 id="say-hello">Say hello</h4>
+<pre><code class="language-python">from bottle import route, run, template
+
+@route('/')
+def index():
+    return &quot;index page&quot;
+
+
+@route('/hello/&lt;name&gt;')
+def hello(name):
+    return template('&lt;b&gt;Hello {{name}}&lt;/b&gt;!', name=name)
+
+
+run(host='0.0.0.0', port=8080)
+</code></pre>
+<p>Copy and paste the above code to the Python3 Editor and click run, you will see the website running on the right.</p>
+<p>When you visit "/", you will see the page like this:
+<img src="../../assets/img/bottle-hello-index.png" width="400px"></p>
+<p>When you visit "/hello/john", you will see the page like this:
+<img src="../../assets/img/bottle-hello-john.png" width="400px"></p>
               
             </div>
           </div><footer>
