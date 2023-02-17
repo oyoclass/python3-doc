@@ -28,3 +28,4 @@ nav:
         - 'Intro': 'extralibs/index.md'
         - 'requests': 'extralibs/requests.md'
         - 'bottle': 'extralibs/bottle.md'
+        - 'matplotlib': 'extralibs/matplotlib.md'
