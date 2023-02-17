@@ -23,4 +23,4 @@ window.mainloop()
 
 Copy the above code to Python3 editor in OYOclass, then click "Run", you will see the running result like fhe following:
 
-<img src="/assets/img/tkinter-msgbox.png" width="400px"/>
+<img src="../../assets/img/tkinter-msgbox.png" width="400px"/>

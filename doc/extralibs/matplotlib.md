@@ -18,4 +18,4 @@ plt.plot(pt1, pt2, marker="o")
 plt.show()
 ```
 
-<img src="/assets/img/matplotlib-line.png" width="400px"/>
+<img src="../../assets/img/matplotlib-line.png" width="400px"/>

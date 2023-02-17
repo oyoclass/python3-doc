@@ -22,7 +22,7 @@ Please note that you must call the `done()` function at the end, otherwise the d
 
 Copy the above code to Python3 editor in OYOclass, then click "Run", you will see the running result like fhe following:
 
-<img src="/assets/img/turtle-square.png" width="400px"/>
+<img src="../../assets/img/turtle-square.png" width="400px"/>
 
 
 #### 2, Draw with a filled color 
@@ -44,7 +44,7 @@ done()
 
 Copy the above code to Python3 editor in OYOclass, then click "Run", you will see the running result like fhe following:
 
-<img src="/assets/img/turtle-square-filled.png" width="400px"/>
+<img src="../../assets/img/turtle-square-filled.png" width="400px"/>
 
 ### Reference
 * https://docs.python.org/3/library/turtle.html
