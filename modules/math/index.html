@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>math - Python3 Editor Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "math";
+        var mkdocs_page_input_path = "modules/math.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Python3 Editor Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comments/">Comments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/boolean/">Boolean</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/number/">Number</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comparison/">Comparison</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/none/">None</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/string/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/function/">Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/listtuple/">List & Tuple</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/set/">Set</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/dictionary/">Dictionary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/inputoutput/">Standard Input & Output</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Standard Python Libraries</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Intro</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">math</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#constants">Constants</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#some-functions">Some Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example">Example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../random/">random</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../string/">string</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../time/">time</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../urllib/">urllib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../turtle/">turtle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tkinter/">tkinter</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Extra Python Libraries</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/requests/">requests</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/bottle/">bottle</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Python3 Editor Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Standard Python Libraries &raquo;</li>
+      <li>math</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="math-mathematical-functions">math — Mathematical Functions</h2>
+<p>This module contains mathematical operations. In order to use these functions, you should <code>import math</code> at the start of your file.</p>
+<h3 id="constants">Constants</h3>
+<ul>
+<li><code>math.e</code> : The mathematical constant e = 2.718281... to available precision.</li>
+<li><code>math.pi</code> : The mathematical constant π = 3.141592... to available precision.</li>
+</ul>
+<h3 id="some-functions">Some Functions</h3>
+<ul>
+<li><code>math.acos(x)</code> : Returns the arccosine of <em>x</em> in radians.</li>
+<li><code>math.acosh(x)</code> : Returns the inverse hyperbolic cosine of <em>x</em>.</li>
+<li><code>math.asin(x)</code> : Returns the arcsine of <em>x</em> in radians.</li>
+<li><code>math.asinh(x)</code> : Returns the inverse hyperbolic sine of <em>x</em>.</li>
+<li><code>math.atan(x)</code> : Returns the arctangent of <em>x</em> in radians.</li>
+<li><code>math.atan2(y, x)</code> : Returns <em>atan(y / x)</em> in radians. The result is between -pi and pi.</li>
+<li><code>math.atanh(x)</code> : Returns the inverse hyperbolic tangent of <em>x</em>.</li>
+<li><code>math.ceil(x)</code> : Returns the ceiling of <em>x</em> as a float, which is the smallest integer value greater than or equal to <em>x</em>.</li>
+<li><code>math.copysign(x, y)</code>: Returns <em>x</em> with the sign of <em>y</em>. On a platform that supports signed zeros, <code>copysign(1.0, -0.0)</code> returns -1.0.</li>
+<li><code>math.cos(x)</code> : Returns the cosine of <em>x</em> radians.</li>
+<li><code>math.cosh(x)</code> : Returns the hyperbolic cosine of <em>x</em>.</li>
+<li><code>math.degrees(x)</code> : Converts angle <em>x</em> from radians to degrees.</li>
+<li><code>math.exp(x)</code> : Returns <em>e**<code>x</code></em>.</li>
+<li><code>math.fabs(x)</code> : Returns the absolute value of <em>x</em>.</li>
+<li><code>math.factorial(x)</code> : Returns <em>x</em> factorial.</li>
+<li><code>math.floor(x)</code> : Returns the floor of <em>x</em> as a float, the largest integer value less than or equal to <code>x</code>.</li>
+<li><code>math.hypot(x, y)</code> : Returns the Euclidean norm, <em>sqrt(x*x + y*y)</em>. This is the length of the vector from the origin to point <em>(x, y)</em>.</li>
+<li><code>math.log(x[,base])</code> : With one argument, the function returns the natural logarithm of <em>x</em> (to <em>base e</em>). With two arguments, it returns the logarithm of <em>x</em> to the given base, calculated as <strong><em>log(x)/log(base)</em></strong>.</li>
+<li><code>math.log10(x)</code> : Returns the base-10 logarithm of <em>x</em>. This is usually more accurate than <em>log(x, 10)</em>.</li>
+<li><code>math.pow(x, y)</code> : Returns <em>x</em> raised to the power <em>y</em>.</li>
+<li><code>math.radians</code> : Converts angle <em>x</em> from degrees to radians.</li>
+<li><code>math.sin(x)</code> : Returns the sine of <em>x</em> radians.</li>
+<li><code>math.sinh(x)</code> : Returns the hyperbolic sine of <em>x</em>.</li>
+<li><code>math.sqrt(x)</code> : Returns the square root of <em>x</em>.</li>
+<li><code>math.tan(x)</code> : Returns the tangent of <em>x</em> radians.</li>
+<li><code>math.tanh(x)</code> : Returns the hyperbolic tangent of <em>x</em>.</li>
+<li><code>math.trunc(x)</code> : Returns the <strong><em>real value</em></strong> <em>x</em> truncated to an <strong><em>integral</em></strong>.</li>
+</ul>
+<h3 id="example">Example</h3>
+<pre><code class="language-python">import math
+
+print(math.pi)
+# 3.141592653589793
+
+print(math.sqrt(4))
+# 2.0
+
+print(math.sin(math.pi/6))
+# 0.49999999999999994
+
+print(math.degrees(math.pi/6))
+# 29.999999999999996
+</code></pre>
+<h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://docs.python.org/3/library/math.html">Math Module</a> at <em>docs.python.org</em></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="Intro"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../random/" class="btn btn-neutral float-right" title="random">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../random/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

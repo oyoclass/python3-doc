@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>time - Python3 Editor Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "time";
+        var mkdocs_page_input_path = "modules/time.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Python3 Editor Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comments/">Comments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/boolean/">Boolean</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/number/">Number</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comparison/">Comparison</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/none/">None</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/string/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/function/">Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/listtuple/">List & Tuple</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/set/">Set</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/dictionary/">Dictionary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/inputoutput/">Standard Input & Output</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Standard Python Libraries</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../math/">math</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../random/">random</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../string/">string</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">time</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#attribute">Attribute</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#class">Class</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example">Example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../urllib/">urllib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../turtle/">turtle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tkinter/">tkinter</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Extra Python Libraries</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/requests/">requests</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/bottle/">bottle</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Python3 Editor Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Standard Python Libraries &raquo;</li>
+      <li>time</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="time-time-access">time — Time access</h2>
+<p>This module contains time-related functions.</p>
+<h3 id="attribute">Attribute</h3>
+<ul>
+<li><code>time.altzone</code> : The offset of the local DST timezone, in second, west of UTC.</li>
+<li><code>time.daylight</code> : Nonzero if a DST timezone is defined.</li>
+<li><code>time.timezone</code> : The offset of the local (non-DST) timezone, in seconds, west of UTC (negative in most of Western Europe, positive in the US, zero in the UK).</li>
+<li><code>time.tzname</code> : A tuple of two strings: the first is the name of the local non-DST timezone, the second is the name of the local DST timezone.</li>
+</ul>
+<h3 id="functions">Functions</h3>
+<ul>
+<li><code>time.asctime([t])</code> : Converts a tuple or <em>struct_time</em> representing a time as returned by <code>gmtime()</code> or <code>localtime()</code> to a 24-character string of the following form: 'Sun Jun 20 23:21:05 1993'. If <em>t</em> is not provided, the current time as returned by <code>localtime()</code> is used.</li>
+<li><code>time.clock()</code> : Returns the current processor time as a floating point number expressed in seconds.</li>
+<li><code>time.ctime([secs])</code> : Converts a time expressed in seconds since the epoch to a string representing local time.  If <em>secs</em> is not provided or <em>None</em>, the current time as returned by <code>time()</code> is used.</li>
+<li><code>time.gmtime([secs])</code> : Converts a time expressed in seconds since the epoch to a <em>struct_time</em> in UTC in which the dst flag is always zero. If <em>secs</em> is not provided or <em>None</em>, the current time as returned by <code>time()</code> is used.</li>
+<li><code>time.localtime([secs])</code> : Like <code>gmtime()</code> but converts to local time. If <code>secs</code> is not provided or <em>None</em>, the current time as returned by <code>time()</code> is used.</li>
+<li><code>time.mktime(t)</code> : This is the inverse function of <code>localtime()</code>. Its argument is the <em>struct_time</em> or a full 9-tuple.</li>
+<li><code>time.sleep(secs)</code> : Suspends execution of the current thread for the given number of seconds.</li>
+<li><code>time.time()</code>: Returns the time in seconds since the epoch as a floating point number.</li>
+</ul>
+<h3 id="class">Class</h3>
+<ul>
+<li><code>time.struct_time</code>: The type of the time value sequence returned by <code>gmtime()</code> and <code>localtime()</code>.</li>
+</ul>
+<h3 id="example">Example</h3>
+<pre><code class="language-python">import time
+
+print(time.timezone)
+print(time.altzone)
+print(time.ctime())
+print(time.clock())
+print(time.localtime())
+print(time.gmtime())
+print(time.tzname)
+
+# print out time every 1 second
+for i in range(10):
+    print(time.asctime())
+    time.sleep(1)
+</code></pre>
+<h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://docs.python.org/3/library/time.html">Time Module</a> - <em>docs.python.org</em></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../string/" class="btn btn-neutral float-left" title="string"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../urllib/" class="btn btn-neutral float-right" title="urllib">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../string/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../urllib/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
