@@ -1,6 +1,7 @@
 ## requests
 
-requests is xx
+requests is a python library that simplifies the syntax for making HTTP 
+requests
 
 ### Quick Examples
 
