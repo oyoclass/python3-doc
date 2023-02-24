@@ -1,6 +1,8 @@
 ## bottle
 
-bottle is xxx
+bottle is an ultra-lightweight web framework that works with just the Python
+Standard Library. bottle also supports html template frameworks like 
+<a href="/extralibs/jinja2/">Jinja2</a> for building more robust websites.
 
 ### Quick Examples
 
@@ -29,3 +31,5 @@ When you visit "/", you will see the page like this:
 
 When you visit "/hello/john", you will see the page like this:
 <img src="../../assets/img/bottle-hello-john.png" width="400px">
+
+Read more at <a href="https://bottlepy.org/docs/dev/">bottlepy.org</a>

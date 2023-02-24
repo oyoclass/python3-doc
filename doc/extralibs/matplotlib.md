@@ -1,10 +1,10 @@
 ## matplotlib
 
-matplotlib is xxx
+matplotlib is a library for creating various data visualizations in Python.
 
 ### Quick Examples
 
-#### 1, Plot a simple line
+#### 1. Plot a simple line
 
 
 ```python
@@ -19,3 +19,5 @@ plt.show()
 ```
 
 <img src="../../assets/img/matplotlib-line.png" width="400px"/>
+
+Read more at <a href="https://matplotlib.org/stable/index.html">matplotlib.org</a>
