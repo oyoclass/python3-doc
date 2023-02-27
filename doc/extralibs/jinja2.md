@@ -16,9 +16,7 @@ First, create a template named `template.html` in your project's directory:
         <title>My Template</title>
     </head>
     <body>
-        {% for i in range(count_to) %}
-            {{i}}
-        {% endfor %}
+        {% for i in range(count_to) %}{{i}} {% endfor %}
 
         {% if say_hi %}
             Hi!
@@ -37,6 +35,23 @@ environment = Environment(loader=FileSystemLoader("./"))
 template = environment.get_template("template.html")
 
 print(template.render(count_to=10, say_hi=False))
+```
+
+Results:
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Template</title>
+    </head>
+    <body>
+        0 1 2 3 4 5 6 7 8 9 
+
+        
+            Goodbye!
+        
+    </body>
+</html>
 ```
 
 Read more at <a href="https://jinja.palletsprojects.com/en/3.1.x/">jinja.palletsprojects.com</a>

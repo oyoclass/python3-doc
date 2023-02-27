@@ -4,7 +4,7 @@ Requests is a Python library that simplifies the syntax for making HTTP
 requests. You can easily GET the content of webpages as well as POST data to
 them without needing to manually build query strings.
 
-### Quick Examples
+### Examples
 
 #### 1. GET Content from a Webpage
 

@@ -2,7 +2,7 @@
 
 matplotlib is a library for creating various data visualizations in Python.
 
-### Quick Examples
+### Examples
 
 #### 1. Plot a simple line
 

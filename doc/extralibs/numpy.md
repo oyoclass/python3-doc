@@ -45,4 +45,6 @@ plt.title('Sine')
 plt.show()
 ```
 
+<img src="../../assets/img/numpy-matplotlib-sine.png" width="400px"/>
+
 Read more at <a href="https://numpy.org/doc/stable/">numpy.org</a>

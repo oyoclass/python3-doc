@@ -28,6 +28,7 @@ nav:
         - 'Intro': 'extralibs/index.md'
         - 'requests': 'extralibs/requests.md'
         - 'bottle': 'extralibs/bottle.md'
+        - 'flask': 'extralibs/flask.md'
         - 'matplotlib': 'extralibs/matplotlib.md'
         - 'numpy': 'extralibs/numpy.md'
         - 'jinja2': 'extralibs/jinja2.md'
