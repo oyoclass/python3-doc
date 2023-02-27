@@ -6,22 +6,22 @@ them without needing to manually build query strings.
 
 ### Examples
 
-#### 1. GET Content from a Webpage
+#### GET Content from a Webpage
 
 ```python
 import requests
 
-query = {"exampleKey": "exampleValue"}
+query = {'exampleKey': 'exampleValue'}
 resp = requests.get('https://httpbin.service.oyoclass.com/get', params=query)
 
 print(resp.text)
 ```
 
-#### 2. POST Data to a Webpage
+#### POST Data to a Webpage
 ```python
 import requests
 
-post_data = {"exampleKey": "exampleValue"}
+post_data = {'exampleKey': 'exampleValue'}
 resp = requests.post('https://httpbin.service.oyoclass.com/post', data=post_data)
 
 print(resp.text)

@@ -6,6 +6,9 @@ suited for larger projects that can span across mulitple Python files.
 
 
 ### Example
+
+#### Basic Web Server with Templates
+
 1\. flask will look for template files in the `templates` directory by default, so
 first, create a new folder named `templates`, then add a file named `welcome.html`:
 ```html
@@ -25,7 +28,7 @@ from flask import Flask
 app = Flask(__name__)
 
 if __name__ == '__main__':
-    # host='0.0.0.0' required for running in Python3 Editor
+    # host must be 0.0.0.0 to work in the Python3 Editor
     import example_routes
     app.run(host='0.0.0.0', port=8080)
 ```
@@ -36,7 +39,7 @@ from __main__ import app
 
 @app.route('/')
 def index():
-    return "This is the index page"
+    return 'This is the index page'
 
 @app.route('/welcome/<name>')
 def welcome(name):

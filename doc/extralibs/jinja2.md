@@ -6,7 +6,7 @@ webpages.
 
 ### Examples
 
-#### 1. Render a Template from File
+#### Render a Template from File
 
 First, create a template named `template.html` in your project's directory:
 ```html
@@ -31,8 +31,8 @@ Then, in `main.py`:
 ```python
 from jinja2 import Environment, FileSystemLoader
 
-environment = Environment(loader=FileSystemLoader("./"))
-template = environment.get_template("template.html")
+environment = Environment(loader=FileSystemLoader('./'))
+template = environment.get_template('template.html')
 
 print(template.render(count_to=10, say_hi=False))
 ```

@@ -6,21 +6,21 @@ Standard Library. bottle also supports html template frameworks like
 
 ### Examples
 
-#### Say hello
+#### Say Hello
 
 ```python
 from bottle import route, run, template
 
 @route('/')
 def index():
-    return "index page"
+    return 'index page'
 
 
 @route('/hello/<name>')
 def hello(name):
     return template('<b>Hello {{name}}</b>!', name=name)
 
-
+# host must be 0.0.0.0 to work in the Python3 Editor
 run(host='0.0.0.0', port=8080)
 ```
 

@@ -7,7 +7,7 @@ package works well with data visualization packages like
 
 ### Examples
 
-#### 1. Create and Add Matrices
+#### Create and Add Matrices
 ```python
 import numpy
 
@@ -28,7 +28,8 @@ print(random_mat)
 print(added_mat)
 ```
 
-#### 2. Create a Sine Wave Graph with matplotlib
+#### Create a Sine Wave Graph with matplotlib
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
