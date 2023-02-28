@@ -1,6 +1,6 @@
-## matplotlib
+## Matplotlib
 
-matplotlib is a library for creating various data visualizations in Python.
+Matplotlib is a library for creating various data visualizations in Python.
 
 ### Examples
 

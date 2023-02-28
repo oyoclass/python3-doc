@@ -1,6 +1,6 @@
-## jinja2
+## Jinja2
 
-jinja2 is a templating engine. It allows you to inject variables and write code 
+Jinja2 is a templating engine. It allows you to inject variables and write code 
 similar to Python directly into text files, which can be very useful for building
 webpages.
 

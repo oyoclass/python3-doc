@@ -1,6 +1,6 @@
-## numpy
+## NumPy
 
-numpy is a powerful number processing library, used by data scientists due to it
+NumPy is a powerful number processing library, used by data scientists due to it
 being able to process large amounts of data much faster than native Python. This
 package works well with data visualization packages like 
 <a href="/extralibs/matplotlib/">matplotlib</a>.

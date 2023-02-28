@@ -1,6 +1,6 @@
-## flask
+## Flask
 
-flask is a micro web framwork. flask is similar to <a href="/extralibs/bottle/">bottle</a>,
+Flask is a micro web framwork. Flask is similar to <a href="/extralibs/bottle/">Bottle</a>,
 but it has more functionality out of the box and scales easier. flask is better
 suited for larger projects that can span across mulitple Python files.
 
@@ -9,7 +9,7 @@ suited for larger projects that can span across mulitple Python files.
 
 #### Basic Web Server with Templates
 
-1\. flask will look for template files in the `templates` directory by default, so
+1\. Flask will look for template files in the `templates` directory by default, so
 first, create a new folder named `templates`, then add a file named `welcome.html`:
 ```html
 <!DOCTYPE html>
@@ -48,7 +48,6 @@ def welcome(name):
         name=name
     )
 ```
-
 
 When you visit "/", you will see a page like this:
 <img src="../../assets/img/flask-welcome-index.png" width="400px">
