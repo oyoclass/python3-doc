@@ -13,7 +13,7 @@
       <script>
         // Current page data
         var mkdocs_page_name = "requests";
-        var mkdocs_page_input_path = "extralibs\\requests.md";
+        var mkdocs_page_input_path = "extralibs/requests.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -94,17 +94,35 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">requests</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#quick-examples">Quick Examples</a>
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#1">1,</a>
+    <li class="toctree-l3"><a class="reference internal" href="#get-content-from-a-webpage">GET Content from a Webpage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#post-data-to-a-webpage">POST Data to a Webpage</a>
     </li>
         </ul>
     </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../beautifulsoup/">beautifulsoup4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../jinja2/">jinja2</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../bottle/">bottle</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../flask/">flask</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../starlette/">starlette</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../uvicorn/">uvicorn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
                   </li>
               </ul>
       </div>
@@ -131,18 +149,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="requests">requests</h2>
-<p>requests is a python library that simplifies the syntax for making HTTP 
-requests</p>
-<h3 id="quick-examples">Quick Examples</h3>
-<h4 id="1">1,</h4>
-<pre><code class="language-python"></code></pre>
+                <h2 id="requests">Requests</h2>
+<p>Requests is a Python library that simplifies the syntax for making HTTP 
+requests. You can easily GET the content of webpages as well as POST data to
+them without needing to manually build query strings.</p>
+<h3 id="examples">Examples</h3>
+<h4 id="get-content-from-a-webpage">GET Content from a Webpage</h4>
+<pre><code class="language-python">import requests
+
+query = {'exampleKey': 'exampleValue'}
+resp = requests.get('https://httpbin.service.oyoclass.com/get', params=query)
+
+print(resp.text)
+</code></pre>
+<h4 id="post-data-to-a-webpage">POST Data to a Webpage</h4>
+<pre><code class="language-python">import requests
+
+post_data = {'exampleKey': 'exampleValue'}
+resp = requests.post('https://httpbin.service.oyoclass.com/post', data=post_data)
+
+print(resp.text)
+</code></pre>
+<p>Read more at <a href="https://requests.readthedocs.io/en/latest/">requests.readthedocs.io</a></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../" class="btn btn-neutral float-left" title="Intro"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../bottle/" class="btn btn-neutral float-right" title="bottle">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../beautifulsoup/" class="btn btn-neutral float-right" title="beautifulsoup4">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -168,7 +202,7 @@ requests</p>
       <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../bottle/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../beautifulsoup/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

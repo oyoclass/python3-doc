@@ -13,7 +13,7 @@
       <script>
         // Current page data
         var mkdocs_page_name = "matplotlib";
-        var mkdocs_page_input_path = "extralibs\\matplotlib.md";
+        var mkdocs_page_input_path = "extralibs/matplotlib.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -94,17 +94,33 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../requests/">requests</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../beautifulsoup/">beautifulsoup4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../jinja2/">jinja2</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../bottle/">bottle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../flask/">flask</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../starlette/">starlette</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../uvicorn/">uvicorn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">matplotlib</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#quick-examples">Quick Examples</a>
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#1-plot-a-simple-line">1, Plot a simple line</a>
+    <li class="toctree-l3"><a class="reference internal" href="#plot-a-simple-line">Plot a simple line</a>
     </li>
         </ul>
     </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
                   </li>
               </ul>
       </div>
@@ -131,25 +147,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="matplotlib">matplotlib</h2>
-<p>matplotlib is xxx</p>
-<h3 id="quick-examples">Quick Examples</h3>
-<h4 id="1-plot-a-simple-line">1, Plot a simple line</h4>
+                <h2 id="matplotlib">Matplotlib</h2>
+<p>Matplotlib is a library for creating various data visualizations in Python.</p>
+<h3 id="examples">Examples</h3>
+<h4 id="plot-a-simple-line">Plot a simple line</h4>
 <pre><code class="language-python">import matplotlib.pyplot as plt
 # define the 1st point's coordinate (x=1, y=2)
 pt1 = [1, 2]
 # define the 2nd point's coordinate (x=3, y=8)
 pt2 = [3, 8]
 # draw a line from point1 to point2, also mark these 2 points
-plt.plot(pt1, pt2, marker=&quot;o&quot;)
+plt.plot(pt1, pt2, marker='o')
 plt.show()
 </code></pre>
 <p><img src="../../assets/img/matplotlib-line.png" width="400px"/></p>
+<p>Read more at <a href="https://matplotlib.org/stable/index.html">matplotlib.org</a></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../bottle/" class="btn btn-neutral float-left" title="bottle"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../pillow/" class="btn btn-neutral float-left" title="pillow"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../numpy/" class="btn btn-neutral float-right" title="numpy">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -172,8 +190,10 @@ plt.show()
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../bottle/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../pillow/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
+    
+      <span><a href="../numpy/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
