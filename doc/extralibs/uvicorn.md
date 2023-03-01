@@ -1,8 +1,6 @@
 ## Uvicorn
 
-Uvicorn is an ASGI web server implementation for Python. It allows for hosting
-an ASGI server and serving requests. It is highly recommended that uvicorn be used
-together with an ASGI framework library, like <a href="/extralibs/starlette/">starlette</a>.
+Uvicorn is an ASGI web server implementation for Python. It allows for hosting an ASGI server and serving requests. It is highly recommended that uvicorn be used together with an ASGI framework library, like <a href="/extralibs/starlette/">Starlette</a>.
 
 ### Examples
 
@@ -33,10 +31,9 @@ if __name__ == "__main__":
 ```
 
 #### Handling Routing
-If you would like to have routing to different pages in your app, you should use an
-ASGI framework like <a href="/extralibs/starlette/">starlette</a>, otherwise you will 
-have to parse the `scope['path']` variable and handle the different request paths yourself
-like this:
+
+If you would like to have routing to different pages in your app, you should use an ASGI framework like <a href="/extralibs/starlette/">starlette</a>, otherwise you will have to parse the `scope['path']` variable and handle the different request paths yourself like this:
+
 ```python
 import uvicorn
 

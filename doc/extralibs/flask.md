@@ -1,16 +1,13 @@
 ## Flask
 
-Flask is a micro web framwork. Flask is similar to <a href="/extralibs/bottle/">Bottle</a>,
-but it has more functionality out of the box and scales easier. flask is better
-suited for larger projects that can span across mulitple Python files.
-
+Flask is a micro web framwork. Flask is similar to <a href="/extralibs/bottle/">Bottle</a>, but it has more functionality out of the box and scales easier. flask is better suited for larger projects that can span across mulitple Python files.
 
 ### Example
 
 #### Basic Web Server with Templates
 
-1\. Flask will look for template files in the `templates` directory by default, so
-first, create a new folder named `templates`, then add a file named `welcome.html`:
+1\. Flask will look for template files in the `templates` directory by default, so first, create a new folder named `templates`, then add a file named `welcome.html`:
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -21,7 +18,9 @@ first, create a new folder named `templates`, then add a file named `welcome.htm
     </body>
 </html>
 ```
+
 2\. Copy and paste the below code to `main.py`:
+
 ```python
 from flask import Flask
 
@@ -32,7 +31,9 @@ if __name__ == '__main__':
     import example_routes
     app.run(host='0.0.0.0', port=8080)
 ```
+
 3\. Create a 2nd python file named `example_routes.py`:
+
 ```python
 from flask import render_template
 from __main__ import app

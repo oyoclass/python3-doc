@@ -1,18 +1,13 @@
-### TinyDB
+## TinyDB
 
-TinyDB is a database package for Python written entirely in Python with a focus
-on providing a simple database solution for simple programs without the need for
-an extra external database server like Mongo.
+TinyDB is a database package for Python written entirely in Python with a focus on providing a simple database solution for simple programs without the need for an extra external database server like Mongo.
 
-You should use TinyDB if you only need to track a small amount of data across
-separate runs of a program. If you need advanced features like concurrent access
-or handling data for an HTTP server, you should use a more robust database package
-like Mongo or SQLite.
-
+You should use TinyDB if you only need to track a small amount of data across separate runs of a program. If you need advanced features like concurrent access or handling data for an HTTP server, you should use a more robust database package like Mongo or SQLite.
 
 ### Examples
 
 #### Record Runtimes
+
 ```python
 import time
 from tinydb import TinyDB
@@ -26,7 +21,6 @@ for entry in iter(db):
 Each time you run this program, another entry with the key `runtime` will be
 inserted with the current `time.time()`, and all the previous times the program
 was ran will also be printed.
-
 
 #### Search Database Entries
 
@@ -48,7 +42,6 @@ marbles = Query()
 for entry in db.search(marbles.count >= 3):
     print(entry)
 ```
-
 
 #### Update Entry in Database
 

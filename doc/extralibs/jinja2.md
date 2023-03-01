@@ -1,8 +1,6 @@
 ## Jinja2
 
-Jinja2 is a templating engine. It allows you to inject variables and write code 
-similar to Python directly into text files, which can be very useful for building
-webpages.
+Jinja2 is a templating engine. It allows you to inject variables and write code similar to Python directly into text files, which can be very useful for building webpages.
 
 ### Examples
 
@@ -28,6 +26,7 @@ First, create a template named `template.html` in your project's directory:
 ```
 
 Then, in `main.py`:
+
 ```python
 from jinja2 import Environment, FileSystemLoader
 
@@ -38,6 +37,7 @@ print(template.render(count_to=10, say_hi=False))
 ```
 
 Results:
+
 ```html
 <!DOCTYPE html>
 <html>
