@@ -87,6 +87,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../modules/tkinter/">tkinter</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/sqlite/">sqlite</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Extra Python Libraries</span></p>
               <ul class="current">
@@ -102,6 +104,8 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#requests_1">Requests</a>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../beautifulsoup/">beautifulsoup4</a>
@@ -116,13 +120,19 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../uvicorn/">uvicorn</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pygame/">pygame</a>
                   </li>
               </ul>
       </div>
@@ -150,9 +160,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h2 id="requests">Requests</h2>
-<p>Requests is a Python library that simplifies the syntax for making HTTP 
-requests. You can easily GET the content of webpages as well as POST data to
-them without needing to manually build query strings.</p>
+<p>Requests is a Python library that simplifies the syntax for making HTTP requests. You can easily GET the content of webpages as well as POST data to them without needing to manually build query strings.</p>
 <h3 id="examples">Examples</h3>
 <h4 id="get-content-from-a-webpage">GET Content from a Webpage</h4>
 <pre><code class="language-python">import requests
@@ -170,7 +178,10 @@ resp = requests.post('https://httpbin.service.oyoclass.com/post', data=post_data
 
 print(resp.text)
 </code></pre>
-<p>Read more at <a href="https://requests.readthedocs.io/en/latest/">requests.readthedocs.io</a></p>
+<h3 id="requests_1">Requests</h3>
+<ul>
+<li><a href="https://requests.readthedocs.io/en/latest/">Requests</a> at <em>requests.readthedocs.io</em></li>
+</ul>
               
             </div>
           </div><footer>

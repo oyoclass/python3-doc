@@ -87,6 +87,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../modules/tkinter/">tkinter</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/sqlite/">sqlite</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Extra Python Libraries</span></p>
               <ul class="current">
@@ -114,15 +116,23 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
+    </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pygame/">pygame</a>
                   </li>
               </ul>
       </div>
@@ -150,9 +160,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h2 id="uvicorn">Uvicorn</h2>
-<p>Uvicorn is an ASGI web server implementation for Python. It allows for hosting
-an ASGI server and serving requests. It is highly recommended that uvicorn be used
-together with an ASGI framework library, like <a href="/extralibs/starlette/">starlette</a>.</p>
+<p>Uvicorn is an ASGI web server implementation for Python. It allows for hosting an ASGI server and serving requests. It is highly recommended that uvicorn be used together with an ASGI framework library, like <a href="/extralibs/starlette/">Starlette</a>.</p>
 <h3 id="examples">Examples</h3>
 <h4 id="standalone-uvicorn-hello-world">Standalone Uvicorn Hello World</h4>
 <pre><code class="language-python">import uvicorn
@@ -178,10 +186,7 @@ if __name__ == &quot;__main__&quot;:
     uvicorn.run('main:app', host='0.0.0.0', port=8000, log_level='info')
 </code></pre>
 <h4 id="handling-routing">Handling Routing</h4>
-<p>If you would like to have routing to different pages in your app, you should use an
-ASGI framework like <a href="/extralibs/starlette/">starlette</a>, otherwise you will 
-have to parse the <code>scope['path']</code> variable and handle the different request paths yourself
-like this:</p>
+<p>If you would like to have routing to different pages in your app, you should use an ASGI framework like <a href="/extralibs/starlette/">Starlette</a>, otherwise you will have to parse the <code>scope['path']</code> variable and handle the different request paths yourself like this:</p>
 <pre><code class="language-python">import uvicorn
 
 
@@ -218,13 +223,16 @@ if __name__ == &quot;__main__&quot;:
     # host must be 0.0.0.0 to work in the Python3 Editor
     uvicorn.run('main:app', host='0.0.0.0', port=8000, log_level='info')
 </code></pre>
-<p>Read more at <a href="https://www.uvicorn.org/">uvicorn.org</a></p>
+<h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://www.uvicorn.org/">Uvicorn</a> at <em>uvicorn.org</em></li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../starlette/" class="btn btn-neutral float-left" title="starlette"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../tinydb/" class="btn btn-neutral float-right" title="tinydb">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../redis/" class="btn btn-neutral float-right" title="redis">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -250,7 +258,7 @@ if __name__ == &quot;__main__&quot;:
       <span><a href="../starlette/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../tinydb/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../redis/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

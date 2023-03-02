@@ -87,6 +87,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../modules/tkinter/">tkinter</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/sqlite/">sqlite</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Extra Python Libraries</span></p>
               <ul class="current">
@@ -106,15 +108,33 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../uvicorn/">uvicorn</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
+                  </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">tinydb</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#record-runtimes">Record Runtimes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#search-database-entries">Search Database Entries</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#update-entry-in-database">Update Entry in Database</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
+    </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pygame/">pygame</a>
                   </li>
               </ul>
       </div>
@@ -141,14 +161,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h3 id="tinydb">TinyDB</h3>
-<p>TinyDB is a database package for Python written entirely in Python with a focus
-on providing a simple database solution for simple programs without the need for
-an extra external database server like Mongo.</p>
-<p>You should use TinyDB if you only need to track a small amount of data across
-separate runs of a program. If you need advanced features like concurrent access
-or handling data for an HTTP server, you should use a more robust database package
-like Mongo or SQLite.</p>
+                <h2 id="tinydb">TinyDB</h2>
+<p>TinyDB is a database package for Python written entirely in Python with a focus on providing a simple database solution for simple programs without the need for an extra external database server like Mongo.</p>
+<p>You should use TinyDB if you only need to track a small amount of data across separate runs of a program. If you need advanced features like concurrent access or handling data for an HTTP server, you should use a more robust database package like Mongo or SQLite.</p>
 <h3 id="examples">Examples</h3>
 <h4 id="record-runtimes">Record Runtimes</h4>
 <pre><code class="language-python">import time
@@ -196,13 +211,16 @@ db.update(add('count', 10), animals.type == 'dog')
 for entry in iter(db):
     print(entry)
 </code></pre>
-<p>Read more at <a href="https://tinydb.readthedocs.io/en/latest/index.html">tinydb.readthedocs.io</a></p>
+<h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://tinydb.readthedocs.io/en/latest/index.html">TinyDB</a> at <em>tinydb.readthedocs.io</em></li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../uvicorn/" class="btn btn-neutral float-left" title="uvicorn"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../pillow/" class="btn btn-neutral float-right" title="pillow">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../redis/" class="btn btn-neutral float-left" title="redis"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../plyvel/" class="btn btn-neutral float-right" title="plyvel">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -225,10 +243,10 @@ for entry in iter(db):
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../uvicorn/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../redis/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../pillow/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../plyvel/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

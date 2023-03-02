@@ -87,6 +87,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../modules/tkinter/">tkinter</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/sqlite/">sqlite</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Extra Python Libraries</span></p>
               <ul class="current">
@@ -106,15 +108,33 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../uvicorn/">uvicorn</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">pillow</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#get-image-info">Get Image Info</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#render-image">Render Image</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#apply-a-filter-to-an-image">Apply a Filter to an Image</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pygame/">pygame</a>
                   </li>
               </ul>
       </div>
@@ -141,17 +161,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h3 id="pillow">Pillow</h3>
-<p>Pillow is an image processing library for Python.</p>
+                <h2 id="pillow">Pillow</h2>
+<p>Pillow is an image processing library for Python. It enables you to load pictures for viewing and editing, perform transformations, and apply filters to them.</p>
 <h3 id="examples">Examples</h3>
 <ul>
-<li>All examples assume you have an image named <code>oyobot.png</code> inside a folder 
-named <code>images</code> in your project. You may change the filename in the examples and
-use your own image, or
-<a download="oyobot.png" href="../../assets/img/oyobot.png" title="Download image">
-    click here
-</a> 
-to download a copy.</li>
+<li>All examples assume you have an image named <code>oyobot.png</code> inside a folder named <code>images</code> in your project. You may change the filename in the examples and use your own image, or <a download="oyobot.png" href="../../assets/img/oyobot.png" title="Download image">click here</a> to download a copy.</li>
 </ul>
 <h4 id="get-image-info">Get Image Info</h4>
 <pre><code class="language-python">from PIL import Image
@@ -176,15 +190,18 @@ img = Image.open('images/oyobot.png')
 img = img.filter(ImageFilter.GaussianBlur(20))
 img.show()
 </code></pre>
-<p>You will get an ImageMagick window rendered to the right of your code similar 
+<p>You will get an ImageMagick window rendered to the right of your code similar
 to this:</p>
 <p><img src="../../assets/img/pillow-gaussian-blur.png" width="400px"/></p>
-<p>Read more at <a href="https://pillow.readthedocs.io/en/stable/">pillow.readthedocs.io</a></p>
+<h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://pillow.readthedocs.io/en/stable/">Pillow</a> at <em>pillow.readthedocs.io</em></li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../tinydb/" class="btn btn-neutral float-left" title="tinydb"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../plyvel/" class="btn btn-neutral float-left" title="plyvel"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../matplotlib/" class="btn btn-neutral float-right" title="matplotlib">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -208,7 +225,7 @@ to this:</p>
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../tinydb/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../plyvel/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../matplotlib/" style="color: #fcfcfc">Next &raquo;</a></span>

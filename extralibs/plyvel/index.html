@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>numpy - Python3 Editor Documentation</title>
+    <title>plyvel - Python3 Editor Documentation</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "numpy";
-        var mkdocs_page_input_path = "extralibs/numpy.md";
+        var mkdocs_page_name = "plyvel";
+        var mkdocs_page_input_path = "extralibs/plyvel.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -112,25 +112,27 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">numpy</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">plyvel</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#create-and-add-matrices">Create and Add Matrices</a>
+    <li class="toctree-l3"><a class="reference internal" href="#create-update-and-read-keys">Create, Update, and Read Keys</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#create-a-sine-wave-graph-with-matplotlib">Create a Sine Wave Graph with matplotlib</a>
+    <li class="toctree-l3"><a class="reference internal" href="#delete-keys">Delete Keys</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#iterate-over-all-keys">Iterate Over All Keys</a>
     </li>
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
     </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../pygame/">pygame</a>
                   </li>
@@ -150,7 +152,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Extra Python Libraries &raquo;</li>
-      <li>numpy</li>
+      <li>plyvel</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -159,54 +161,60 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="numpy">NumPy</h2>
-<p>NumPy is a powerful number processing library, used by data scientists due to it being able to process large amounts of data much faster than native Python. This package works well with data visualization packages like <a href="/extralibs/matplotlib/">Matplotlib</a>.</p>
+                <h2 id="plyvel">Plyvel</h2>
+<p>Plyvel is a Python library that provides an interface to LevelDB. LevelDB is a simple datastore which exlusively maps byte strings to byte strings. This database is best used when you will always know the keys you will be accessing and don't need advanced database features like querying.</p>
 <h3 id="examples">Examples</h3>
-<h4 id="create-and-add-matrices">Create and Add Matrices</h4>
-<pre><code class="language-python">import numpy
+<h4 id="create-update-and-read-keys">Create, Update, and Read Keys</h4>
+<p>Using <code>db.put</code> to write to the same key multiple times will simply overwrite the value in the database, so create and update operations are done the exact same way:</p>
+<pre><code class="language-python">import plyvel
 
-# Create a 4x4 matrix of ones
-ones_mat = numpy.ones((4, 4))
+db = plyvel.DB('testdb', create_if_missing=True)
+db.put(b'example_key', b'example_value1')
+print(db.get(b'example_key'))
+db.put(b'example_key', b'example_value2')
+print(db.get(b'example_key'))
 
-# Create a default numpy random number generator
-rg = numpy.random.default_rng(1)
-
-# Create a 4x4 matrix of random numbers
-random_mat = rg.random((4, 4))
-
-# Add the two matrices together
-added_mat = numpy.add(ones_mat, random_mat)
-
-print(ones_mat)
-print(random_mat)
-print(added_mat)
 </code></pre>
-<h4 id="create-a-sine-wave-graph-with-matplotlib">Create a Sine Wave Graph with matplotlib</h4>
-<pre><code class="language-python">import numpy as np
-import matplotlib.pyplot as plt
+<h4 id="delete-keys">Delete Keys</h4>
+<pre><code class="language-python">import plyvel
 
-# Get x and y coordinates of sine wave
-x = np.arange(0, 4*np.pi, 0.1)
-y = np.sin(x)
-
-# Make the graph
-plt.plot(x, y)
-plt.title('Sine')
-
-# Show the figure.
-plt.show()
+db = plyvel.DB('testdb', create_if_missing=True)
+db.put(b'example_key', b'example_value')
+print(db.get(b'example_key'))
+db.delete(b'example_key')
+print(db.get(b'example_key'))
 </code></pre>
-<p><img src="../../assets/img/numpy-matplotlib-sine.png" width="400px"/></p>
+<h4 id="iterate-over-all-keys">Iterate Over All Keys</h4>
+<p>When a new key is insterted into the database, it is stored (and later returned) in <strong>lexicographical order</strong>:</p>
+<pre><code class="language-python">import plyvel
+
+db = plyvel.DB('testdb', create_if_missing=True)
+db.put(b'z', b'zval')
+db.put(b'A', b'Aval')
+db.put(b'2', b'2val')
+db.put(b'1', b'1val')
+db.put(b'a', b'aval')
+
+for key, value in db:
+    print(key, value)
+</code></pre>
+<p>Output from print:</p>
+<pre><code>b'1' b'1val'
+b'2' b'2val'
+b'A' b'Aval'
+b'a' b'aval'
+b'z' b'zval'
+</code></pre>
 <h3 id="reference">Reference</h3>
 <ul>
-<li><a href="https://numpy.org/doc/stable/">NumPy</a> at <em>numpy.org</em></li>
+<li><a href="https://plyvel.readthedocs.io/en/latest/index.html">Plyvel</a> at <em>plyvel.redthedocs.io</em></li>
 </ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../matplotlib/" class="btn btn-neutral float-left" title="matplotlib"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../pygame/" class="btn btn-neutral float-right" title="pygame">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../tinydb/" class="btn btn-neutral float-left" title="tinydb"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../pillow/" class="btn btn-neutral float-right" title="pillow">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -229,10 +237,10 @@ plt.show()
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../matplotlib/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../tinydb/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../pygame/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../pillow/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

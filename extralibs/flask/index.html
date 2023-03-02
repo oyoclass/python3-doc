@@ -87,6 +87,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../modules/tkinter/">tkinter</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/sqlite/">sqlite</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Extra Python Libraries</span></p>
               <ul class="current">
@@ -108,19 +110,27 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../starlette/">starlette</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../uvicorn/">uvicorn</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pygame/">pygame</a>
                   </li>
               </ul>
       </div>
@@ -148,13 +158,10 @@
             <div class="section" itemprop="articleBody">
               
                 <h2 id="flask">Flask</h2>
-<p>Flask is a micro web framwork. Flask is similar to <a href="/extralibs/bottle/">Bottle</a>,
-but it has more functionality out of the box and scales easier. flask is better
-suited for larger projects that can span across mulitple Python files.</p>
+<p>Flask is a micro web framwork. Flask is similar to <a href="/extralibs/bottle/">Bottle</a>, but it has more functionality out of the box and scales easier. flask is better suited for larger projects that can span across mulitple Python files.</p>
 <h3 id="example">Example</h3>
 <h4 id="basic-web-server-with-templates">Basic Web Server with Templates</h4>
-<p>1. Flask will look for template files in the <code>templates</code> directory by default, so
-first, create a new folder named <code>templates</code>, then add a file named <code>welcome.html</code>:</p>
+<p>1. Flask will look for template files in the <code>templates</code> directory by default, so first, create a new folder named <code>templates</code>, then add a file named <code>welcome.html</code>:</p>
 <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -193,7 +200,10 @@ def welcome(name):
 <img src="../../assets/img/flask-welcome-index.png" width="400px"></p>
 <p>And when you visit "/welcome/jane", you will see a page like this:
 <img src="../../assets/img/flask-welcome-jane.png" width="400px"></p>
-<p>Read more at <a href="https://flask.palletsprojects.com/en/2.2.x/">flask.palletsprojects.com</a></p>
+<h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://flask.palletsprojects.com/en/2.2.x/">Flask</a> at <em>flask.palletsprojects.com</em></li>
+</ul>
               
             </div>
           </div><footer>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>sqlite - Python3 Editor Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "sqlite";
+        var mkdocs_page_input_path = "modules/sqlite.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Python3 Editor Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comments/">Comments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/boolean/">Boolean</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/number/">Number</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comparison/">Comparison</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/none/">None</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/string/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/function/">Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/listtuple/">List & Tuple</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/set/">Set</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/dictionary/">Dictionary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/inputoutput/">Standard Input & Output</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Standard Python Libraries</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../math/">math</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../random/">random</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../string/">string</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../time/">time</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../urllib/">urllib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../turtle/">turtle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tkinter/">tkinter</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">sqlite</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#quick-note-about-sql-statements">Quick Note About SQL Statements</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-simple-student-roster">Example: Simple Student Roster</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#creating-a-database-and-initializing-a-table">Creating a Database and Initializing a Table</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#inserting-data-into-the-table">Inserting Data Into the Table</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#searching-for-specific-students">Searching For Specific Students</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ordering-query-results">Ordering Query Results</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#update-an-existing-row">Update an Existing Row</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#delete-data-from-a-table">Delete Data from a Table</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Extra Python Libraries</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/requests/">requests</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/beautifulsoup/">beautifulsoup4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/jinja2/">jinja2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/bottle/">bottle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/flask/">flask</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/starlette/">starlette</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/uvicorn/">uvicorn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/redis/">redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/plyvel/">plyvel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/pillow/">pillow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/matplotlib/">matplotlib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/numpy/">numpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/pygame/">pygame</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Python3 Editor Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Standard Python Libraries &raquo;</li>
+      <li>sqlite</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="sqlite-small-fast-sql-database-engine">SQLite — Small + Fast SQL Database Engine</h2>
+<p>SQLite is an SQL database engine that is built into most devices that exist today. Python comes with an SQLite library built in. This library allows you to store data between each time your program is run as well as search through it with queries.</p>
+<p>Using SQLite will require the use of <strong>Structured Query Language</strong> to interface with the database. SQL statements can become very complex quickly, but we will go over some basic commands for creating a table, then adding, reading, and deleting rows of data from it.</p>
+<h5 id="quick-note-about-sql-statements">Quick Note About SQL Statements</h5>
+<p>SQL statements are case-insensitive, so the following two statements are the same:</p>
+<pre><code class="language-SQL">SELECT last_name, first_name, age FROM students WHERE age&gt;15;
+</code></pre>
+<pre><code class="language-SQL">select last_name, first_name, age from students where age&gt;15;
+</code></pre>
+<p>Usually key words like <strong>SELECT</strong>, <strong>FROM</strong>, <strong>WHERE</strong>, and so on are capitalized to differntiate them from the custom database table and column names.</p>
+<h3 id="example-simple-student-roster">Example: Simple Student Roster</h3>
+<h4 id="creating-a-database-and-initializing-a-table">Creating a Database and Initializing a Table</h4>
+<p>Before we store any data, we need to create a <strong>table</strong>. SQL databases are set up similarly to a spreadsheet, where each entry is a <strong>row</strong> with data that lines up with named <strong>columns</strong>.</p>
+<pre><code class="language-python">import sqlite3
+
+conn = sqlite3.connect('example.db')
+
+create_table_sql_str = '''
+CREATE TABLE students (
+    id INTEGER PRIMARY KEY,
+    last_name TEXT,
+    first_name TEXT,
+    age INTEGER,
+    gpa REAL
+);
+'''
+conn.execute(create_table_sql_str)
+print('Table created successfully')
+
+conn.close()
+</code></pre>
+<p>This will create a file named "example.db" in your project's root folder, and it will create a table that is set up like this:</p>
+<pre><code class="language-sql">id | last_name | first_name | age | gpa
+---------------------------------------
+</code></pre>
+<p>The "id" field we set up is special as it is the <strong>INTEGER PRIMARY KEY</strong>. This field will automatically increment each time we insert a row into this table.</p>
+<h4 id="inserting-data-into-the-table">Inserting Data Into the Table</h4>
+<p>Now that we have a table, let's write another statement to insert some data into it:</p>
+<pre><code class="language-python">import sqlite3
+
+conn = sqlite3.connect('example.db')
+insert_sql_str = '''
+INSERT INTO students (last_name, first_name, age, gpa)
+VALUES
+    ('Doe', 'John', 16, 3.2),
+    ('Doe', 'Jane', 13, 3.8),
+    ('Smith', 'Ronald', 14, 2.7),
+    ('Aster', 'Jean', 11, 3.4);
+'''
+conn.execute(insert_sql_str)
+conn.commit()  # this line actually finalizes the operation and saves to disk
+conn.close()
+</code></pre>
+<p>After running this code, your table will now have the following data:</p>
+<pre><code class="language-SQL">id | last_name | first_name | age | gpa
+---------------------------------------
+ 1 |    Doe    |    John    | 16  | 3.2
+ 2 |    Doe    |    Jane    | 13  | 3.8
+ 3 |   Smith   |   Ronald   | 14  | 2.7
+ 4 |   Aster   |    Jean    | 11  | 3.4
+
+</code></pre>
+<p>Note how we didn't specify an id, and it was automatically added for us.</p>
+<h4 id="searching-for-specific-students">Searching For Specific Students</h4>
+<p>And now that our table has data from it, we want a specific set of data. Let's run the first example query used at the beginning of this guide:</p>
+<pre><code class="language-python">import sqlite3
+
+conn = sqlite3.connect('example.db')
+query_sql_str = '''
+SELECT last_name, first_name, age FROM students WHERE age&gt;15;
+'''
+cursor = conn.execute(query_sql_str)
+for row in cursor.fetchall():
+    print(row)
+
+conn.close()
+</code></pre>
+<p>Output:</p>
+<pre><code>('Doe', 'John', 16)
+</code></pre>
+<h4 id="ordering-query-results">Ordering Query Results</h4>
+<p>By default, there is no guarantee any data returned by a query will be in any specific order. Most of the time this is ok, but if we need data returned in any specific order, we can do this with the <strong>ORDER BY</strong> keyphrase:</p>
+<pre><code class="language-python">import sqlite3
+
+conn = sqlite3.connect('example.db')
+query_sql_str = '''
+SELECT * FROM students WHERE gpa&gt;=3 ORDER BY last_name;
+'''
+cursor = conn.execute(query_sql_str)
+for row in cursor.fetchall():
+    print(row)
+
+conn.close()
+</code></pre>
+<p>Output:</p>
+<pre><code>(4, 'Aster', 'Jean', 11, 3.4)
+(1, 'Doe', 'John', 16, 3.2)
+(2, 'Doe', 'Jane', 13, 3.8)
+</code></pre>
+<p>Notice how it returned the entire row for each student. That's because we used the <strong>*</strong> character, which selects all existing columns in order without having to write them out individually.</p>
+<h4 id="update-an-existing-row">Update an Existing Row</h4>
+<p>Sometimes you need to edit a row that is already inserted into the table. You can do this with an update query. Keep in mind that you cannot undo an update after it is committed:</p>
+<pre><code class="language-python">import sqlite3
+
+conn = sqlite3.connect('example.db')
+update_sql_str = '''
+UPDATE students SET gpa=3.9 WHERE id=3;
+'''
+conn.execute(update_sql_str)
+conn.commit()
+conn.close()
+</code></pre>
+<p>After running this code, the student with <code>id=3</code> will have their GPA updated:</p>
+<pre><code class="language-SQL">id | last_name | first_name | age | gpa
+---------------------------------------
+ 3 |   Smith   |   Ronald   | 14  | 3.9
+</code></pre>
+<h4 id="delete-data-from-a-table">Delete Data from a Table</h4>
+<p>Final of the main four operations, we can delete a row of data that is no longer needed. Keep in mind that like updates, you cannot undo a delete once it is committed:</p>
+<pre><code class="language-python">import sqlite3
+
+conn = sqlite3.connect('example.db')
+delete_sql_str = '''
+DELETE FROM students WHERE age=16;
+'''
+conn.execute(delete_sql_str)
+conn.commit()
+conn.close()
+</code></pre>
+<p>Our final table looks like this, note how the id column <strong>did not</strong> get automatically updated:</p>
+<pre><code class="language-SQL">id | last_name | first_name | age | gpa
+---------------------------------------
+ 2 |    Doe    |    Jane    | 13  | 3.8
+ 3 |   Smith   |   Ronald   | 14  | 2.7
+ 4 |   Aster   |    Jean    | 11  | 3.4
+</code></pre>
+<p>We only had one student with an <code>age=16</code> in our table, but the above query would have deleted <strong>all</strong> students with <code>age=16</code>. The next student inserted into this table will have an id of 5.</p>
+<h3 id="reference">Reference</h3>
+<p>These examples are far from the only thing you can do with SQLite and SQL queries. Read more about SQLite and SQL queries here:</p>
+<ul>
+<li><a href="https://docs.python.org/3/library/sqlite3.html">Python SQLite Package Documentation</a> at <em>docs.python.org</em></li>
+<li><a href="https://www.sqlite.org/docs.html">SQLite Documentation</a> at <em>sqlite.org</em></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../tkinter/" class="btn btn-neutral float-left" title="tkinter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../extralibs/" class="btn btn-neutral float-right" title="Intro">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../tkinter/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../extralibs/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
