@@ -24,6 +24,7 @@ nav:
         - 'urllib': 'modules/urllib.md'
         - 'turtle': 'modules/turtle.md'
         - 'tkinter': 'modules/tkinter.md'
+        - 'sqlite': 'modules/sqlite.md'
     - 'Extra Python Libraries':
         - 'Intro': 'extralibs/index.md'
         - 'requests': 'extralibs/requests.md'
