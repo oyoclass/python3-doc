@@ -1,6 +1,6 @@
 ## NumPy
 
-NumPy is a powerful number processing library, used by data scientists due to it being able to process large amounts of data much faster than native Python. This package works well with data visualization packages like <a href="/extralibs/matplotlib/">matplotlib</a>.
+NumPy is a powerful number processing library, used by data scientists due to it being able to process large amounts of data much faster than native Python. This package works well with data visualization packages like [Matplotlib](/extralibs/matplotlib/).
 
 ### Examples
 
@@ -46,4 +46,6 @@ plt.show()
 
 <img src="../../assets/img/numpy-matplotlib-sine.png" width="400px"/>
 
-Read more at <a href="https://numpy.org/doc/stable/">numpy.org</a>
+### Reference
+
+-   [NumPy](https://numpy.org/doc/stable/) at _numpy.org_

@@ -1,6 +1,6 @@
 ## Starlette
 
-Starlette is an ASGI framework that allows for ease of building async web services in Python. To work properly, it must be used together with an ASGI server to run the service such as <a href="/extralibs/uvicorn/">Uvicorn</a>.
+Starlette is an ASGI framework that allows for ease of building async web services in Python. To work properly, it must be used together with an ASGI server to run the service such as [Uvicorn](/extralibs/uvicorn/).
 
 ### Examples
 
@@ -40,4 +40,6 @@ When you visit "/", you will see a page like this:
 And when you visit "/greetings/jordan", you will see a page like this:
 <img src="../../assets/img/starlette-greetings-jordan.png" width="400px"/>
 
-Read more at <a href="https://www.starlette.io/">starlette.io</a>
+### Reference
+
+-   [Starlette](https://www.starlette.io/) at _starlette.io_

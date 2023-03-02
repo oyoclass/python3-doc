@@ -33,7 +33,7 @@ print(db.get(b'example_key'))
 
 #### Iterate Over All Keys
 
-When a new key is insterted into the database, it is stored (and later returned) in <b>lexicographical order</b>:
+When a new key is insterted into the database, it is stored (and later returned) in **lexicographical order**:
 
 ```python
 import plyvel
@@ -59,4 +59,6 @@ b'a' b'aval'
 b'z' b'zval'
 ```
 
-Read more at <a href="https://plyvel.readthedocs.io/en/latest/index.html">plyvel.redthedocs.io</a>
+### Reference
+
+-   [Plyvel](https://plyvel.readthedocs.io/en/latest/index.html) at _plyvel.redthedocs.io_

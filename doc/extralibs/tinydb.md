@@ -62,4 +62,6 @@ for entry in iter(db):
     print(entry)
 ```
 
-Read more at <a href="https://tinydb.readthedocs.io/en/latest/index.html">tinydb.readthedocs.io</a>
+### Reference
+
+-   [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html) at _tinydb.readthedocs.io_

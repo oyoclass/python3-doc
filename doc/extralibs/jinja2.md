@@ -54,4 +54,7 @@ Results:
 </html>
 ```
 
-Read more at <a href="https://jinja.palletsprojects.com/en/3.1.x/">jinja.palletsprojects.com</a>
+
+### Reference
+
+-   [Jinja2](https://jinja.palletsprojects.com/en/3.1.x/) at _jinja.palletsprojects.com_

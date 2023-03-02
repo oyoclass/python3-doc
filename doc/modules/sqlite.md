@@ -2,7 +2,7 @@
 
 SQLite is an SQL database engine that is built into most devices that exist today. Python comes with an SQLite library built in. This library allows you to store data between each time your program is run as well as search through it with queries.
 
-Using SQLite will require the use of <b>Structured Query Language</b> to interface with the database. SQL statements can become very complex quickly, but we will go over some basic commands for creating a table, then adding, reading, and deleting rows of data from it.
+Using SQLite will require the use of **Structured Query Language** to interface with the database. SQL statements can become very complex quickly, but we will go over some basic commands for creating a table, then adding, reading, and deleting rows of data from it.
 
 ##### Quick Note About SQL Statements
 
@@ -16,13 +16,13 @@ SELECT last_name, first_name, age FROM students WHERE age>15;
 select last_name, first_name, age from students where age>15;
 ```
 
-Usually key words like <b>SELECT</b>, <b>FROM</b>, <b>WHERE</b>, and so on are capitalized to differntiate them from the custom database table and column names.
+Usually key words like **SELECT**, **FROM**, **WHERE**, and so on are capitalized to differntiate them from the custom database table and column names.
 
 ### Example: Simple Student Roster
 
 #### Creating a Database and Initializing a Table
 
-Before we store any data, we need to create a <b>table</b>. SQL databases are set up similarly to a spreadsheet, where each entry is a <b>row</b> with data that lines up with named <b>columns</b>.
+Before we store any data, we need to create a **table**. SQL databases are set up similarly to a spreadsheet, where each entry is a **row** with data that lines up with named **columns**.
 
 ```python
 import sqlite3
@@ -51,7 +51,7 @@ id | last_name | first_name | age | gpa
 ---------------------------------------
 ```
 
-The "id" field we set up is special as it is the <b>INTEGER PRIMARY KEY</b>. This field will automatically increment each time we insert a row into this table.
+The "id" field we set up is special as it is the **INTEGER PRIMARY KEY**. This field will automatically increment each time we insert a row into this table.
 
 #### Inserting Data Into the Table
 
@@ -114,7 +114,7 @@ Output:
 
 #### Ordering Query Results
 
-By default, there is no guarantee any data returned by a query will be in any specific order. Most of the time this is ok, but if we need data returned in any specific order, we can do this with the <b>ORDER BY</b> keyphrase:
+By default, there is no guarantee any data returned by a query will be in any specific order. Most of the time this is ok, but if we need data returned in any specific order, we can do this with the **ORDER BY** keyphrase:
 
 ```python
 import sqlite3
@@ -138,7 +138,7 @@ Output:
 (2, 'Doe', 'Jane', 13, 3.8)
 ```
 
-Notice how it returned the entire row for each student. That's because we used the <b>\*</b> character, which selects all existing columns in order without having to write them out individually.
+Notice how it returned the entire row for each student. That's because we used the **\*** character, which selects all existing columns in order without having to write them out individually.
 
 #### Update an Existing Row
 
@@ -180,7 +180,7 @@ conn.commit()
 conn.close()
 ```
 
-Our final table looks like this, note how the id column <b>did not</b> get automatically updated:
+Our final table looks like this, note how the id column **did not** get automatically updated:
 
 ```SQL
 id | last_name | first_name | age | gpa
@@ -190,8 +190,11 @@ id | last_name | first_name | age | gpa
  4 |   Aster   |    Jean    | 11  | 3.4
 ```
 
-We only had one student with an `age=16` in our table, but the above query would have deleted <b>all</b> students with `age=16`. The next student inserted into this table will have an id of 5.
+We only had one student with an `age=16` in our table, but the above query would have deleted **all** students with `age=16`. The next student inserted into this table will have an id of 5.
+
+### Reference
 
 These examples are far from the only thing you can do with SQLite and SQL queries. Read more about SQLite and SQL queries here:
 
-<a href="https://docs.python.org/3/library/sqlite3.html">Python SQLite Library Reference</a>
+-   [Python SQLite Package Documentation](https://docs.python.org/3/library/sqlite3.html) at _docs.python.org_
+-   [SQLite Documentation](https://www.sqlite.org/docs.html) at _sqlite.org_

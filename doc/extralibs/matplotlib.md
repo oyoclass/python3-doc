@@ -19,4 +19,6 @@ plt.show()
 
 <img src="../../assets/img/matplotlib-line.png" width="400px"/>
 
-Read more at <a href="https://matplotlib.org/stable/index.html">matplotlib.org</a>
+### Reference
+
+-   [Matplotlib](https://matplotlib.org/stable/index.html) at _matplotlib.org_

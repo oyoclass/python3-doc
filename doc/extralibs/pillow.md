@@ -45,4 +45,6 @@ to this:
 
 <img src="../../assets/img/pillow-gaussian-blur.png" width="400px"/>
 
-Read more at <a href="https://pillow.readthedocs.io/en/stable/">pillow.readthedocs.io</a>
+### Reference
+
+-   [Pillow](https://pillow.readthedocs.io/en/stable/) at _pillow.readthedocs.io_

@@ -26,4 +26,6 @@ resp = requests.post('https://httpbin.service.oyoclass.com/post', data=post_data
 print(resp.text)
 ```
 
-Read more at <a href="https://requests.readthedocs.io/en/latest/">requests.readthedocs.io</a>
+### Requests
+
+-   [Requests](https://requests.readthedocs.io/en/latest/) at _requests.readthedocs.io_

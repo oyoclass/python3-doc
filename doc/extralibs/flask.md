@@ -1,6 +1,6 @@
 ## Flask
 
-Flask is a micro web framwork. Flask is similar to <a href="/extralibs/bottle/">Bottle</a>, but it has more functionality out of the box and scales easier. flask is better suited for larger projects that can span across mulitple Python files.
+Flask is a micro web framwork. Flask is similar to [Bottle](/extralibs/bottle/), but it has more functionality out of the box and scales easier. flask is better suited for larger projects that can span across mulitple Python files.
 
 ### Example
 
@@ -56,4 +56,6 @@ When you visit "/", you will see a page like this:
 And when you visit "/welcome/jane", you will see a page like this:
 <img src="../../assets/img/flask-welcome-jane.png" width="400px">
 
-Read more at <a href="https://flask.palletsprojects.com/en/2.2.x/">flask.palletsprojects.com</a>
+### Reference
+
+-   [Flask](https://flask.palletsprojects.com/en/2.2.x/) at _flask.palletsprojects.com_
