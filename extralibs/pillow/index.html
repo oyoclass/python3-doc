@@ -118,11 +118,15 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
         <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#upload-an-image-to-your-project">Upload an Image to Your Project</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#get-image-info">Get Image Info</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#render-image">Render Image</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#apply-a-filter-to-an-image">Apply a Filter to an Image</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#save-image-after-filtering">Save Image After Filtering</a>
     </li>
         </ul>
     </li>
@@ -164,35 +168,59 @@
                 <h2 id="pillow">Pillow</h2>
 <p>Pillow is an image processing library for Python. It enables you to load pictures for viewing and editing, perform transformations, and apply filters to them.</p>
 <h3 id="examples">Examples</h3>
-<ul>
-<li>All examples assume you have an image named <code>oyobot.png</code> inside a folder named <code>images</code> in your project. You may change the filename in the examples and use your own image, or <a download="oyobot.png" href="../../assets/img/oyobot.png" title="Download image">click here</a> to download a copy.</li>
-</ul>
+<h4 id="upload-an-image-to-your-project">Upload an Image to Your Project</h4>
+<p>The first thing we need to do to use this package is have an image to work with. We're going to use an image of OYObot in the following examples, <a download="oyobot.png" href="../../assets/img/oyobot.png" title="Download image">click here</a> to download a copy.</p>
+<p>After it's downloaded, open up the Python3 Editor and select <strong>Upload File</strong> from the dropdown at the top of your project's file list:</p>
+<p><img src="../../assets/img/pillow-upload-image1.png" width="400px"/></p>
+<p><img src="../../assets/img/pillow-upload-image2.png" width="400px"/></p>
+<p>Find the picture you downloaded in your file browser, then confirm the upload was successful by finding the image in your project's file list:</p>
+<p><img src="../../assets/img/pillow-upload-image3.png" width="400px"/></p>
 <h4 id="get-image-info">Get Image Info</h4>
+<p>Pillow is able to read metadata from an image it opens, and provide phsyical properties like its dimensions and format:</p>
 <pre><code class="language-python">from PIL import Image
-img = Image.open('images/oyobot.png')
+img = Image.open('oyobot.png')
 
 # print out image info
 print(f'filename: {img.filename}')
 print(f'dimensions: {img.width}x{img.height}')
 print(f'format: {img.format}')
 </code></pre>
+<p>Output:</p>
+<pre><code class="language-text">filename: oyobot.png
+dimensions: 1200x1200
+format: PNG
+</code></pre>
 <h4 id="render-image">Render Image</h4>
+<p>We can render the image by calling the <code>show()</code> method of the image:</p>
 <pre><code class="language-python">from PIL import Image
-img = Image.open('images/oyobot.png')
+img = Image.open('oyobot.png')
 img.show()
 </code></pre>
-<p>You will get an ImageMagick window rendered to the right of your code similar
-to this:</p>
+<p>You will get an ImageMagick window rendered to the right of your code that looks like this:</p>
 <p><img src="../../assets/img/pillow-render.png" width="400px"/></p>
+<p>You can use your mouse and keyboard to interact with this window. The second smaller window allows you to pan around the image by clicking and dragging since it will most likely be too big to fit on one screen.</p>
 <h4 id="apply-a-filter-to-an-image">Apply a Filter to an Image</h4>
+<p>We can also use Pillow to apply various filters and transforms to images. Here's a simple example where we apply a gaussian blur to our OYObot picture:</p>
 <pre><code class="language-python">from PIL import Image, ImageFilter
-img = Image.open('images/oyobot.png')
+img = Image.open('oyobot.png')
 img = img.filter(ImageFilter.GaussianBlur(20))
 img.show()
 </code></pre>
-<p>You will get an ImageMagick window rendered to the right of your code similar
-to this:</p>
+<p>You will get an ImageMagick window rendered to the right of your code that looks like this:</p>
 <p><img src="../../assets/img/pillow-gaussian-blur.png" width="400px"/></p>
+<h4 id="save-image-after-filtering">Save Image After Filtering</h4>
+<p>If you want to apply your filters to an image and then save it afterwards, we can do that with the <code>save()</code> method:</p>
+<pre><code class="language-python">from PIL import Image, ImageFilter
+img = Image.open('oyobot.png')
+img = img.filter(ImageFilter.GaussianBlur(20))
+# make sure this filename is different, otherwise you will overwrite your
+# original image!
+img.save('oyobot_blurred.png')
+</code></pre>
+<p>You will see that the file will appear automatically to the left of your code in your projects file list:</p>
+<p><img src="../../assets/img/pillow-save-image.png" width="300px"/></p>
+<p>From here, you can simply click on the picture in your file list to open it and see a preview directly in your editor window:</p>
+<p><img src="../../assets/img/pillow-save-image-open.png" width="400px"/></p>
 <h3 id="reference">Reference</h3>
 <ul>
 <li><a href="https://pillow.readthedocs.io/en/stable/">Pillow</a> at <em>pillow.readthedocs.io</em></li>

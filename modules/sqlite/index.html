@@ -223,7 +223,7 @@ conn.commit()  # this line actually finalizes the operation and saves to disk
 conn.close()
 </code></pre>
 <p>After running this code, your table will now have the following data:</p>
-<pre><code class="language-SQL">id | last_name | first_name | age | gpa
+<pre><code class="language-sql">id | last_name | first_name | age | gpa
 ---------------------------------------
  1 |    Doe    |    John    | 16  | 3.2
  2 |    Doe    |    Jane    | 13  | 3.8
@@ -247,7 +247,7 @@ for row in cursor.fetchall():
 conn.close()
 </code></pre>
 <p>Output:</p>
-<pre><code>('Doe', 'John', 16)
+<pre><code class="language-text">('Doe', 'John', 16)
 </code></pre>
 <h4 id="ordering-query-results">Ordering Query Results</h4>
 <p>By default, there is no guarantee any data returned by a query will be in any specific order. Most of the time this is ok, but if we need data returned in any specific order, we can do this with the <strong>ORDER BY</strong> keyphrase:</p>
@@ -264,7 +264,7 @@ for row in cursor.fetchall():
 conn.close()
 </code></pre>
 <p>Output:</p>
-<pre><code>(4, 'Aster', 'Jean', 11, 3.4)
+<pre><code class="language-text">(4, 'Aster', 'Jean', 11, 3.4)
 (1, 'Doe', 'John', 16, 3.2)
 (2, 'Doe', 'Jane', 13, 3.8)
 </code></pre>
@@ -282,7 +282,7 @@ conn.commit()
 conn.close()
 </code></pre>
 <p>After running this code, the student with <code>id=3</code> will have their GPA updated:</p>
-<pre><code class="language-SQL">id | last_name | first_name | age | gpa
+<pre><code class="language-sql">id | last_name | first_name | age | gpa
 ---------------------------------------
  3 |   Smith   |   Ronald   | 14  | 3.9
 </code></pre>
@@ -299,7 +299,7 @@ conn.commit()
 conn.close()
 </code></pre>
 <p>Our final table looks like this, note how the id column <strong>did not</strong> get automatically updated:</p>
-<pre><code class="language-SQL">id | last_name | first_name | age | gpa
+<pre><code class="language-sql">id | last_name | first_name | age | gpa
 ---------------------------------------
  2 |    Doe    |    Jane    | 13  | 3.8
  3 |   Smith   |   Ronald   | 14  | 2.7
