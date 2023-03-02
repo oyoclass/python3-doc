@@ -71,6 +71,27 @@ You will get an ImageMagick window rendered to the right of your code that looks
 
 <img src="../../assets/img/pillow-gaussian-blur.png" width="400px"/>
 
+#### Save Image After Filtering
+
+If you want to apply your filters to an image and then save it afterwards, we can do that with the `save()` method:
+
+```python
+from PIL import Image, ImageFilter
+img = Image.open('oyobot.png')
+img = img.filter(ImageFilter.GaussianBlur(20))
+# make sure this filename is different, otherwise you will overwrite your
+# original image!
+img.save('oyobot_blurred.png')
+```
+
+You will see that the file will appear automatically to the left of your code in your projects file list:
+
+<img src="../../assets/img/pillow-save-image.png" width="300px"/>
+
+From here, you can simply click on the picture in your file list to open it and see a preview directly in your editor window:
+
+<img src="../../assets/img/pillow-save-image-open.png" width="400px"/>
+
 ### Reference
 
 -   [Pillow](https://pillow.readthedocs.io/en/stable/) at _pillow.readthedocs.io_
