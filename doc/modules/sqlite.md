@@ -76,7 +76,7 @@ conn.close()
 
 After running this code, your table will now have the following data:
 
-```SQL
+```sql
 id | last_name | first_name | age | gpa
 ---------------------------------------
  1 |    Doe    |    John    | 16  | 3.2
@@ -108,7 +108,7 @@ conn.close()
 
 Output:
 
-```
+```text
 ('Doe', 'John', 16)
 ```
 
@@ -132,7 +132,7 @@ conn.close()
 
 Output:
 
-```
+```text
 (4, 'Aster', 'Jean', 11, 3.4)
 (1, 'Doe', 'John', 16, 3.2)
 (2, 'Doe', 'Jane', 13, 3.8)
@@ -158,7 +158,7 @@ conn.close()
 
 After running this code, the student with `id=3` will have their GPA updated:
 
-```SQL
+```sql
 id | last_name | first_name | age | gpa
 ---------------------------------------
  3 |   Smith   |   Ronald   | 14  | 3.9
@@ -182,7 +182,7 @@ conn.close()
 
 Our final table looks like this, note how the id column **did not** get automatically updated:
 
-```SQL
+```sql
 id | last_name | first_name | age | gpa
 ---------------------------------------
  2 |    Doe    |    Jane    | 13  | 3.8

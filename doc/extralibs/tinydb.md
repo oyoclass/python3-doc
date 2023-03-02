@@ -18,11 +18,11 @@ for entry in iter(db):
     print(entry)
 ```
 
-Each time you run this program, another entry with the key `runtime` will be
-inserted with the current `time.time()`, and all the previous times the program
-was ran will also be printed.
+Each time you run this program, another entry with the key `runtime` will be inserted with the current `time.time()`, and all the previous times the program was ran will also be printed.
 
 #### Search Database Entries
+
+We can search through our database and only pull certain values that meet some specific critera with a **Query**:
 
 ```python
 from tinydb import TinyDB, Query
@@ -43,7 +43,17 @@ for entry in db.search(marbles.count >= 3):
     print(entry)
 ```
 
+Output:
+
+```text
+{'color': 'blue', 'count': 3}
+{'color': 'orange', 'count': 4}
+{'color': 'purple', 'count': 5}
+```
+
 #### Update Entry in Database
+
+We can also use **Query** to select a certain document or documents to update. The following code creates an `animals.json`, inserts two items, and then adds 10 to animals with the type "dog":
 
 ```python
 from tinydb import TinyDB, Query
@@ -60,6 +70,13 @@ animals = Query()
 db.update(add('count', 10), animals.type == 'dog')
 for entry in iter(db):
     print(entry)
+```
+
+Output:
+
+```text
+{'type': 'cat', 'count': 5}
+{'type': 'dog', 'count': 15}
 ```
 
 ### Reference

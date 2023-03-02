@@ -51,7 +51,7 @@ for key, value in db:
 
 Output from print:
 
-```
+```text
 b'1' b'1val'
 b'2' b'2val'
 b'A' b'Aval'
