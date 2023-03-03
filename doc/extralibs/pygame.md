@@ -49,7 +49,7 @@ circle_y = height//2
 radius = 10
 
 # We will use an infinite "while True" loop to only force exit our game once
-# the pygame.QUIT event is fired (like clicking the X on the game window)
+# the pygame.QUIT event is fired (like pressing the escape key)
 while True:
     # Check pygame events every frame to process player's inputs
     for event in pygame.event.get():
