@@ -41,3 +41,4 @@ nav:
         - 'matplotlib': 'extralibs/matplotlib.md'
         - 'numpy': 'extralibs/numpy.md'
         - 'pygame': 'extralibs/pygame.md'
+        - 'pysimplegui': 'extralibs/pysimplegui.md'
