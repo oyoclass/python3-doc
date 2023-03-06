@@ -40,6 +40,8 @@ nav:
         - 'pillow': 'extralibs/pillow.md'
         - 'matplotlib': 'extralibs/matplotlib.md'
         - 'numpy': 'extralibs/numpy.md'
+        - 'scipy': 'extralibs/scipy.md'
+        - 'pandas': 'extralibs/pandas.md'
         - 'nltk': 'extralibs/nltk.md'
         - 'pygame': 'extralibs/pygame.md'
         - 'pysimplegui': 'extralibs/pysimplegui.md'
