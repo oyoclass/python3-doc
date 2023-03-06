@@ -19,12 +19,21 @@ print(source_code)
 
 This will print the source code as a string from the website "sabrinaw.oyosite.com".
 
-> **Note**: If you are using the code above to get the source code from a website, it is not uncommon that the function will return a "forbidden" error instead of the actual source code. The reason is that many websites have restrictions on who can fetch their code. For example, the website may check if you are an actual browser or a spider robot, and it will return an empty string or a "forbidden" error if they think you are a robot.
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        If you are using the code above to get the source code from a website, it is not uncommon that the function will return a "forbidden" error instead of the actual source code. The reason is that many websites have restrictions on who can fetch their code.
+    </p>
+    <p>
+        For example, the website may check if you are an actual browser or a spider robot, and it will return an empty string or a "forbidden" error if they think you are a robot.
+    </p>
+</div>
 
 #### Example 2) Get CSV data and parse it with the CSV lib
 
 A comma-separated values (CSV) file is a delimited text file that uses a comma to separate values. Each line of the file is a data record. Each record consists of one or more fields, separated by commas. [Read more on Wikipedia >>](https://en.wikipedia.org/wiki/Comma-separated_values).
-
 
 Suppose we have a CSV file for a Code Conquest Hackathon:
 
@@ -67,6 +76,7 @@ print("Approx. Location:", location["city"], location["region"])
 ```
 
 Run it (suppose we want to query the IP 67.84.146.84):
+
 ```markdown
 Input the IP you want to query: 67.84.146.84
 Approx. Location: Ronkonkoma NY
@@ -86,7 +96,7 @@ location = json.loads(urlopen(url).read())
 print("Approx. Location:", location["city"], location["region"])
 ```
 
-Here is another example. This is an API you can use to get the bitcoin price in USD: `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd`. 
+Here is another example. This is an API you can use to get the bitcoin price in USD: `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd`.
 
 Suppose your school blocks the "coingecho.com" domain, you can just prepend `https://proxy.oyoclass.com/` to it:
 
@@ -99,6 +109,7 @@ print(data)
 ```
 
 Run it:
+
 ```
 {'bitcoin': {'usd': 65274}}
 ```
@@ -123,6 +134,7 @@ print(parsed.fragment)
 ```
 
 Run it:
+
 ```
 ParseResult(scheme='https', netloc='oyoclass.com', path='/settings/account', params='', query='name=python', fragment='anchor')
 https

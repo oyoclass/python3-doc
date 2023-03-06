@@ -1,0 +1,26 @@
+.notebox {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.notebox.notebox-info {
+    color: #2e6b89;
+    background-color: #e2f0f7;
+    border-color: #bce8f1;
+}
+
+.notebox .notebox-title {
+    font-weight: bold;
+    text-align: left;
+}
+
+.notebox p {
+    margin-bottom: 1rem;
+}
+
+.notebox p:last-child {
+    margin-bottom: 0;
+}

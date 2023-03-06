@@ -18,7 +18,9 @@ Output:
 hello
 [1, 2, 3, 4]
 ```
+
 ---
+
 Or you can use `sys.stdout.write`:
 
 ```python
@@ -27,8 +29,15 @@ arr = [1, 2, 3, 4]
 stdout.write("hello ")
 stdout.write(str(arr))
 ```
-**Note:** The parameter of *write* must be a String. 
 
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        The parameter of <code>write</code> must be a String
+    </p>
+</div>
 
 Output:
 
@@ -46,9 +55,10 @@ print "hello", name
 ```
 
 #### Change from Python2
+
 The `raw_input` function from Python2 is no longer supported in Python3. The `input()` function in Python3 works the same way as the `raw_input()` function in Python2.
 
-The `input()` function in Python3 *always* returns a String. You must cast the variable to use the variable as a different type.
+The `input()` function in Python3 _always_ returns a String. You must cast the variable to use the variable as a different type.
 
 ```python
 num = input("Give me a number")
@@ -59,7 +69,9 @@ print(num * 2)           # 1212
 num = int(num)
 print(num * 2)           # 24
 ```
+
 ---
+
 You can also read user's input by using `sys.stdin.read` or `sys.stdin.readline`:
 
 ```python
@@ -72,4 +84,3 @@ print(name)
 name = stdin.readline(3)
 print(name)
 ```
-

@@ -2,7 +2,18 @@
 
 Pydub is a Python library that allows you to edit audio files with a simple interface.
 
-Note: Since this library uses sounds, you will need to upload your own music or music loop. For a quick sample, you can create an account on a website like [SampleFocus](https://samplefocus.com/) and grab a royalty free sample.
+<div class="notebox notebox-info">
+  <p class="notebox-title">
+    Note
+  </p>
+  <p>
+    Since this library uses sounds, you will need to upload your own music or music loop. For a quick sample, you can create an account on a website like 
+    <a href="https://samplefocus.com/">
+      <b>SampleFocus</b>
+    </a> 
+    and grab a royalty free sample.
+  </p>
+</div>
 
 ### Examples
 
@@ -48,7 +59,14 @@ File Size: 3146306 bytes
 
 Run the following code and your program will begin playing audio:
 
-Note: make sure your file format matches the file you uploaded. If you uploaded an mp3, make sure you change the format to `"mp3"`
+<div class="notebox notebox-info">
+  <p class="notebox-title">
+    Note
+  </p>
+  <p>
+    make sure your file format matches the file you uploaded. If you uploaded an mp3, make sure you change the format to <code>"mp3"</code>
+  </p>
+</div>
 
 ```python
 from pydub import AudioSegment
