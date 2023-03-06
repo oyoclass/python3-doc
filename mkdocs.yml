@@ -43,5 +43,7 @@ nav:
         - 'scipy': 'extralibs/scipy.md'
         - 'pandas': 'extralibs/pandas.md'
         - 'nltk': 'extralibs/nltk.md'
+        - 'arcade': 'extralibs/arcade.md'
         - 'pygame': 'extralibs/pygame.md'
         - 'pysimplegui': 'extralibs/pysimplegui.md'
+        - 'pydub': 'extralibs/pydub.md'
