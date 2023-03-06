@@ -6,7 +6,7 @@ SciPy is a scientific computation library that was made by the author of [NumPy]
 
 #### Linear Algebra
 
-One good reason to use SciPy is that it has an enhanced set of features for linear algebra and matrix operations. Let's use SciPy to extract the eigen values and vectors from a matrix:
+One good reason to use SciPy is that it has an enhanced set of features for linear algebra and matrix operations. Let's use SciPy to extract the eigenvalues and eigenvectors from a matrix:
 
 ```python
 from scipy import linalg

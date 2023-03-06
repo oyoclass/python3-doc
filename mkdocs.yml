@@ -37,6 +37,7 @@ nav:
         - 'uvicorn': 'extralibs/uvicorn.md'
         - 'redis': 'extralibs/redis.md'
         - 'tinydb': 'extralibs/tinydb.md'
+        - 'pymongo': 'extralibs/pymongo.md'
         - 'plyvel': 'extralibs/plyvel.md'
         - 'pillow': 'extralibs/pillow.md'
         - 'matplotlib': 'extralibs/matplotlib.md'
