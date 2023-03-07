@@ -35,6 +35,7 @@ nav:
         - 'flask': 'extralibs/flask.md'
         - 'starlette': 'extralibs/starlette.md'
         - 'uvicorn': 'extralibs/uvicorn.md'
+        - 'fastapi': 'extralibs/fastapi.md'
         - 'redis': 'extralibs/redis.md'
         - 'tinydb': 'extralibs/tinydb.md'
         - 'pymongo': 'extralibs/pymongo.md'
