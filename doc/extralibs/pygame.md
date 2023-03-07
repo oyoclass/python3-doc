@@ -19,6 +19,15 @@ You will get a game window open to the right of your code, you can use the left 
 
 You can try out the other example projects too. You can find a list of them at the official [Pygame Examples Reference](https://www.pygame.org/docs/ref/examples.html)
 
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        Some Pygame demos require <b>PyOpenGL</b> installed to work properly. If you get an error running one of the Pygame examples because PyOpenGL is missing from your project, you can install it from the libraries tab. 
+    </p>
+</div>
+
 #### Keyboard Controls
 
 Creating your own game requires we do a bit more than calling a single function. In the following example, we will create a simple game where you can move a small red ball around the screen with the arrow keys. Included are comments that explain what each section of the code is doing:

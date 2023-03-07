@@ -29,6 +29,7 @@ nav:
     - 'Extra Python Libraries':
         - 'Intro': 'extralibs/index.md'
         - 'requests': 'extralibs/requests.md'
+        - 'httpx': 'extralibs/httpx.md'
         - 'beautifulsoup4': 'extralibs/beautifulsoup.md'
         - 'jinja2': 'extralibs/jinja2.md'
         - 'bottle': 'extralibs/bottle.md'
