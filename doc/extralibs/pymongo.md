@@ -52,7 +52,7 @@ After you do all that, you can finally paste the code provided into Python3 Edit
 ```python
 import pymongo
 
-client = pymongo.MongoClient("mongodb+srv://admin:<password>@<your cluster>.mongodb.net/?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://testuser:<password>@<your cluster>.mongodb.net/?retryWrites=true&w=majority")
 
 # this will fail if the provided URL or database has a problem
 client.server_info()
@@ -61,4 +61,119 @@ print("Database connected successfully")
 
 If you have done everything correctly, then congratulations! You have successfully created and connected to a MongoDB cloud instance properly configured to work with the Python3 Editor.
 
-#### Creating a New Document
+#### Create a New Document
+
+Now that we have a database up and running, it's time to actually use it! Let's begin by inserting a document into our database:
+
+```python
+import datetime
+import pymongo
+
+client = pymongo.MongoClient("mongodb+srv://testuser:<password>@<your cluster>.mongodb.net/?retryWrites=true&w=majority")
+# Use a database we named "health". If the desired database doesn't exist, it
+# will automatically be created for us.
+health_db = client.health
+
+# In the "health database", use a collection named "food". This will also be
+# created for us if it doesn't exist
+food_collection = health_db.food
+
+new_food = {
+    "name": "pizza",
+    "serving_size": "1/8 pie",
+    "healthy": False,
+    "add_time": datetime.datetime.utcnow()
+}
+
+food_id = food_collection.insert_one(new_food).inserted_id
+print(food_id)
+```
+
+Output:
+
+```text
+640760df51dae8bf5b6f9282
+```
+
+Every document inserted is automatically given an **\_id** field even if we don't give it one. We can see the full document if we look at our database in Mongo Atlas:
+
+<img src="../../assets/img/mongo-document.png" width="400px">
+
+#### Read an Existing Document
+
+Once we have a piece of data in our database, we can read from it by making queries:
+
+```python
+import pprint
+import pymongo
+
+client = pymongo.MongoClient("mongodb+srv://testuser:<password>@<your cluster>.mongodb.net/?retryWrites=true&w=majority")
+health_db = client.health
+food_collection = health_db.food
+
+query_cond = {
+    "name": "pizza"
+}
+food_item = food_collection.find_one(query_cond)
+pprint.pprint(food_item)
+```
+
+Output:
+
+```text
+{'_id': ObjectId('640760df51dae8bf5b6f9282'),
+ 'add_time': datetime.datetime(2023, 3, 7, 16, 5, 51, 883000),
+ 'healthy': False,
+ 'name': 'pizza',
+ 'serving_size': '1/8 pie'}
+```
+
+#### Update an Existing Document
+
+We can change a document already in our database with an update query. Let's update our pizza entry to increase the serving size, and add an `update_time` field:
+
+```python
+import datetime
+import pymongo
+
+client = pymongo.MongoClient("mongodb+srv://testuser:<password>@<yourcluster>.mongodb.net/?retryWrites=true&w=majority")
+health_db = client.health
+food_collection = health_db.food
+
+query_cond = {
+    "name": "pizza"
+}
+update_data = {
+    "$set": {
+        "serving_size": "1/6 pie",
+        "update_time": datetime.datetime.utcnow()
+    }
+}
+food_item = food_collection.update_one(query_cond, update_data)
+```
+
+<img src="../../assets/img/mongo-update-document.png" width="400px">
+
+#### Delete a Document
+
+Finally, let's get rid of the pizza document altogether. We can do this with a delete query:
+
+```python
+import pymongo
+
+client = pymongo.MongoClient("mongodb+srv://testuser:<password>@<yourcluster>.mongodb.net/?retryWrites=true&w=majority")
+health_db = client.health
+food_collection = health_db.food
+
+delete_cond = {
+    "name": "pizza"
+}
+food_item = food_collection.delete_one(delete_cond)
+```
+
+If we check our database now, we can see that this collection is now fully empty since we deleted the only document from it.
+
+### Reference
+
+-   [PyMongo](https://pymongo.readthedocs.io/en/stable/) at _readthedocs.io_
+-   [MongoDB User Manual](https://www.mongodb.com/docs/v5.0/) at _mongodb.com_
