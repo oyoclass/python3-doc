@@ -21,9 +21,7 @@ PyMongo is a Python library that provides an interface for using MongoDB. MongoD
     </p>
 </div>
 
-### Examples
-
-#### Connect to Your Database
+### Setting Up Your Database
 
 Before we can write or read anything to our new cloud database, we need to actually have our code connect to it. Mongo provides a pre-built connection URL that you can copy and paste into your code. To find this URL, do the following:
 
@@ -60,6 +58,8 @@ print("Database connected successfully")
 ```
 
 If you have done everything correctly, then congratulations! You have successfully created and connected to a MongoDB cloud instance properly configured to work with the Python3 Editor.
+
+### Examples
 
 #### Create a New Document
 
