@@ -146,7 +146,7 @@ class MyGame(arcade.Window):
             self.player_sprite.change_x += MOVEMENT_SPEED
 
 
-window = MyGame(800, 600, 'Keyboard Movement')
+window = MyGame(SCREEN_WIDTH, SCREEN_HEIGHT, 'Keyboard Movement')
 window.setup()
 arcade.run()
 ```
