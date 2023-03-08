@@ -42,6 +42,7 @@ nav:
         - 'tinydb': 'extralibs/tinydb.md'
         - 'pymongo': 'extralibs/pymongo.md'
         - 'motor': 'extralibs/motor.md'
+        - 'sqlalchemy': 'extralibs/sqlalchemy.md'
         - 'plyvel': 'extralibs/plyvel.md'
         - 'pillow': 'extralibs/pillow.md'
         - 'matplotlib': 'extralibs/matplotlib.md'
