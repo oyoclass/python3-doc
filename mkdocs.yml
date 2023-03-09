@@ -44,6 +44,7 @@ nav:
         - 'motor': 'extralibs/motor.md'
         - 'sqlalchemy': 'extralibs/sqlalchemy.md'
         - 'plyvel': 'extralibs/plyvel.md'
+        - 'boto3': 'extralibs/boto3.md'
         - 'pillow': 'extralibs/pillow.md'
         - 'matplotlib': 'extralibs/matplotlib.md'
         - 'seaborn': 'extralibs/seaborn.md'
