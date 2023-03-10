@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -94,6 +95,16 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../">Intro</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bottle/">bottle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../flask/">flask</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../starlette/">starlette</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../uvicorn/">uvicorn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fastapi/">fastapi</a>
+                  </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">requests</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
@@ -110,29 +121,53 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../beautifulsoup/">beautifulsoup4</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../httpx/">httpx</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python-multipart/">python-multipart</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../jinja2/">jinja2</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../bottle/">bottle</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../flask/">flask</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../starlette/">starlette</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../uvicorn/">uvicorn</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pymongo/">pymongo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../motor/">motor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../boto3/">boto3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firebase-admin/">firebase-admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sqlalchemy/">sqlalchemy</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scipy/">scipy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seaborn/">seaborn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pandas/">pandas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../nltk/">nltk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scikit-learn/">scikit-learn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pysimplegui/">pysimplegui</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../pygame/">pygame</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../arcade/">arcade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pyxel/">pyxel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pydub/">pydub</a>
                   </li>
               </ul>
       </div>
@@ -163,6 +198,7 @@
 <p>Requests is a Python library that simplifies the syntax for making HTTP requests. You can easily GET the content of webpages as well as POST data to them without needing to manually build query strings.</p>
 <h3 id="examples">Examples</h3>
 <h4 id="get-content-from-a-webpage">GET Content from a Webpage</h4>
+<p>The basic way to load a webpage is with a GET request. The following code will send a GET request to a webpage, and load the result into a response object:</p>
 <pre><code class="language-python">import requests
 
 query = {'exampleKey': 'exampleValue'}
@@ -170,13 +206,60 @@ resp = requests.get('https://httpbin.service.oyoclass.com/get', params=query)
 
 print(resp.text)
 </code></pre>
+<p>Most webpages will give their raw HTML, however this site acts like an echo for testing:</p>
+<pre><code class="language-text">{
+  &quot;args&quot;: {
+    &quot;exampleKey&quot;: &quot;exampleValue&quot;
+  },
+  &quot;headers&quot;: {
+    &quot;Accept&quot;: &quot;*/*&quot;,
+    &quot;Accept-Encoding&quot;: &quot;gzip&quot;,
+    &quot;Cdn-Loop&quot;: &quot;cloudflare&quot;,
+    &quot;Cf-Connecting-Ip&quot;: &quot;23.92.19.165&quot;,
+    &quot;Cf-Ipcountry&quot;: &quot;US&quot;,
+    &quot;Cf-Ray&quot;: &quot;7a3b936cd84978d0-EWR&quot;,
+    &quot;Cf-Visitor&quot;: &quot;{\&quot;scheme\&quot;:\&quot;https\&quot;}&quot;,
+    &quot;Host&quot;: &quot;httpbin.service.oyoclass.com&quot;,
+    &quot;User-Agent&quot;: &quot;python-requests/2.28.2&quot;
+  },
+  &quot;origin&quot;: &quot;23.92.19.165, 23.92.19.165&quot;,
+  &quot;url&quot;: &quot;https://httpbin.service.oyoclass.com/get?exampleKey=exampleValue&quot;
+}
+</code></pre>
 <h4 id="post-data-to-a-webpage">POST Data to a Webpage</h4>
+<p>We can also POST data to webpages with Requests. This action is like submitting form data or logging into a webpage, not trying to load a page:</p>
 <pre><code class="language-python">import requests
 
 post_data = {'exampleKey': 'exampleValue'}
 resp = requests.post('https://httpbin.service.oyoclass.com/post', data=post_data)
 
 print(resp.text)
+</code></pre>
+<p>The target URL in the example is also a special echo endpoint:</p>
+<pre><code class="language-text">{
+  &quot;args&quot;: {},
+  &quot;data&quot;: &quot;&quot;,
+  &quot;files&quot;: {},
+  &quot;form&quot;: {
+    &quot;exampleKey&quot;: &quot;exampleValue&quot;
+  },
+  &quot;headers&quot;: {
+    &quot;Accept&quot;: &quot;*/*&quot;,
+    &quot;Accept-Encoding&quot;: &quot;gzip&quot;,
+    &quot;Cdn-Loop&quot;: &quot;cloudflare&quot;,
+    &quot;Cf-Connecting-Ip&quot;: &quot;23.92.19.165&quot;,
+    &quot;Cf-Ipcountry&quot;: &quot;US&quot;,
+    &quot;Cf-Ray&quot;: &quot;7a3b94b99a97c468-EWR&quot;,
+    &quot;Cf-Visitor&quot;: &quot;{\&quot;scheme\&quot;:\&quot;https\&quot;}&quot;,
+    &quot;Content-Length&quot;: &quot;23&quot;,
+    &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,
+    &quot;Host&quot;: &quot;httpbin.service.oyoclass.com&quot;,
+    &quot;User-Agent&quot;: &quot;python-requests/2.28.2&quot;
+  },
+  &quot;json&quot;: null,
+  &quot;origin&quot;: &quot;23.92.19.165, 23.92.19.165&quot;,
+  &quot;url&quot;: &quot;https://httpbin.service.oyoclass.com/post&quot;
+}
 </code></pre>
 <h3 id="requests_1">Requests</h3>
 <ul>
@@ -186,7 +269,7 @@ print(resp.text)
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../" class="btn btn-neutral float-left" title="Intro"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../fastapi/" class="btn btn-neutral float-left" title="fastapi"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../beautifulsoup/" class="btn btn-neutral float-right" title="beautifulsoup4">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -210,7 +293,7 @@ print(resp.text)
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../fastapi/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../beautifulsoup/" style="color: #fcfcfc">Next &raquo;</a></span>

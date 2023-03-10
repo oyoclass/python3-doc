@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>pydub - Python3 Editor Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "pydub";
+        var mkdocs_page_input_path = "extralibs/pydub.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Python3 Editor Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comments/">Comments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/boolean/">Boolean</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/number/">Number</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comparison/">Comparison</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/none/">None</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/string/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/function/">Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/listtuple/">List & Tuple</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/set/">Set</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/dictionary/">Dictionary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/inputoutput/">Standard Input & Output</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Standard Python Libraries</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/math/">math</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/random/">random</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/string/">string</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/time/">time</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/urllib/">urllib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/turtle/">turtle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/tkinter/">tkinter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/sqlite/">sqlite</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Extra Python Libraries</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bottle/">bottle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../flask/">flask</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../starlette/">starlette</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../uvicorn/">uvicorn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fastapi/">fastapi</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../requests/">requests</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../beautifulsoup/">beautifulsoup4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../httpx/">httpx</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python-multipart/">python-multipart</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../jinja2/">jinja2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pymongo/">pymongo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../motor/">motor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../boto3/">boto3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firebase-admin/">firebase-admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sqlalchemy/">sqlalchemy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scipy/">scipy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seaborn/">seaborn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pandas/">pandas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../nltk/">nltk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scikit-learn/">scikit-learn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pysimplegui/">pysimplegui</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pygame/">pygame</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../arcade/">arcade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pyxel/">pyxel</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">pydub</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#upload-a-sound-to-your-project">Upload a Sound to Your Project</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-sound-info">Get Sound Info</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#play-a-sound">Play a Sound</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#modify-a-sound">Modify a Sound</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Python3 Editor Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Extra Python Libraries &raquo;</li>
+      <li>pydub</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="pydub">Pydub</h2>
+<p>Pydub is a Python library that allows you to edit audio files with a simple interface.</p>
+<div class="notebox notebox-info">
+  <p class="notebox-title">
+    Note
+  </p>
+  <p>
+    Since this library uses sounds, you will need to upload your own music or music loop. For a quick sample, you can create an account on a website like 
+    <a href="https://samplefocus.com/">
+      <b>SampleFocus</b>
+    </a> 
+    and grab a royalty free sample.
+  </p>
+</div>
+
+<h3 id="examples">Examples</h3>
+<h4 id="upload-a-sound-to-your-project">Upload a Sound to Your Project</h4>
+<p>The first thing we need to do to use this package is have a sound to work with. We're going to use a sound obtained from a sample library, <a href="https://samplefocus.com/">click here</a> and make an account to download a sample or you can upload a song you already have on your computer.</p>
+<p>After it's downloaded, open up the Python3 Editor and select Upload File from the dropdown at the top of your project's file list:</p>
+<p><img src="../../assets/img/pydub-upload-sound1.png" width="400px"/></p>
+<p><img src="../../assets/img/pydub-upload-sound2.png" width="400px"/></p>
+<p>Find the sound you want to upload in your file browser, then confirm the upload was successful by finding the sound in your project's file list:</p>
+<p><img src="../../assets/img/pydub-upload-sound3.png" width="400px"/></p>
+<h4 id="get-sound-info">Get Sound Info</h4>
+<p>Similar to images with <a href="/extralibs/pillow">Pillow</a>, we can use Pydub to extract and print information about audio files:</p>
+<pre><code class="language-python">from pydub.utils import mediainfo
+import os
+info = mediainfo('riff-loop.wav')
+
+print('Filename:', info['filename'])
+print('Format:', info['format_name'])
+print('Sample Rate:', info['sample_rate'])
+print('File Size:', int(info['size']), &quot;bytes&quot;)
+</code></pre>
+<p>Output:</p>
+<pre><code class="language-text">Filename: riff-loop.wav
+Format: wav
+Sample Rate: 44100
+File Size: 3146306 bytes
+</code></pre>
+<h4 id="play-a-sound">Play a Sound</h4>
+<p>Run the following code and your program will begin playing audio:</p>
+<div class="notebox notebox-info">
+  <p class="notebox-title">
+    Note
+  </p>
+  <p>
+    make sure your file format matches the file you uploaded. If you uploaded an mp3, make sure you change the format to <code>"mp3"</code>
+  </p>
+</div>
+
+<pre><code class="language-python">from pydub import AudioSegment
+from pydub.playback import play
+
+sound = AudioSegment.from_file('riff-loop.wav', format='wav')
+play(sound)
+</code></pre>
+<p>Your output should look similar to this:</p>
+<pre><code class="language-text">nan    :  0.000 fd=   0 aq=    0KB vq=    0KB Input #0, wav, from '/tmp/tmpxyn846ga.wav':
+  Duration: 00:00:17.84, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 2 channels, s16, 1411 kb/s
+   0.02 M-A:  0.000 fd=   0 aq=  176KB vq=    0KB
+   0.05 M-A:  0.000 fd=   0 aq=  176KB vq=    0KB
+   0.08 M-A:  0.000 fd=   0 aq=  176KB vq=    0KB
+   0.11 M-A:  0.000 fd=   0 aq=  176KB vq=    0KB
+   0.14 M-A:  0.000 fd=   0 aq=  176KB vq=    0KB
+   ...
+</code></pre>
+<p>This is the raw text output of processing the audio stream. To actually hear the audio, you must click on the speaker icon on the top right of your running project:</p>
+<p><img src="../../assets/img/pydub-enable-audio1.png" width="400px"/></p>
+<p>You know if audio was successfully enabled if the speaker icon changes and turns green:</p>
+<p><img src="../../assets/img/pydub-enable-audio2.png" width="400px"/></p>
+<h4 id="modify-a-sound">Modify a Sound</h4>
+<p>Every time you modify a sound, it creates a new <strong>AudioSegment</strong>. Let's try a basic edit where we reverse our sound:</p>
+<pre><code class="language-python">from pydub import AudioSegment
+from pydub.playback import play
+
+sound = AudioSegment.from_file('riff-loop.wav', format='wav')
+reversed_sound = sound.reverse()  # need to store edit in new variable
+play(reversed_sound)
+</code></pre>
+<p>The output will be similar to the previous example, except now the audio file will be playing in reverse.</p>
+<h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://pydub.com/">Pydub</a> at <em>pydub.com</em></li>
+<li><a href="https://github.com/jiaaro/pydub/blob/master/API.markdown">Pydub API Reference</a> at <em>github.com</em></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../pyxel/" class="btn btn-neutral float-left" title="pyxel"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../pyxel/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

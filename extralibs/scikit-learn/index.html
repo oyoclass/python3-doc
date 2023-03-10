@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>scikit-learn - Python3 Editor Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "scikit-learn";
+        var mkdocs_page_input_path = "extralibs/scikit-learn.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Python3 Editor Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comments/">Comments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/boolean/">Boolean</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/number/">Number</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comparison/">Comparison</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/none/">None</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/string/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/function/">Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/listtuple/">List & Tuple</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/set/">Set</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/dictionary/">Dictionary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/inputoutput/">Standard Input & Output</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Standard Python Libraries</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/math/">math</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/random/">random</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/string/">string</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/time/">time</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/urllib/">urllib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/turtle/">turtle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/tkinter/">tkinter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/sqlite/">sqlite</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Extra Python Libraries</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bottle/">bottle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../flask/">flask</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../starlette/">starlette</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../uvicorn/">uvicorn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fastapi/">fastapi</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../requests/">requests</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../beautifulsoup/">beautifulsoup4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../httpx/">httpx</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python-multipart/">python-multipart</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../jinja2/">jinja2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pymongo/">pymongo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../motor/">motor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../boto3/">boto3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firebase-admin/">firebase-admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sqlalchemy/">sqlalchemy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scipy/">scipy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seaborn/">seaborn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pandas/">pandas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../nltk/">nltk</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">scikit-learn</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#classification">Classification</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#color-clustering">Color Clustering</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pysimplegui/">pysimplegui</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pygame/">pygame</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../arcade/">arcade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pyxel/">pyxel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pydub/">pydub</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Python3 Editor Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Extra Python Libraries &raquo;</li>
+      <li>scikit-learn</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="scikit-learn">scikit-learn</h2>
+<p>scikit-learn is a machine learning library built for Python. It is built on <a href="/extralibs/numpy/">NumPy</a>, <a href="/extralibs/scipy/">SciPy</a>, and <a href="/extralibs/matplotlib/">Matplotlib</a>. It's useful for statistical problems like <em>data classification</em> or <em>predicting trends</em>.</p>
+<h3 id="examples">Examples</h3>
+<h4 id="classification">Classification</h4>
+<p>From scikit-learn's examples (column names array has been modified for space in output window):</p>
+<pre><code class="language-python">from sklearn import svm
+X = [[0, 0], [1, 1]]
+y = [0, 1]
+clf = svm.SVC()
+clf.fit(X, y)
+# Code source: Gaël Varoquaux
+#              Andreas Müller
+# Modified for documentation by Jaques Grobler
+# License: BSD 3 clause
+
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import make_pipeline
+from sklearn.datasets import make_moons, make_circles, make_classification
+from sklearn.neural_network import MLPClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC
+from sklearn.gaussian_process import GaussianProcessClassifier
+from sklearn.gaussian_process.kernels import RBF
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
+from sklearn.inspection import DecisionBoundaryDisplay
+
+names = [
+    &quot;NN&quot;,
+    &quot;Linear SVM&quot;,
+    &quot;RBF SVM&quot;,
+    &quot;GP&quot;,
+    &quot;DT&quot;,
+    &quot;RF&quot;,
+    &quot;NeuralNet&quot;,
+    &quot;AB&quot;,
+    &quot;NB&quot;,
+    &quot;QDA&quot;,
+]
+
+classifiers = [
+    KNeighborsClassifier(3),
+    SVC(kernel=&quot;linear&quot;, C=0.025),
+    SVC(gamma=2, C=1),
+    GaussianProcessClassifier(1.0 * RBF(1.0)),
+    DecisionTreeClassifier(max_depth=5),
+    RandomForestClassifier(max_depth=5, n_estimators=10, max_features=1),
+    MLPClassifier(alpha=1, max_iter=1000),
+    AdaBoostClassifier(),
+    GaussianNB(),
+    QuadraticDiscriminantAnalysis(),
+]
+
+X, y = make_classification(
+    n_features=2, n_redundant=0, n_informative=2, random_state=1, n_clusters_per_class=1
+)
+rng = np.random.RandomState(2)
+X += 2 * rng.uniform(size=X.shape)
+linearly_separable = (X, y)
+
+datasets = [
+    make_moons(noise=0.3, random_state=0),
+    make_circles(noise=0.2, factor=0.5, random_state=1),
+    linearly_separable,
+]
+
+figure = plt.figure(figsize=(27, 9))
+i = 1
+# iterate over datasets
+for ds_cnt, ds in enumerate(datasets):
+    # preprocess dataset, split into training and test part
+    X, y = ds
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.4, random_state=42
+    )
+
+    x_min, x_max = X[:, 0].min() - 0.5, X[:, 0].max() + 0.5
+    y_min, y_max = X[:, 1].min() - 0.5, X[:, 1].max() + 0.5
+
+    # just plot the dataset first
+    cm = plt.cm.RdBu
+    cm_bright = ListedColormap([&quot;#FF0000&quot;, &quot;#0000FF&quot;])
+    ax = plt.subplot(len(datasets), len(classifiers) + 1, i)
+    if ds_cnt == 0:
+        ax.set_title(&quot;Input data&quot;)
+    # Plot the training points
+    ax.scatter(X_train[:, 0], X_train[:, 1], c=y_train, cmap=cm_bright, edgecolors=&quot;k&quot;)
+    # Plot the testing points
+    ax.scatter(
+        X_test[:, 0], X_test[:, 1], c=y_test, cmap=cm_bright, alpha=0.6, edgecolors=&quot;k&quot;
+    )
+    ax.set_xlim(x_min, x_max)
+    ax.set_ylim(y_min, y_max)
+    ax.set_xticks(())
+    ax.set_yticks(())
+    i += 1
+
+    # iterate over classifiers
+    for name, clf in zip(names, classifiers):
+        ax = plt.subplot(len(datasets), len(classifiers) + 1, i)
+
+        clf = make_pipeline(StandardScaler(), clf)
+        clf.fit(X_train, y_train)
+        score = clf.score(X_test, y_test)
+        DecisionBoundaryDisplay.from_estimator(
+            clf, X, cmap=cm, alpha=0.8, ax=ax, eps=0.5
+        )
+
+        # Plot the training points
+        ax.scatter(
+            X_train[:, 0], X_train[:, 1], c=y_train, cmap=cm_bright, edgecolors=&quot;k&quot;
+        )
+        # Plot the testing points
+        ax.scatter(
+            X_test[:, 0],
+            X_test[:, 1],
+            c=y_test,
+            cmap=cm_bright,
+            edgecolors=&quot;k&quot;,
+            alpha=0.6,
+        )
+
+        ax.set_xlim(x_min, x_max)
+        ax.set_ylim(y_min, y_max)
+        ax.set_xticks(())
+        ax.set_yticks(())
+        if ds_cnt == 0:
+            ax.set_title(name)
+        ax.text(
+            x_max - 0.3,
+            y_min + 0.3,
+            (&quot;%.2f&quot; % score).lstrip(&quot;0&quot;),
+            size=15,
+            horizontalalignment=&quot;right&quot;,
+        )
+        i += 1
+
+plt.tight_layout()
+plt.show()
+</code></pre>
+<p>Will generate a window showing a plot of the data and the classificaiton fields derived from it:</p>
+<p><img src="../../assets/img/scikit-learn-classification.png" width="400px"/></p>
+<h4 id="color-clustering">Color Clustering</h4>
+<p>The following example takes a sample image and uses scikit-learn to identify clusters of colors. It then uses that cluster info to reduce the amount of colors in the image to only 64 instead of over 90,000:</p>
+<pre><code class="language-python"># Authors: Robert Layton &lt;robertlayton@gmail.com&gt;
+#          Olivier Grisel &lt;olivier.grisel@ensta.org&gt;
+#          Mathieu Blondel &lt;mathieu@mblondel.org&gt;
+#
+# License: BSD 3 clause
+
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+from sklearn.metrics import pairwise_distances_argmin
+from sklearn.datasets import load_sample_image
+from sklearn.utils import shuffle
+from time import time
+
+n_colors = 64
+
+# Load the Summer Palace photo
+china = load_sample_image(&quot;china.jpg&quot;)
+
+# Convert to floats instead of the default 8 bits integer coding. Dividing by
+# 255 is important so that plt.imshow behaves works well on float data (need to
+# be in the range [0-1])
+china = np.array(china, dtype=np.float64) / 255
+
+# Load Image and transform to a 2D numpy array.
+w, h, d = original_shape = tuple(china.shape)
+assert d == 3
+image_array = np.reshape(china, (w * h, d))
+
+print(&quot;Fitting model on a small sub-sample of the data&quot;)
+t0 = time()
+image_array_sample = shuffle(image_array, random_state=0, n_samples=1_000)
+kmeans = KMeans(n_clusters=n_colors, n_init=&quot;auto&quot;, random_state=0).fit(
+    image_array_sample
+)
+print(f&quot;done in {time() - t0:0.3f}s.&quot;)
+
+# Get labels for all points
+print(&quot;Predicting color indices on the full image (k-means)&quot;)
+t0 = time()
+labels = kmeans.predict(image_array)
+print(f&quot;done in {time() - t0:0.3f}s.&quot;)
+
+
+codebook_random = shuffle(image_array, random_state=0, n_samples=n_colors)
+print(&quot;Predicting color indices on the full image (random)&quot;)
+t0 = time()
+labels_random = pairwise_distances_argmin(codebook_random, image_array, axis=0)
+print(f&quot;done in {time() - t0:0.3f}s.&quot;)
+
+
+def recreate_image(codebook, labels, w, h):
+    &quot;&quot;&quot;Recreate the (compressed) image from the code book &amp; labels&quot;&quot;&quot;
+    return codebook[labels].reshape(w, h, -1)
+
+
+# Display all results, alongside original image
+plt.figure(1)
+plt.clf()
+plt.axis(&quot;off&quot;)
+plt.title(&quot;Original image (96,615 colors)&quot;)
+plt.imshow(china)
+
+plt.figure(2)
+plt.clf()
+plt.axis(&quot;off&quot;)
+plt.title(f&quot;Quantized image ({n_colors} colors, K-Means)&quot;)
+plt.imshow(recreate_image(kmeans.cluster_centers_, labels, w, h))
+
+plt.figure(3)
+plt.clf()
+plt.axis(&quot;off&quot;)
+plt.title(f&quot;Quantized image ({n_colors} colors, Random)&quot;)
+plt.imshow(recreate_image(codebook_random, labels_random, w, h))
+plt.show()
+</code></pre>
+<p>Your output will generate 3 separate windows showing the original image, the reduced color image using an average of the color clusters using K-Means, and a final image where the cluster colors are calculated by random selection:</p>
+<p><img src="../../assets/img/scikit-learn-clustering1.png" width="400px"/></p>
+<p><img src="../../assets/img/scikit-learn-clustering2.png" width="400px"/></p>
+<p><img src="../../assets/img/scikit-learn-clustering3.png" width="400px"/></p>
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        When there are multiple windows in an output in Python3 Editor, you can use your mouse to click and drag the windows around to reposition them.
+    </p>
+</div>
+
+<h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://scikit-learn.org/stable/">scikit-learn</a> at <em>scikit-learn.org</em></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../nltk/" class="btn btn-neutral float-left" title="nltk"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../pysimplegui/" class="btn btn-neutral float-right" title="pysimplegui">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../nltk/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../pysimplegui/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

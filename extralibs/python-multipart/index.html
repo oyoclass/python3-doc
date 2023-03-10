@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>python-multipart - Python3 Editor Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "python-multipart";
+        var mkdocs_page_input_path = "extralibs/python-multipart.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Python3 Editor Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comments/">Comments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/boolean/">Boolean</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/number/">Number</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comparison/">Comparison</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/none/">None</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/string/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/function/">Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/listtuple/">List & Tuple</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/set/">Set</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/dictionary/">Dictionary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/inputoutput/">Standard Input & Output</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Standard Python Libraries</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/math/">math</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/random/">random</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/string/">string</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/time/">time</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/urllib/">urllib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/turtle/">turtle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/tkinter/">tkinter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/sqlite/">sqlite</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Extra Python Libraries</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bottle/">bottle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../flask/">flask</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../starlette/">starlette</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../uvicorn/">uvicorn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fastapi/">fastapi</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../requests/">requests</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../beautifulsoup/">beautifulsoup4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../httpx/">httpx</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">python-multipart</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#example">Example</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#handling-a-multipart-request">Handling a Multipart Request</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../jinja2/">jinja2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pymongo/">pymongo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../motor/">motor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../boto3/">boto3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firebase-admin/">firebase-admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sqlalchemy/">sqlalchemy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scipy/">scipy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seaborn/">seaborn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pandas/">pandas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../nltk/">nltk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scikit-learn/">scikit-learn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pysimplegui/">pysimplegui</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pygame/">pygame</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../arcade/">arcade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pyxel/">pyxel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pydub/">pydub</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Python3 Editor Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Extra Python Libraries &raquo;</li>
+      <li>python-multipart</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="python-multipart">Python-Multipart</h2>
+<p>Python-Multipart is a library for handling <code>multipart/form-data</code> POST requests. This is usually only needed or used when running a web server and you have a place where users can upload files to your server.</p>
+<h3 id="example">Example</h3>
+<h4 id="handling-a-multipart-request">Handling a Multipart Request</h4>
+<p>Below is an example of how to handle a basic multipart request using the <a href="/extarlibs/bottle">Bottle</a> library for our server:</p>
+<pre><code class="language-python">from bottle import request, get, post, run
+import multipart
+
+@get('/')
+def index_get():
+    return 'hi'
+
+@post('/')
+def index_post():
+    field_to_values = {}
+    filenames = []
+    ret = {
+        'field_to_values': field_to_values,
+        'filenames': filenames
+    }
+    def on_field(field):
+        field_to_values[field.field_name.decode()] = field.value.decode()
+
+    def on_file(file):
+        filenames.append(file.field_name.decode())
+
+    # Python-Multipart doesn't assume we are using WSGI, so we need to
+    # manually create a header dictionary to pass to it.
+    environ = request.environ
+    headers = {'Content-Type': environ['CONTENT_TYPE']}
+    if 'HTTP_X_FILE_NAME' in environ:
+        headers['X-File-Name'] = environ['HTTP_X_FILE_NAME']
+    if 'CONTENT_LENGTH' in environ:
+        headers['Content-Length'] = environ['CONTENT_LENGTH']
+
+    # Parse the form
+    multipart.parse_form(headers, environ['wsgi.input'], on_field, on_file)
+
+    return ret
+
+# host must be 0.0.0.0 to work in the Python3 Editor
+run(host='0.0.0.0', port=8000)
+</code></pre>
+<p>Then we need to take the URL generated in our running app to the right of our code and use it to make a POST request to our server.</p>
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        When you run your program, you will get a random URL in the form of:
+    </p>
+    <p>
+        <b>https://(random).app.oyoprofile.com</b>
+    </p>
+    <p>
+        Make sure you copy the whole URL for the next part of this example.
+    </p>
+</div>
+
+<p>Then we can open a command line tool (<code>cmd</code> in Windows or <code>Terminal</code> in macOS) and write the following:</p>
+<pre><code class="language-text">curl -X POST -d &quot;key1=val1&amp;key2=val2&quot; https://(YOUR URL HERE)/
+</code></pre>
+<p>Our server will return the following and it will be printed in your terminal:</p>
+<pre><code class="language-text">{&quot;field_to_values&quot;: {&quot;key1&quot;: &quot;val1&quot;, &quot;key2&quot;: &quot;val2&quot;}, &quot;filenames&quot;: []}
+</code></pre>
+<h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://andrew-d.github.io/python-multipart/index.html">Python Multipart</a> at <em>github.io</em></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../httpx/" class="btn btn-neutral float-left" title="httpx"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../jinja2/" class="btn btn-neutral float-right" title="jinja2">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../httpx/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../jinja2/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>boto3 - Python3 Editor Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "boto3";
+        var mkdocs_page_input_path = "extralibs/boto3.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Python3 Editor Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comments/">Comments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/boolean/">Boolean</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/number/">Number</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comparison/">Comparison</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/none/">None</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/string/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/function/">Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/listtuple/">List & Tuple</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/set/">Set</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/dictionary/">Dictionary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/inputoutput/">Standard Input & Output</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Standard Python Libraries</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/math/">math</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/random/">random</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/string/">string</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/time/">time</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/urllib/">urllib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/turtle/">turtle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/tkinter/">tkinter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/sqlite/">sqlite</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Extra Python Libraries</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bottle/">bottle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../flask/">flask</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../starlette/">starlette</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../uvicorn/">uvicorn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fastapi/">fastapi</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../requests/">requests</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../beautifulsoup/">beautifulsoup4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../httpx/">httpx</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python-multipart/">python-multipart</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../jinja2/">jinja2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pymongo/">pymongo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../motor/">motor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">boto3</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#add-object-to-bucket">Add Object to Bucket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#retrieving-object-from-bucket">Retrieving Object from Bucket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deleting-object-from-bucket">Deleting Object from Bucket</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firebase-admin/">firebase-admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sqlalchemy/">sqlalchemy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scipy/">scipy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seaborn/">seaborn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pandas/">pandas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../nltk/">nltk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scikit-learn/">scikit-learn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pysimplegui/">pysimplegui</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pygame/">pygame</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../arcade/">arcade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pyxel/">pyxel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pydub/">pydub</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Python3 Editor Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Extra Python Libraries &raquo;</li>
+      <li>boto3</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="boto3">Boto3</h2>
+<p>Boto3 is a Python library written by Amazon to interact with their cloud services. In particular, it's useful for accessing Amazon's S3 (Simple Storage Service).</p>
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        Amazon offers a free version of their S3 service, however you are required to provide a phone number and credit card to use it. There are alternative services that offer S3 compatible storage for free with no credit card required, and we created a guide on how to set one up:
+    </p>
+    <p>
+        <a href="https://docs.oyoclass.com/cloudservices/datastores/backblaze">
+            <b>Backblaze S3 Compatible Storage Service</b>
+        </a>
+    </p>
+</div>
+
+<h3 id="examples">Examples</h3>
+<p>In all the following examples, <strong>you must replace all the credentials marked with pointed brackets (&lt;&gt;) with your own</strong>. You can find them by following the guide linked above.</p>
+<h4 id="add-object-to-bucket">Add Object to Bucket</h4>
+<p>You can put all kinds of objects in an S3 bucket. For an example, let's write a simple text file to it:</p>
+<pre><code class="language-python">import boto3
+
+s3 = boto3.resource('s3',
+endpoint_url = '&lt;YOUR ENDPOINT&gt;',
+aws_access_key_id = '&lt;YOUR KEYID&gt;',
+aws_secret_access_key = '&lt;YOUR ACCESS KEY&gt;')
+
+s3.Bucket('&lt;YOUR BUCKET NAME&gt;').put_object(
+    Key='example.txt',
+    Body='this is an example text document'
+)
+</code></pre>
+<p>If we look at our bucket's file list, we can see that the <strong>example.txt</strong> is now there:</p>
+<p><img src="../../assets/img/boto3-filelist.png" width="500px"></p>
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        It may take some time before this list updates and you can see it in your bucket through the web browser. We will still be able to access the file even if it's not visible yet in your account.
+    </p>
+</div>
+
+<h4 id="retrieving-object-from-bucket">Retrieving Object from Bucket</h4>
+<p>Now that the object exists in the bucket, we can retrieve it:</p>
+<pre><code class="language-python">import boto3
+
+s3 = boto3.resource('s3',
+endpoint_url = '&lt;YOUR ENDPOINT&gt;',
+aws_access_key_id = '&lt;YOUR KEYID&gt;',
+aws_secret_access_key = '&lt;YOUR ACCESS KEY&gt;')
+
+obj = s3.Object('&lt;YOUR BUCKET NAME&gt;', 'example.txt')
+obj_content = obj.get()['Body'].read().decode()
+print(obj_content)
+</code></pre>
+<p>Output:</p>
+<pre><code class="language-text">this is an example text document
+</code></pre>
+<h4 id="deleting-object-from-bucket">Deleting Object from Bucket</h4>
+<p>We can also delete an object stored in our bucket:</p>
+<pre><code class="language-python">import boto3
+
+s3 = boto3.resource('s3',
+endpoint_url = '&lt;YOUR ENDPOINT&gt;',
+aws_access_key_id = '&lt;YOUR KEYID&gt;',
+aws_secret_access_key = '&lt;YOUR ACCESS KEY&gt;')
+
+obj = s3.Object('&lt;YOUR BUCKET NAME&gt;', 'example.txt')
+obj.delete()
+</code></pre>
+<p>Now if we run the previous example where we try to read <strong>example.txt</strong>, we get the following error:</p>
+<pre><code class="language-text">botocore.errorfactory.NoSuchKey: An error occurred (NoSuchKey) when calling the GetObject operation: Key not found
+</code></pre>
+<p>So we know that we have successfully deleted this object.</p>
+<h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html">boto3</a> at <em>amazonaws.com</em></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../plyvel/" class="btn btn-neutral float-left" title="plyvel"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../firebase-admin/" class="btn btn-neutral float-right" title="firebase-admin">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../plyvel/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../firebase-admin/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

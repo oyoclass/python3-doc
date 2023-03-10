@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -94,12 +95,6 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../">Intro</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../requests/">requests</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../beautifulsoup/">beautifulsoup4</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../jinja2/">jinja2</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../bottle/">bottle</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../flask/">flask</a>
@@ -108,15 +103,35 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../uvicorn/">uvicorn</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../fastapi/">fastapi</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../requests/">requests</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../beautifulsoup/">beautifulsoup4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../httpx/">httpx</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python-multipart/">python-multipart</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../jinja2/">jinja2</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pymongo/">pymongo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../motor/">motor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../boto3/">boto3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firebase-admin/">firebase-admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sqlalchemy/">sqlalchemy</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">numpy</a>
     <ul class="current">
@@ -124,7 +139,7 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#create-and-add-matrices">Create and Add Matrices</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#create-a-sine-wave-graph-with-matplotlib">Create a Sine Wave Graph with matplotlib</a>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-sine-wave-graph-with-matplotlib">Create a Sine Wave Graph with Matplotlib</a>
     </li>
         </ul>
     </li>
@@ -132,7 +147,27 @@
     </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scipy/">scipy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seaborn/">seaborn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pandas/">pandas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../nltk/">nltk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scikit-learn/">scikit-learn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pysimplegui/">pysimplegui</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../pygame/">pygame</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../arcade/">arcade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pyxel/">pyxel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pydub/">pydub</a>
                   </li>
               </ul>
       </div>
@@ -161,27 +196,45 @@
               
                 <h2 id="numpy">NumPy</h2>
 <p>NumPy is a powerful number processing library, used by data scientists due to it being able to process large amounts of data much faster than native Python. This package works well with data visualization packages like <a href="/extralibs/matplotlib/">Matplotlib</a>.</p>
+<p>NumPy is used as the base of many other libraries like <a href="/extralibs/pandas">Pandas</a> and <a href="/extralibs/scipy">SciPy</a> and work together with them closely. It is very common for these libraries to take NumPy arrays in as arguments.</p>
 <h3 id="examples">Examples</h3>
 <h4 id="create-and-add-matrices">Create and Add Matrices</h4>
+<p>The most basic function of NumPy is performing math with arrays and matricies:</p>
 <pre><code class="language-python">import numpy
-
 # Create a 4x4 matrix of ones
 ones_mat = numpy.ones((4, 4))
-
 # Create a default numpy random number generator
 rg = numpy.random.default_rng(1)
-
 # Create a 4x4 matrix of random numbers
 random_mat = rg.random((4, 4))
-
 # Add the two matrices together
 added_mat = numpy.add(ones_mat, random_mat)
 
-print(ones_mat)
-print(random_mat)
-print(added_mat)
+print(f'ones_mat:\n{ones_mat}\n')
+print(f'random_mat:\n{random_mat}\n')
+print(f'added_mat:\n{added_mat}\n')
 </code></pre>
-<h4 id="create-a-sine-wave-graph-with-matplotlib">Create a Sine Wave Graph with matplotlib</h4>
+<p>Output:</p>
+<pre><code class="language-text">ones_mat:
+[[1. 1. 1. 1.]
+ [1. 1. 1. 1.]
+ [1. 1. 1. 1.]
+ [1. 1. 1. 1.]]
+
+random_mat:
+[[0.51182162 0.9504637  0.14415961 0.94864945]
+ [0.31183145 0.42332645 0.82770259 0.40919914]
+ [0.54959369 0.02755911 0.75351311 0.53814331]
+ [0.32973172 0.7884287  0.30319483 0.45349789]]
+
+added_mat:
+[[1.51182162 1.9504637  1.14415961 1.94864945]
+ [1.31183145 1.42332645 1.82770259 1.40919914]
+ [1.54959369 1.02755911 1.75351311 1.53814331]
+ [1.32973172 1.7884287  1.30319483 1.45349789]]
+</code></pre>
+<h4 id="create-a-sine-wave-graph-with-matplotlib">Create a Sine Wave Graph with Matplotlib</h4>
+<p>NumPy is also useful for creating data to pass to a rendering library for data visualization, like <a href="/extralibs/matplotlib">Matplotlib</a>:</p>
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
 
@@ -196,6 +249,7 @@ plt.title('Sine')
 # Show the figure.
 plt.show()
 </code></pre>
+<p>Output:</p>
 <p><img src="../../assets/img/numpy-matplotlib-sine.png" width="400px"/></p>
 <h3 id="reference">Reference</h3>
 <ul>
@@ -205,8 +259,8 @@ plt.show()
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../matplotlib/" class="btn btn-neutral float-left" title="matplotlib"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../pygame/" class="btn btn-neutral float-right" title="pygame">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../sqlalchemy/" class="btn btn-neutral float-left" title="sqlalchemy"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../scipy/" class="btn btn-neutral float-right" title="scipy">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -229,10 +283,10 @@ plt.show()
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../matplotlib/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../sqlalchemy/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../pygame/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../scipy/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>pandas - Python3 Editor Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "pandas";
+        var mkdocs_page_input_path = "extralibs/pandas.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Python3 Editor Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comments/">Comments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/boolean/">Boolean</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/number/">Number</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comparison/">Comparison</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/none/">None</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/string/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/function/">Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/listtuple/">List & Tuple</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/set/">Set</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/dictionary/">Dictionary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/inputoutput/">Standard Input & Output</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Standard Python Libraries</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/math/">math</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/random/">random</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/string/">string</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/time/">time</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/urllib/">urllib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/turtle/">turtle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/tkinter/">tkinter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/sqlite/">sqlite</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Extra Python Libraries</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bottle/">bottle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../flask/">flask</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../starlette/">starlette</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../uvicorn/">uvicorn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fastapi/">fastapi</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../requests/">requests</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../beautifulsoup/">beautifulsoup4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../httpx/">httpx</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python-multipart/">python-multipart</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../jinja2/">jinja2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pymongo/">pymongo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../motor/">motor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../boto3/">boto3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firebase-admin/">firebase-admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sqlalchemy/">sqlalchemy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scipy/">scipy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seaborn/">seaborn</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">pandas</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#creating-a-dataframe">Creating a DataFrame</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#filtering-a-dataframe">Filtering a DataFrame</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../nltk/">nltk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scikit-learn/">scikit-learn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pysimplegui/">pysimplegui</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pygame/">pygame</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../arcade/">arcade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pyxel/">pyxel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pydub/">pydub</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Python3 Editor Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Extra Python Libraries &raquo;</li>
+      <li>pandas</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="pandas">Pandas</h2>
+<p>Pandas is a Python library focused on data science and analysis. Pandas is built on top of <a href="/extralibs/numpy">NumPy</a> and focuses on working with tables of data called <strong>DataFrames</strong>.</p>
+<h3 id="examples">Examples</h3>
+<h4 id="creating-a-dataframe">Creating a DataFrame</h4>
+<p>We can create a DataFrame in Pandas by simply passing it a dictionary of data:</p>
+<pre><code class="language-python">import random
+import pandas as pd
+
+def create_random_array(length, low_bound, high_bound):
+    return [random.randint(low_bound, high_bound) for _ in range(length)]
+
+# Values of a DataFrame dictionary must all be of the same length
+data = {
+    &quot;A&quot;: create_random_array(5, 10, 20),
+    &quot;B&quot;: create_random_array(5, 10, 20),
+    &quot;C&quot;: create_random_array(5, 10, 20),
+    &quot;D&quot;: create_random_array(5, 10, 20)
+}
+
+dataframe = pd.DataFrame(data)
+print(dataframe)
+</code></pre>
+<p>Output:</p>
+<pre><code class="language-text">    A   B   C   D
+0  13  14  20  19
+1  19  18  19  13
+2  15  16  14  11
+3  12  11  20  17
+4  10  20  16  15
+</code></pre>
+<h4 id="filtering-a-dataframe">Filtering a DataFrame</h4>
+<p>Let's take our previous example and add a filter function and pass it to <code>applymap()</code>:</p>
+<pre><code class="language-python">import random
+import pandas as pd
+
+def create_random_array(length, low_bound, high_bound):
+    return [random.randint(low_bound, high_bound) for _ in range(length)]
+
+# Values of a DataFrame dictionary must all be of the same length
+data = {
+    &quot;A&quot;: create_random_array(5, 10, 20),
+    &quot;B&quot;: create_random_array(5, 10, 20),
+    &quot;C&quot;: create_random_array(5, 10, 20),
+    &quot;D&quot;: create_random_array(5, 10, 20)
+}
+dataframe = pd.DataFrame(data)
+
+# Let's create a filter function to pass to pandas.
+# This simple filter will just zero any element that is less than 15:
+def min_val_filter(item):
+    if item &lt; 15:
+        return 0
+    return item
+filtered_frame = dataframe.applymap(min_val_filter)
+
+print(filtered_frame)
+</code></pre>
+<p>Output:</p>
+<pre><code class="language-text">   A   B   C   D
+0  0  17   0  16
+1  0  20   0   0
+2  0   0  18   0
+3  0   0  16   0
+4  0  20  17  16
+</code></pre>
+<p>Note that since our array is randomly populated each run, the results will be different each time.</p>
+<h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://pandas.pydata.org/docs/">Pandas</a> at <em>pandas.pydata.org</em></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../seaborn/" class="btn btn-neutral float-left" title="seaborn"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../nltk/" class="btn btn-neutral float-right" title="nltk">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../seaborn/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../nltk/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

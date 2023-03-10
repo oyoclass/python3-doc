@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -114,12 +115,6 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../extralibs/">Intro</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/requests/">requests</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/beautifulsoup/">beautifulsoup4</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/jinja2/">jinja2</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../extralibs/bottle/">bottle</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../extralibs/flask/">flask</a>
@@ -128,19 +123,59 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../extralibs/uvicorn/">uvicorn</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/redis/">redis</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/fastapi/">fastapi</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/tinydb/">tinydb</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/requests/">requests</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/plyvel/">plyvel</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/beautifulsoup/">beautifulsoup4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/httpx/">httpx</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/python-multipart/">python-multipart</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/jinja2/">jinja2</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../extralibs/pillow/">pillow</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/matplotlib/">matplotlib</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/pymongo/">pymongo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/motor/">motor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/plyvel/">plyvel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/boto3/">boto3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/firebase-admin/">firebase-admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/redis/">redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/sqlalchemy/">sqlalchemy</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../extralibs/numpy/">numpy</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/scipy/">scipy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/matplotlib/">matplotlib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/seaborn/">seaborn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/pandas/">pandas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/nltk/">nltk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/scikit-learn/">scikit-learn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/pysimplegui/">pysimplegui</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../extralibs/pygame/">pygame</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/arcade/">arcade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/pyxel/">pyxel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extralibs/pydub/">pydub</a>
                   </li>
               </ul>
       </div>
@@ -179,9 +214,18 @@ source_code = urlopen(&quot;http://sabrinaw.oyosite.com&quot;).read().decode(&qu
 print(source_code)
 </code></pre>
 <p>This will print the source code as a string from the website "sabrinaw.oyosite.com".</p>
-<blockquote>
-<p><strong>Note</strong>: If you are using the code above to get the source code from a website, it is not uncommon that the function will return a "forbidden" error instead of the actual source code. The reason is that many websites have restrictions on who can fetch their code. For example, the website may check if you are an actual browser or a spider robot, and it will return an empty string or a "forbidden" error if they think you are a robot.</p>
-</blockquote>
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        If you are using the code above to get the source code from a website, it is not uncommon that the function will return a "forbidden" error instead of the actual source code. The reason is that many websites have restrictions on who can fetch their code.
+    </p>
+    <p>
+        For example, the website may check if you are an actual browser or a spider robot, and it will return an empty string or a "forbidden" error if they think you are a robot.
+    </p>
+</div>
+
 <h4 id="example-2-get-csv-data-and-parse-it-with-the-csv-lib">Example 2) Get CSV data and parse it with the CSV lib</h4>
 <p>A comma-separated values (CSV) file is a delimited text file that uses a comma to separate values. Each line of the file is a data record. Each record consists of one or more fields, separated by commas. <a href="https://en.wikipedia.org/wiki/Comma-separated_values">Read more on Wikipedia &gt;&gt;</a>.</p>
 <p>Suppose we have a CSV file for a Code Conquest Hackathon:</p>
@@ -228,7 +272,7 @@ url = f&quot;https://proxy.oyoclass.com/http://ip-api.com/json/{ip}&quot;
 location = json.loads(urlopen(url).read())
 print(&quot;Approx. Location:&quot;, location[&quot;city&quot;], location[&quot;region&quot;])
 </code></pre>
-<p>Here is another example. This is an API you can use to get the bitcoin price in USD: <code>https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&amp;vs_currencies=usd</code>. </p>
+<p>Here is another example. This is an API you can use to get the bitcoin price in USD: <code>https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&amp;vs_currencies=usd</code>.</p>
 <p>Suppose your school blocks the "coingecho.com" domain, you can just prepend <code>https://proxy.oyoclass.com/</code> to it:</p>
 <pre><code class="language-python">from urllib.request import urlopen
 import json

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -94,12 +95,6 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../">Intro</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../requests/">requests</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../beautifulsoup/">beautifulsoup4</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../jinja2/">jinja2</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../bottle/">bottle</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../flask/">flask</a>
@@ -108,27 +103,75 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../uvicorn/">uvicorn</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">redis</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#create-update-and-read-keys">Create, Update, and Read Keys</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../fastapi/">fastapi</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../requests/">requests</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../beautifulsoup/">beautifulsoup4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../httpx/">httpx</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python-multipart/">python-multipart</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../jinja2/">jinja2</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pymongo/">pymongo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../motor/">motor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../boto3/">boto3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firebase-admin/">firebase-admin</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">redis</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#connecting-to-your-database">Connecting to Your Database</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#create-and-read-keys">Create and Read Keys</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#update-keys">Update Keys</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#delete-keys">Delete Keys</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sqlalchemy/">sqlalchemy</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scipy/">scipy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seaborn/">seaborn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pandas/">pandas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../nltk/">nltk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scikit-learn/">scikit-learn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pysimplegui/">pysimplegui</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../pygame/">pygame</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../arcade/">arcade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pyxel/">pyxel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pydub/">pydub</a>
                   </li>
               </ul>
       </div>
@@ -157,16 +200,123 @@
               
                 <h2 id="redis">Redis</h2>
 <p>Redis is an in-memory datastore which boasts high speed data storage and access. Redis is most often used for caching frequently used data that doesn't need to be stored forever, such as client sessions for a web service. redis-py is a Python library that allows interfacing with Redis.</p>
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        Python3 Editor does not provide access to a locally running Redis instance. You can, however, connect to a Redis cloud database using the Python3 Editor. Redis provides a free tier for their cloud database service and you can get one by making an account with them.
+    </p>
+    <p>
+        We have written a short guide on how to properly set up a Redis cloud instance to work with Python3 Editor. You can check it out here:
+    </p>
+    <p>
+        <a href="https://docs.oyoclass.com/cloudservices/datastores/redis">
+            <b>
+                Redis Free Cloud Database
+            </b>
+        </a>
+    </p>
+</div>
+
+<h3 id="connecting-to-your-database">Connecting to Your Database</h3>
+<p>First, open up your Redis account and go to your database list. Here, click on the <strong>Connect</strong> button:</p>
+<p><img src="../../assets/img/redis-connect1.png" width="700px"></p>
+<p>In the following list, click on <strong>Redis Client</strong>:</p>
+<p><img src="../../assets/img/redis-connect2.png" width="400px"></p>
+<p>In the menu that appears, select <strong>Python</strong> as your client, then copy the code into your Python3 Editor project:</p>
+<p><img src="../../assets/img/redis-connect3.png" width="400px"></p>
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        If you click the <b>Copy</b> button above, Redis will automatically insert your database's password into the code snippet. A password is added by default when you create your database.
+    </p>
+    <p>
+        If you want to set your own password, you can click on your database, and scroll down you can find the <b>Security</b> section which includes the password Redis generated:
+    </p>
+    <p>
+        <img src="../../assets/img/redis-database-password.png" width="400px">
+    </p>
+    <p>
+        <b>Make sure you don't share this password with anyone.</b>
+    </p>
+</div>
+
+<p>Congratulations! You're now ready to use your Redis cloud with Python3 Editor.</p>
 <h3 id="examples">Examples</h3>
-<h4 id="create-update-and-read-keys">Create, Update, and Read Keys</h4>
-<pre><code class="language-python">
+<h4 id="create-and-read-keys">Create and Read Keys</h4>
+<p>Storing keys and values are simple with Redis. We can use the <code>set()</code> method to set a value in Redis:</p>
+<pre><code class="language-python">import redis
+
+r = redis.Redis(
+  host='&lt;YOUR DATABASE&gt;.cloud.redislabs.com',
+  port=11588,
+  password='&lt;YOUR PASSWORD&gt;'
+)
+
+r.set('example_key', 'example_val')
+print(r.get('example_key'))
+print(r.get('not_exist_key'))
 </code></pre>
+<p>Output:</p>
+<pre><code class="language-text">b'example_val'
+None
+</code></pre>
+<p>Notice two things:</p>
+<ol>
+<li>our <strong>example_val</strong> string got automatically converted to bytes</li>
+<li>when we attempt to access a key that doesn't exist, we get <code>None</code>, not an error</li>
+</ol>
+<h4 id="update-keys">Update Keys</h4>
+<p>If we want to update an existing key, we can just overwrite it:</p>
+<pre><code class="language-python">import redis
+
+r = redis.Redis(
+  host='&lt;YOUR DATABASE&gt;.cloud.redislabs.com',
+  port=11588,
+  password='&lt;YOUR PASSWORD&gt;'
+)
+
+r.set('example_key', 'val1')
+print(r.get('example_key'))
+r.set('example_key', 'val2')
+print(r.get('example_key'))
+</code></pre>
+<p>Output:</p>
+<pre><code class="language-text">b'val1'
+b'val2'
+</code></pre>
+<h4 id="delete-keys">Delete Keys</h4>
+<p>We can also delete keys with the <code>delete()</code> method:</p>
+<pre><code class="language-python">import redis
+
+r = redis.Redis(
+  host='&lt;YOUR DATABASE&gt;.cloud.redislabs.com',
+  port=11588,
+  password='&lt;YOUR PASSWORD&gt;'
+)
+
+r.set('example_key', 'val1')
+print(r.get('example_key'))
+r.delete('example_key')
+print(r.get('example_key'))
+</code></pre>
+<p>Output:</p>
+<pre><code class="language-text">b'val1'
+None
+</code></pre>
+<h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://redis-py.readthedocs.io/en/stable/">redis-py</a> at <em>readthedocs.io</em></li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../uvicorn/" class="btn btn-neutral float-left" title="uvicorn"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../tinydb/" class="btn btn-neutral float-right" title="tinydb">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../firebase-admin/" class="btn btn-neutral float-left" title="firebase-admin"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sqlalchemy/" class="btn btn-neutral float-right" title="sqlalchemy">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -189,10 +339,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../uvicorn/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../firebase-admin/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../tinydb/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../sqlalchemy/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

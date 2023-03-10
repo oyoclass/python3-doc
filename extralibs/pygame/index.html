@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -94,12 +95,6 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../">Intro</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../requests/">requests</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../beautifulsoup/">beautifulsoup4</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../jinja2/">jinja2</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../bottle/">bottle</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../flask/">flask</a>
@@ -108,17 +103,51 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../uvicorn/">uvicorn</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../fastapi/">fastapi</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../requests/">requests</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../beautifulsoup/">beautifulsoup4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../httpx/">httpx</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python-multipart/">python-multipart</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../jinja2/">jinja2</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pymongo/">pymongo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../motor/">motor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../boto3/">boto3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firebase-admin/">firebase-admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sqlalchemy/">sqlalchemy</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scipy/">scipy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seaborn/">seaborn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pandas/">pandas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../nltk/">nltk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scikit-learn/">scikit-learn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pysimplegui/">pysimplegui</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">pygame</a>
     <ul class="current">
@@ -130,7 +159,15 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#references">References</a>
+    </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../arcade/">arcade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pyxel/">pyxel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pydub/">pydub</a>
                   </li>
               </ul>
       </div>
@@ -161,26 +198,52 @@
 <p>Pygame is a collection of Python modules for creating video games. It provides access to keyboard and mouse inputs, rendering images, playing sounds, and more. The main draw of Pygame, especially for learners, is the ease of use without the need to install bulky full featured or enterprise level game engines like Unreal or Unity.</p>
 <h3 id="examples">Examples</h3>
 <h4 id="run-built-in-aliens-demo-game">Run Built-in Aliens Demo Game</h4>
+<p>Pygame has several built in demos that we can try running simply by importing them from the library's builtin <strong>examples</strong> package. Let's try running the <em>aliens</em> demo:</p>
 <pre><code class="language-python">import pygame.examples.aliens
 pygame.examples.aliens.main()
 </code></pre>
 <p>You will get a game window open to the right of your code, you can use the left and right arrow keys to move, and space to shoot:</p>
 <p><img src="../../assets/img/pygame-aliens-demo.png"></p>
+<p>You can try out the other example projects too. You can find a list of them at the official <a href="https://www.pygame.org/docs/ref/examples.html">Pygame Examples Reference</a></p>
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        Some Pygame demos require <b>PyOpenGL</b> installed to work properly. If you get an error running one of the Pygame examples because PyOpenGL is missing from your project, you can install it from the libraries tab. 
+    </p>
+</div>
+
 <h4 id="keyboard-controls">Keyboard Controls</h4>
+<p>Creating your own game requires we do a bit more than calling a single function. In the following example, we will create a simple game where you can move a small red ball around the screen with the arrow keys. Included are comments that explain what each section of the code is doing:</p>
 <pre><code class="language-python">import sys
 import pygame
+
+# You must call pygame.init() before anything else
 pygame.init()
 
-size = width, height = 320, 240
+# Many Pygame methods take tuples as arguments, so we will save the desired
+# screen width and height (in pixels) into a tuple named &quot;size&quot; to make our
+# code more readable
+width, height = 640, 480
+size = (width, height)
+
+# The screen variable is how we will render graphics to the screen
+screen = pygame.display.set_mode(size)
+
+# Colors are in tuples of (RED, GREEN, BLUE)
 black = (0, 0, 0)
 red = (255, 0, 0)
 
-screen = pygame.display.set_mode(size)
+# Start the circle in the middle of the screen
 circle_x = width//2
 circle_y = height//2
 radius = 10
 
+# We will use an infinite &quot;while True&quot; loop to only force exit our game once
+# the pygame.QUIT event is fired (like pressing the escape key)
 while True:
+    # Check pygame events every frame to process player's inputs
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
@@ -194,17 +257,30 @@ while True:
             elif event.key == pygame.K_DOWN:
                 circle_y += 10
 
+    # Cover the previous frame with a plain black background
     screen.fill(black)
+    # Draw the circle at its current X and Y position
     pygame.draw.circle(screen, red, (circle_x, circle_y), radius)
+
+    # the display.flip() function takes all the changes we made to the screen
+    # and actually displays the changes to the player
     pygame.display.flip()
 </code></pre>
 <p>You will get a game window open to the right of your code, you can use the arrow keys to move the ball up, down, left, and right:</p>
 <p><img src="../../assets/img/pygame-keyboard-ball.png"></p>
+<h3 id="references">References</h3>
+<ul>
+<li><a href="https://www.pygame.org/docs/">Pygame</a> at <em>pygame.org</em><ul>
+<li>In particular, the <a href="https://www.pygame.org/docs/tut/newbieguide.html">Newbie Guide</a> section is a good thing to read if you've never used Pygame before, and has some good tips for game development in general</li>
+</ul>
+</li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../numpy/" class="btn btn-neutral float-left" title="numpy"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../pysimplegui/" class="btn btn-neutral float-left" title="pysimplegui"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../arcade/" class="btn btn-neutral float-right" title="arcade">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -227,8 +303,10 @@ while True:
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../numpy/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../pysimplegui/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
+    
+      <span><a href="../arcade/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

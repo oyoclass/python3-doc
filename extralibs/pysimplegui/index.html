@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>pysimplegui - Python3 Editor Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "pysimplegui";
+        var mkdocs_page_input_path = "extralibs/pysimplegui.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Python3 Editor Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comments/">Comments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/boolean/">Boolean</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/number/">Number</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comparison/">Comparison</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/none/">None</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/string/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/function/">Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/listtuple/">List & Tuple</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/set/">Set</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/dictionary/">Dictionary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/inputoutput/">Standard Input & Output</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Standard Python Libraries</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/math/">math</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/random/">random</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/string/">string</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/time/">time</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/urllib/">urllib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/turtle/">turtle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/tkinter/">tkinter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/sqlite/">sqlite</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Extra Python Libraries</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bottle/">bottle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../flask/">flask</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../starlette/">starlette</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../uvicorn/">uvicorn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fastapi/">fastapi</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../requests/">requests</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../beautifulsoup/">beautifulsoup4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../httpx/">httpx</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python-multipart/">python-multipart</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../jinja2/">jinja2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pymongo/">pymongo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../motor/">motor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../boto3/">boto3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firebase-admin/">firebase-admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sqlalchemy/">sqlalchemy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scipy/">scipy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seaborn/">seaborn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pandas/">pandas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../nltk/">nltk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scikit-learn/">scikit-learn</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">pysimplegui</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#rendering-text">Rendering Text</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#understanding-the-layout-list">Understanding the Layout List</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#handling-button-events">Handling Button Events</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#customizing-events">Customizing Events</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pygame/">pygame</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../arcade/">arcade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pyxel/">pyxel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pydub/">pydub</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Python3 Editor Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Extra Python Libraries &raquo;</li>
+      <li>pysimplegui</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="pysimplegui">PySimpleGUI</h2>
+<p>PySimpleGUI is a meta-library, as in it combines several other GUI libraries into one single package with a common programming interface. This increases your options and gives you less things to think about when building a GUI with Python.</p>
+<h3 id="examples">Examples</h3>
+<h4 id="rendering-text">Rendering Text</h4>
+<p>First thing we will do is simply get a window with text rendered on it. All PythonSimpleGUI projects will have similar structures where we will define elements, put them in a layout list, then render them to a window:</p>
+<pre><code class="language-python">import PySimpleGUI as pg
+
+# Create a text layout element
+hello_world_text_element = pg.Text(
+    text='I Rendered Text!',  # What the text will say
+    font=('Arial Bold', 20),  # Which font and size to use
+    text_color='orange',  # Color for the text
+    justification='center'  # Center the text element
+)
+
+# Create a layout of one row, with one element
+layout = [[hello_world_text_element]]
+
+# Create a window to render the layout on
+window = pg.Window('HelloWorld', layout)
+
+# Keep the window open forever until we close it manually
+while True:
+    # Read if there's any event every loop
+    event, values = window.read()
+    if event in (None, 'Exit'):
+        break
+
+window.close()
+</code></pre>
+<p>To the right of your code, you will see a window that looks like this, which will remain open until you click the "<strong>x</strong>" on the window:</p>
+<p><img src="../../assets/img/pysimplegui-helloworld.png"></p>
+<h4 id="understanding-the-layout-list">Understanding the Layout List</h4>
+<p>The layout that we need to give to the window is a <strong>list of lists</strong>. We can create lists to describe how we want our elements rendered in the window, like this:</p>
+<pre><code class="language-python">layout = [
+    [elem1, elem2, elem3],
+    [elem4],
+    [elem5, elem6]
+]
+</code></pre>
+<p>This would create a window with three rows. The first row would contain elems 1, 2, and 3. The second would contain only elem 4, and the final row would contain elems 5 and 6. Let's create another simple demo to see this in action:</p>
+<pre><code class="language-python">import PySimpleGUI as pg
+
+# Create several buttons
+btns = []
+btn_font = ('Arial Black', 16)
+for i in range(6):
+    btns.append(pg.Button(f'btn{i}', font=btn_font))
+
+# Create the layout like above, a list of three lists
+layout = [
+    [btns[0], btns[1], btns[2]],
+    [btns[3]],
+    [btns[4], btns[5]]
+]
+window = pg.Window('Button Layout Demo', layout)
+
+while True:
+    event, values = window.read()
+    if event in (None, 'Exit'):
+        break
+
+window.close()
+</code></pre>
+<p>Then we can see the window rendered to the right like we expect:</p>
+<p><img src="../../assets/img/pysimplegui-btnlayout.png"></p>
+<h4 id="handling-button-events">Handling Button Events</h4>
+<p>Buttons wouldn't be much use if we can't detect when and which button was clicked. The following example creates two buttons and prints a different message when each one is clicked:</p>
+<pre><code class="language-python">import PySimpleGUI as pg
+
+# Create a layout of two buttons
+font = ('Arial Black', 16)
+layout = [
+    [pg.Button('Left Button', font=font), pg.Button('Right Button', font=font)]
+]
+window = pg.Window('Button Events Demo', layout)
+
+while True:
+    event, values = window.read()
+
+    # We will check for the button event here.
+    # The event will be the same as the button's text
+    if event in (None, 'Exit'):
+        break
+    elif event == 'Left Button':
+        print('Left button clicked!')
+    elif event == 'Right Button':
+        print('Right button clicked!')
+
+window.close()
+</code></pre>
+<p>Rendered on the right:</p>
+<p><img src="../../assets/img/pysimplegui-btnevents.png"></p>
+<p>Then each time when we click each button, we will see our print message appear in the console below the running project:</p>
+<pre><code class="language-text">Left button clicked!
+Left button clicked!
+Right button clicked!
+Left button clicked!
+</code></pre>
+<h4 id="customizing-events">Customizing Events</h4>
+<p>By default, the event that is fired by the button is the same as its text. If you wanted this to be different, you can pass a string to your button as the keyword argument <strong>key</strong> like this:</p>
+<pre><code class="language-python">pg.Button('very long button text that would be too long to repeat', key='short')
+</code></pre>
+<p>Now, the event fired by this button will now be <code>'short'</code> instead of the button's text.</p>
+<h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://www.pysimplegui.org/en/latest/">PySimpleGUI</a> on <em>pysimplegui.org</em><ul>
+<li>The <a href="https://www.pysimplegui.org/en/latest/cookbook/">PySimpleGUI Cookbook Section</a> has good tips on patterns of designing several common GUI situations and how to handle them with example code</li>
+</ul>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../scikit-learn/" class="btn btn-neutral float-left" title="scikit-learn"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../pygame/" class="btn btn-neutral float-right" title="pygame">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../scikit-learn/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../pygame/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

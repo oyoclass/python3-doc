@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>arcade - Python3 Editor Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "arcade";
+        var mkdocs_page_input_path = "extralibs/arcade.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Python3 Editor Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comments/">Comments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/boolean/">Boolean</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/number/">Number</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/comparison/">Comparison</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/none/">None</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/string/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/function/">Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/listtuple/">List & Tuple</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/set/">Set</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/dictionary/">Dictionary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/inputoutput/">Standard Input & Output</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Standard Python Libraries</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/math/">math</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/random/">random</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/string/">string</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/time/">time</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/urllib/">urllib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/turtle/">turtle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/tkinter/">tkinter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/sqlite/">sqlite</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Extra Python Libraries</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bottle/">bottle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../flask/">flask</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../starlette/">starlette</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../uvicorn/">uvicorn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fastapi/">fastapi</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../requests/">requests</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../beautifulsoup/">beautifulsoup4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../httpx/">httpx</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python-multipart/">python-multipart</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../jinja2/">jinja2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pillow/">pillow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pymongo/">pymongo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../motor/">motor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../boto3/">boto3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firebase-admin/">firebase-admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sqlalchemy/">sqlalchemy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scipy/">scipy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seaborn/">seaborn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pandas/">pandas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../nltk/">nltk</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../scikit-learn/">scikit-learn</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pysimplegui/">pysimplegui</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pygame/">pygame</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">arcade</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#drawing-oyobots-head">Drawing OYObot's Head</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getting-player-input">Getting Player Input</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pyxel/">pyxel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pydub/">pydub</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Python3 Editor Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Extra Python Libraries &raquo;</li>
+      <li>arcade</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="arcade">Arcade</h2>
+<p>Arcade is a simple game engine library for Python for building 2D games. You can easily build simple games in a small amount of time to test out your ideas with an easy to learn interface.</p>
+<h3 id="examples">Examples</h3>
+<h4 id="drawing-oyobots-head">Drawing OYObot's Head</h4>
+<p>Before we add any player input, let's simply try drawing something to the screen:</p>
+<pre><code class="language-python">import arcade
+
+# Open the window. Set the window title and dimensions
+arcade.open_window(600, 600, 'OYObot Head')
+
+# Set the background color
+arcade.set_background_color(arcade.color.BLUE)
+
+# the start_render function tells arcade to clear the screen and begin drawing
+# a new frame
+arcade.start_render()
+
+# OYObot's head is 3 concentric circles of decreasing radius
+head_x = 300
+head_y = 300
+arcade.draw_circle_filled(head_x, head_y, 200, arcade.color.BLACK)
+arcade.draw_circle_filled(head_x, head_y, 160, arcade.color.WHITE)
+arcade.draw_circle_filled(head_x, head_y, 80, arcade.color.BLACK)
+
+# the finish_render function tells arcade that we're done drawing and to show
+# the result to the player
+arcade.finish_render()
+
+arcade.run()
+</code></pre>
+<p>Your output will look like this:</p>
+<p><img src="../../assets/img/arcade-oyobot-head.png" width="400px"/></p>
+<h4 id="getting-player-input">Getting Player Input</h4>
+<p>Getting player input requires we read it from the built in <code>on_key_press</code> function. We can do this by creating our own class that extends from arcade's <code>arcade.Window</code> class:</p>
+<pre><code class="language-python">import arcade
+
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+SCREEN_TITLE = &quot;Better Move Sprite with Keyboard Example&quot;
+
+ARROW_KEYS = (arcade.key.UP, arcade.key.DOWN, arcade.key.LEFT, arcade.key.RIGHT)
+
+MOVEMENT_SPEED = 5
+
+
+class Player(arcade.Sprite):
+    def update(self):
+        # Move the player
+        self.center_x += self.change_x
+        self.center_y += self.change_y
+
+
+class MyGame(arcade.Window):
+    # OVERWRITE BUILTIN FUNCTIONS
+    def __init__(self, width, height, title):
+        super().__init__(width, height, title)
+
+        # Create a variable to hold the player list
+        self.player_list = None
+
+        # Set up the player info
+        self.player_sprite = None
+
+        # Track the current state of what key is pressed
+        self.left_pressed = False
+        self.right_pressed = False
+        self.up_pressed = False
+        self.down_pressed = False
+
+        # Set the background color
+        arcade.set_background_color(arcade.color.AMAZON)
+
+    def setup(self):
+        # Sprite lists
+        self.player_list = arcade.SpriteList()
+
+        # Set up the player
+        # This sprite image is built into arcade
+        self.player_sprite = Player(&quot;:resources:images/animated_characters/female_person/femalePerson_idle.png&quot;)
+        self.player_sprite.center_x = 400
+        self.player_sprite.center_y = 400
+        self.player_list.append(self.player_sprite)
+
+    def on_draw(self):
+        # Clear the screen
+        self.clear()
+        # Draw all the sprites.
+        self.player_list.draw()
+
+    def on_update(self, delta_time):
+        # Call update to move the sprite
+        self.player_list.update()
+
+    def on_key_press(self, key, modifiers):
+        if key in ARROW_KEYS:
+            if key == arcade.key.UP:
+                self.up_pressed = True
+            elif key == arcade.key.DOWN:
+                self.down_pressed = True
+            elif key == arcade.key.LEFT:
+                self.left_pressed = True
+            elif key == arcade.key.RIGHT:
+                self.right_pressed = True
+            self.update_player_speed()
+
+    def on_key_release(self, key, modifiers):
+        if key in ARROW_KEYS:
+            if key == arcade.key.UP:
+                self.up_pressed = False
+            elif key == arcade.key.DOWN:
+                self.down_pressed = False
+            elif key == arcade.key.LEFT:
+                self.left_pressed = False
+            elif key == arcade.key.RIGHT:
+                self.right_pressed = False
+            self.update_player_speed()
+    # END OVERWRITE BUILTIN FUNCTIONS
+
+    # Custom function
+    def update_player_speed(self):
+        # Calculate speed based on the keys pressed
+        self.player_sprite.change_x = 0
+        self.player_sprite.change_y = 0
+
+        # Since we add speeds together whenever each key is pressed, holding
+        # opposite directions will add up to 0 and hold the player still
+        if self.up_pressed:
+            self.player_sprite.change_y += MOVEMENT_SPEED
+        if self.down_pressed:
+            self.player_sprite.change_y -= MOVEMENT_SPEED
+        if self.left_pressed:
+            self.player_sprite.change_x -= MOVEMENT_SPEED
+        if self.right_pressed:
+            self.player_sprite.change_x += MOVEMENT_SPEED
+
+
+window = MyGame(SCREEN_WIDTH, SCREEN_HEIGHT, 'Keyboard Movement')
+window.setup()
+arcade.run()
+</code></pre>
+<p>You will get a window on the right like this, and you can use your arrow keys to move the sprite around:</p>
+<p><img src="../../assets/img/arcade-keyboard-movement.gif" width="400px"/></p>
+<h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://api.arcade.academy/en/latest/">Arcade</a> at <em>api.arcade.academy</em><ul>
+<li><a href="https://api.arcade.academy/en/latest/sample_games.html">Some Example Games</a> that show what the Arcade library can do</li>
+</ul>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../pygame/" class="btn btn-neutral float-left" title="pygame"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../pyxel/" class="btn btn-neutral float-right" title="pyxel">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../pygame/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../pyxel/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
