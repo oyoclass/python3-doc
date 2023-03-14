@@ -4,9 +4,41 @@ Flask is a micro web framwork. Flask is similar to [Bottle](../bottle/), but it 
 
 ### Example
 
+#### Say Hello
+
+Let's create a simple server using Flask. This creates a simple server that says "Welcome to Flask!" when visiting the index page:
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return 'Welcome to Flask!'
+
+if __name__ == '__main__':
+    # host must be 0.0.0.0 to work in the Python3 Editor
+    app.run(host='0.0.0.0', port=8080)
+```
+
+When we run our code, we get the folllowing output on the right:
+
+<img src="../../assets/img/flask-helloworld.png" width="400px">
+
 #### Basic Web Server with Templates
 
-1\. Flask will look for template files in the `templates` directory by default, so first, create a new folder named `templates`, then add a file named `welcome.html`:
+Flask will look for template files in the `templates` directory by default, so first, create a new folder named `templates`, then add a file named `welcome.html`.
+
+To create a folder in your project, click on **NEW FOLDER** at the top of your project's file list:
+
+<img src="../../assets/img/flask-new-folder.png" width="300px">
+
+Then, name it "templates" in the window that pops up:
+
+<img src="../../assets/img/flask-new-folder-name.png" width="300px">
+
+Add a new file to your project and name it `welcome.html`. Paste the following HTML into the file then put it inside of your `templates` folder that we just created:
 
 ```html
 <!DOCTYPE html>
@@ -19,24 +51,16 @@ Flask is a micro web framwork. Flask is similar to [Bottle](../bottle/), but it 
 </html>
 ```
 
-2\. Copy and paste the below code to `main.py`:
+Your project's file list should look like this when you are done:
+
+<img src="../../assets/img/flask-filelist.png" width="300px">
+
+Now that we have a template in our templates folder, copy and paste the below code to `main.py`:
 
 ```python
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
-
-if __name__ == '__main__':
-    # host must be 0.0.0.0 to work in the Python3 Editor
-    import example_routes
-    app.run(host='0.0.0.0', port=8080)
-```
-
-3\. Create a 2nd python file named `example_routes.py`:
-
-```python
-from flask import render_template
-from __main__ import app
 
 @app.route('/')
 def index():
@@ -48,6 +72,10 @@ def welcome(name):
         'welcome.html',
         name=name
     )
+
+if __name__ == '__main__':
+    # host must be 0.0.0.0 to work in the Python3 Editor
+    app.run(host='0.0.0.0', port=8080)
 ```
 
 When you visit "/", you will see a page like this:

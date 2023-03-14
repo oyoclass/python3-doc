@@ -6,6 +6,8 @@ Uvicorn is an ASGI web server implementation for Python. It allows for hosting a
 
 #### Standalone Uvicorn Hello World
 
+We can run a simple web server that has an index page which returns **"Hello, World!"** when visited:
+
 ```python
 import uvicorn
 
@@ -30,9 +32,15 @@ if __name__ == "__main__":
     uvicorn.run('main:app', host='0.0.0.0', port=8000, log_level='info')
 ```
 
+On the right, we will see our page:
+
+<img src="../../assets/img/uvicorn-helloworld.png" width="400px"/>
+
 #### Handling Routing
 
-If you would like to have routing to different pages in your app, you should use an ASGI framework like [Starlette](../starlette/), otherwise you will have to parse the `scope['path']` variable and handle the different request paths yourself like this:
+If you would like to have routing to different pages in your app, you should use an ASGI framework like [Starlette](../starlette/), otherwise you will have to parse the `scope['path']` variable and handle the different request paths yourself.
+
+This example has an index page, and also has an extra `/hello/<anything>` path that acts like an echo:
 
 ```python
 import uvicorn
@@ -71,6 +79,10 @@ if __name__ == "__main__":
     # host must be 0.0.0.0 to work in the Python3 Editor
     uvicorn.run('main:app', host='0.0.0.0', port=8000, log_level='info')
 ```
+
+Then, if we visit the `/hello/<anything>` endpoint, we will get this output:
+
+<img src="../../assets/img/uvicorn-routing.png" width="400px"/>
 
 ### Reference
 
