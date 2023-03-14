@@ -1,6 +1,6 @@
 ## Matplotlib
 
-Matplotlib is a library for creating various data visualizations in Python. You can render many different kinds of graphs and charts with a simple interface. This library works closely with [NumPy](/extralibs/numpy/) to handle its datasets.
+Matplotlib is a library for creating various data visualizations in Python. You can render many different kinds of graphs and charts with a simple interface. This library works closely with [NumPy](../numpy/) to handle its datasets.
 
 ### Examples
 

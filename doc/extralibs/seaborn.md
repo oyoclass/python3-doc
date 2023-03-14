@@ -1,6 +1,6 @@
 ## Seaborn
 
-Seaborn is a data visualization library for Python built on top of [Matplotlib](/extralibs/matplotlib/), and works well with [pandas](/extralibs/pandas/) dataframes.
+Seaborn is a data visualization library for Python built on top of [Matplotlib](../matplotlib/), and works well with [pandas](../pandas/) dataframes.
 
 ### Examples
 

@@ -6,7 +6,7 @@ Python-Multipart is a library for handling `multipart/form-data` POST requests. 
 
 #### Handling a Multipart Request
 
-Below is an example of how to handle a basic multipart request using the [Bottle](/extarlibs/bottle) library for our server:
+Below is an example of how to handle a basic multipart request using the [Bottle](../bottle) library for our server:
 
 ```python
 from bottle import request, get, post, run

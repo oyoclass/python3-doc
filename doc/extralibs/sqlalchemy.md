@@ -1,6 +1,6 @@
 ## SQLAlchemy
 
-SQLAlchemy is an SQL database engine library for Python. It uses its own syntax for handling database operations with Python objects and writes the SQL queries for you. SQLAlchemy can be useful if you're uncomfortable writing your own SQL queries directly with [SQLite](/modules/sqlite/).
+SQLAlchemy is an SQL database engine library for Python. It uses its own syntax for handling database operations with Python objects and writes the SQL queries for you. SQLAlchemy can be useful if you're uncomfortable writing your own SQL queries directly with [SQLite](../../modules/sqlite/).
 
 ### Examples
 

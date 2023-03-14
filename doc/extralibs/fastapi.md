@@ -1,6 +1,6 @@
 ## FastAPI
 
-FastAPI is a web framework that's designed to help programmers create API quickly and cleanly while being self-documenting. It is based on [Starlette](/extralibs/starlette/). It's made to be easy to understand and ready for production releases and is currently being used in many real-world applications by major companies like Microsoft.
+FastAPI is a web framework that's designed to help programmers create API quickly and cleanly while being self-documenting. It is based on [Starlette](../starlette/). It's made to be easy to understand and ready for production releases and is currently being used in many real-world applications by major companies like Microsoft.
 
 <div class="notebox notebox-info">
     <p class="notebox-title">
@@ -33,7 +33,7 @@ app = FastAPI()
 @app.get('/')
 async def root():
     return {
-        'message': 'Hello, World!,
+        'message': 'Hello, World!',
         'timestamp': time.time()
     }
 

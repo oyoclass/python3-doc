@@ -1,6 +1,6 @@
 ## scikit-learn
 
-scikit-learn is a machine learning library built for Python. It is built on [NumPy](/extralibs/numpy/), [SciPy](/extralibs/scipy/), and [Matplotlib](/extralibs/matplotlib/). It's useful for statistical problems like _data classification_ or _predicting trends_.
+scikit-learn is a machine learning library built for Python. It is built on [NumPy](../numpy/), [SciPy](../scipy/), and [Matplotlib](../matplotlib/). It's useful for statistical problems like _data classification_ or _predicting trends_.
 
 ### Examples
 

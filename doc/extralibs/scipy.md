@@ -1,6 +1,6 @@
 ## SciPy
 
-SciPy is a scientific computation library that was made by the author of [NumPy](/extralibs/numpy). In fact, SciPy _uses_ NumPy for its functions. SciPy exists as a separate package built on top of NumPy and further optimizes some commonly used functions in Data Science.
+SciPy is a scientific computation library that was made by the author of [NumPy](../numpy). In fact, SciPy _uses_ NumPy for its functions. SciPy exists as a separate package built on top of NumPy and further optimizes some commonly used functions in Data Science.
 
 ### Examples
 

@@ -1,6 +1,6 @@
 ## Flask
 
-Flask is a micro web framwork. Flask is similar to [Bottle](/extralibs/bottle/), but it has more functionality out of the box and scales easier. flask is better suited for larger projects that can span across mulitple Python files.
+Flask is a micro web framwork. Flask is similar to [Bottle](../bottle/), but it has more functionality out of the box and scales easier. Flask is better suited for larger projects that can span across mulitple Python files.
 
 ### Example
 

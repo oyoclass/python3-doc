@@ -1,6 +1,6 @@
 ## Bottle
 
-Bottle is an ultra-lightweight web framework that works with just the Python Standard Library. Bottle also supports html template frameworks like [Jinja2](/extralibs/jinja2/) for building more robust websites.
+Bottle is an ultra-lightweight web framework that works with just the Python Standard Library. Bottle also supports html template frameworks like [Jinja2](../jinja2/) for building more robust websites.
 
 ### Examples
 

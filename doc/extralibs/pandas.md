@@ -1,6 +1,6 @@
 ## Pandas
 
-Pandas is a Python library focused on data science and analysis. Pandas is built on top of [NumPy](/extralibs/numpy) and focuses on working with tables of data called **DataFrames**.
+Pandas is a Python library focused on data science and analysis. Pandas is built on top of [NumPy](../numpy) and focuses on working with tables of data called **DataFrames**.
 
 ### Examples
 

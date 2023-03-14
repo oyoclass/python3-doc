@@ -1,6 +1,6 @@
 ## BeautifulSoup4
 
-BeautifulSoup4 is a library that parses HTML and XML files and provides an easy interface for extracting information out of them. Can be very useful when combined with the [Requests](/extralibs/requests/) library for scraping data off of webpages.
+BeautifulSoup4 is a library that parses HTML and XML files and provides an easy interface for extracting information out of them. Can be very useful when combined with the [Requests](../requests/) library for scraping data off of webpages.
 
 ### Examples
 

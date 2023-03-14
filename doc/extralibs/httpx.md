@@ -1,6 +1,6 @@
 ## HTTPX
 
-HTTPX is an HTTP client for Python, similar to [Requests](/extralibs/requests) which can be used synchronously and asynchronously.
+HTTPX is an HTTP client for Python, similar to [Requests](../requests) which can be used synchronously and asynchronously.
 
 ### Examples
 

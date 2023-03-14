@@ -33,7 +33,7 @@ Find the sound you want to upload in your file browser, then confirm the upload 
 
 #### Get Sound Info
 
-Similar to images with [Pillow](/extralibs/pillow), we can use Pydub to extract and print information about audio files:
+Similar to images with [Pillow](../pillow), we can use Pydub to extract and print information about audio files:
 
 ```python
 from pydub.utils import mediainfo

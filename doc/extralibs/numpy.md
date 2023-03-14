@@ -1,8 +1,8 @@
 ## NumPy
 
-NumPy is a powerful number processing library, used by data scientists due to it being able to process large amounts of data much faster than native Python. This package works well with data visualization packages like [Matplotlib](/extralibs/matplotlib/).
+NumPy is a powerful number processing library, used by data scientists due to it being able to process large amounts of data much faster than native Python. This package works well with data visualization packages like [Matplotlib](../matplotlib/).
 
-NumPy is used as the base of many other libraries like [Pandas](/extralibs/pandas) and [SciPy](/extralibs/scipy) and work together with them closely. It is very common for these libraries to take NumPy arrays in as arguments.
+NumPy is used as the base of many other libraries like [Pandas](../pandas) and [SciPy](../scipy) and work together with them closely. It is very common for these libraries to take NumPy arrays in as arguments.
 
 ### Examples
 
@@ -50,7 +50,7 @@ added_mat:
 
 #### Create a Sine Wave Graph with Matplotlib
 
-NumPy is also useful for creating data to pass to a rendering library for data visualization, like [Matplotlib](/extralibs/matplotlib):
+NumPy is also useful for creating data to pass to a rendering library for data visualization, like [Matplotlib](../matplotlib):
 
 ```python
 import numpy as np

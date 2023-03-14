@@ -1,6 +1,6 @@
 ## PyMongo
 
-PyMongo is a Python library that provides an interface for using MongoDB. MongoDB is a **NoSQL** database, which means **it does not use Structured Query Language** like [SQLite](/modules/sqlite/). MongoDB is useful for an easy to understand database interface without the rigidity a traditional relational SQL database may have.
+PyMongo is a Python library that provides an interface for using MongoDB. MongoDB is a **NoSQL** database, which means **it does not use Structured Query Language** like [SQLite](../../modules/sqlite/). MongoDB is useful for an easy to understand database interface without the rigidity a traditional relational SQL database may have.
 
 <div class="notebox notebox-info">
     <p class="notebox-title">
