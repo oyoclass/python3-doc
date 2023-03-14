@@ -195,9 +195,10 @@
             <div class="section" itemprop="articleBody">
               
                 <h2 id="uvicorn">Uvicorn</h2>
-<p>Uvicorn is an ASGI web server implementation for Python. It allows for hosting an ASGI server and serving requests. It is highly recommended that uvicorn be used together with an ASGI framework library, like <a href="/extralibs/starlette/">Starlette</a>.</p>
+<p>Uvicorn is an ASGI web server implementation for Python. It allows for hosting an ASGI server and serving requests. It is highly recommended that uvicorn be used together with an ASGI framework library, like <a href="../starlette">Starlette</a>.</p>
 <h3 id="examples">Examples</h3>
 <h4 id="standalone-uvicorn-hello-world">Standalone Uvicorn Hello World</h4>
+<p>We can run a simple web server that has an index page which returns <strong>"Hello, World!"</strong> when visited:</p>
 <pre><code class="language-python">import uvicorn
 
 
@@ -220,8 +221,11 @@ if __name__ == &quot;__main__&quot;:
     # host must be 0.0.0.0 to work in the Python3 Editor
     uvicorn.run('main:app', host='0.0.0.0', port=8000, log_level='info')
 </code></pre>
+<p>On the right, we will see our page:</p>
+<p><img src="../../assets/img/uvicorn-helloworld.png" width="400px"/></p>
 <h4 id="handling-routing">Handling Routing</h4>
-<p>If you would like to have routing to different pages in your app, you should use an ASGI framework like <a href="/extralibs/starlette/">Starlette</a>, otherwise you will have to parse the <code>scope['path']</code> variable and handle the different request paths yourself like this:</p>
+<p>If you would like to have routing to different pages in your app, you should use an ASGI framework like <a href="../starlette/">Starlette</a>, otherwise you will have to parse the <code>scope['path']</code> variable and handle the different request paths yourself.</p>
+<p>This example has an index page, and also has an extra <code>/hello/&lt;anything&gt;</code> path that acts like an echo:</p>
 <pre><code class="language-python">import uvicorn
 
 
@@ -258,6 +262,8 @@ if __name__ == &quot;__main__&quot;:
     # host must be 0.0.0.0 to work in the Python3 Editor
     uvicorn.run('main:app', host='0.0.0.0', port=8000, log_level='info')
 </code></pre>
+<p>Then, if we visit the <code>/hello/&lt;anything&gt;</code> endpoint, we will get this output:</p>
+<p><img src="../../assets/img/uvicorn-routing.png" width="400px"/></p>
 <h3 id="reference">Reference</h3>
 <ul>
 <li><a href="https://www.uvicorn.org/">Uvicorn</a> at <em>uvicorn.org</em></li>

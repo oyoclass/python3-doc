@@ -101,6 +101,8 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#example">Example</a>
         <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#say-hello">Say Hello</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#basic-web-server-with-templates">Basic Web Server with Templates</a>
     </li>
         </ul>
@@ -193,10 +195,31 @@
             <div class="section" itemprop="articleBody">
               
                 <h2 id="flask">Flask</h2>
-<p>Flask is a micro web framwork. Flask is similar to <a href="/extralibs/bottle/">Bottle</a>, but it has more functionality out of the box and scales easier. flask is better suited for larger projects that can span across mulitple Python files.</p>
+<p>Flask is a micro web framwork. Flask is similar to <a href="../bottle/">Bottle</a>, but it has more functionality out of the box and scales easier. Flask is better suited for larger projects that can span across mulitple Python files.</p>
 <h3 id="example">Example</h3>
+<h4 id="say-hello">Say Hello</h4>
+<p>Let's create a simple server using Flask. This creates a simple server that says "Welcome to Flask!" when visiting the index page:</p>
+<pre><code class="language-python">from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return 'Welcome to Flask!'
+
+if __name__ == '__main__':
+    # host must be 0.0.0.0 to work in the Python3 Editor
+    app.run(host='0.0.0.0', port=8080)
+</code></pre>
+<p>When we run our code, we get the folllowing output on the right:</p>
+<p><img src="../../assets/img/flask-helloworld.png" width="400px"></p>
 <h4 id="basic-web-server-with-templates">Basic Web Server with Templates</h4>
-<p>1. Flask will look for template files in the <code>templates</code> directory by default, so first, create a new folder named <code>templates</code>, then add a file named <code>welcome.html</code>:</p>
+<p>Flask will look for template files in the <code>templates</code> directory by default, so first, create a new folder named <code>templates</code>, then add a file named <code>welcome.html</code>.</p>
+<p>To create a folder in your project, click on <strong>NEW FOLDER</strong> at the top of your project's file list:</p>
+<p><img src="../../assets/img/flask-new-folder.png" width="300px"></p>
+<p>Then, name it "templates" in the window that pops up:</p>
+<p><img src="../../assets/img/flask-new-folder-name.png" width="300px"></p>
+<p>Add a new file to your project and name it <code>welcome.html</code>. Paste the following HTML into the file then put it inside of your <code>templates</code> folder that we just created:</p>
 <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -206,19 +229,12 @@
     &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<p>2. Copy and paste the below code to <code>main.py</code>:</p>
-<pre><code class="language-python">from flask import Flask
+<p>Your project's file list should look like this when you are done:</p>
+<p><img src="../../assets/img/flask-filelist.png" width="300px"></p>
+<p>Now that we have a template in our templates folder, copy and paste the below code to <code>main.py</code>:</p>
+<pre><code class="language-python">from flask import Flask, render_template
 
 app = Flask(__name__)
-
-if __name__ == '__main__':
-    # host must be 0.0.0.0 to work in the Python3 Editor
-    import example_routes
-    app.run(host='0.0.0.0', port=8080)
-</code></pre>
-<p>3. Create a 2nd python file named <code>example_routes.py</code>:</p>
-<pre><code class="language-python">from flask import render_template
-from __main__ import app
 
 @app.route('/')
 def index():
@@ -230,6 +246,10 @@ def welcome(name):
         'welcome.html',
         name=name
     )
+
+if __name__ == '__main__':
+    # host must be 0.0.0.0 to work in the Python3 Editor
+    app.run(host='0.0.0.0', port=8080)
 </code></pre>
 <p>When you visit "/", you will see a page like this:
 <img src="../../assets/img/flask-welcome-index.png" width="400px"></p>
