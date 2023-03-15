@@ -40,6 +40,36 @@ Most webpages will give their raw HTML, however this site acts like an echo for 
 }
 ```
 
+#### Access a Public API
+
+Let's access _coingecko.com_'s public API for getting the current price of bitcoin in USD:
+
+```python
+import requests
+
+url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd'
+resp = requests.get(url)
+print(resp.text)
+```
+
+Output _(your results will vary depending on the current price of BTC)_:
+
+```text
+{"bitcoin":{"usd":24218}}
+```
+
+#### Using the OYOclass Proxy
+
+If the above API is being blocked, you can try adding `https://proxy.oyoclass.com/` to the beginning of your URL:
+
+```python
+import requests
+
+url = 'https://proxy.oyoclass.com/https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd'
+resp = requests.get(url)
+print(resp.text)
+```
+
 #### POST Data to a Webpage
 
 We can also POST data to webpages with Requests. This action is like submitting form data or logging into a webpage, not trying to load a page:

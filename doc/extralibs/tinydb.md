@@ -38,7 +38,7 @@ Second run:
         Note
     </p>
     <p>
-        When you try to open a database that doesn't exist, it will automatically be created and put into your filelist. Since we used <code>'runtimes.json'</code> in our code above, you can see it added in your project's file list to the left: 
+        When you try to open a database that doesn't exist, it will automatically be created and put into your file list. Since we used <code>'runtimes.json'</code> in our code above, you can see it added in your project's file list to the left: 
     </p>
     <p>
         <img src="../../assets/img/tinydb-filelist.png" width="300px"/>

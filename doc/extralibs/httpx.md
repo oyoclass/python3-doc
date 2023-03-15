@@ -1,6 +1,6 @@
 ## HTTPX
 
-HTTPX is an HTTP client for Python, similar to [Requests](../requests) which can be used synchronously and asynchronously.
+HTTPX is an HTTP client for Python, similar to [Requests](../requests), which can be used synchronously and asynchronously.
 
 ### Examples
 
@@ -53,9 +53,81 @@ Most webpages will give their raw HTML, however this site acts like an echo for 
 }
 ```
 
+#### Access a Public API
+
+Let's access _coingecko.com_'s public API for getting the current price of bitcoin in USD:
+
+```python
+import httpx
+
+url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd'
+resp = httpx.get(url)
+print(resp.text)
+```
+
+Output _(your results will vary depending on the current price of BTC)_:
+
+```text
+{"bitcoin":{"usd":24218}}
+```
+
+#### Using the OYOclass Proxy
+
+If the above API is being blocked, you can try adding `https://proxy.oyoclass.com/` to the beginning of your URL:
+
+```python
+import httpx
+
+url = 'https://proxy.oyoclass.com/https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd'
+resp = httpx.get(url)
+print(resp.text)
+```
+
+#### POST Data to a Webpage
+
+We can also POST data to webpages with HTTPX. This action is like submitting form data or logging into a webpage, not trying to load a page:
+
+```python
+import httpx
+
+post_data = {'exampleKey': 'exampleValue'}
+resp = httpx.post('https://httpbin.service.oyoclass.com/post', data=post_data)
+
+print(resp.text)
+```
+
+The target URL in the example is also a special echo endpoint:
+
+```text
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {
+    "exampleKey": "exampleValue"
+  },
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip",
+    "Cdn-Loop": "cloudflare",
+    "Cf-Connecting-Ip": "23.92.19.165",
+    "Cf-Ipcountry": "US",
+    "Cf-Ray": "7a8654b9fd6278df-EWR",
+    "Cf-Visitor": "{\"scheme\":\"https\"}",
+    "Content-Length": "23",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Host": "httpbin.service.oyoclass.com",
+    "User-Agent": "python-httpx/0.23.3"
+  },
+  "json": null,
+  "origin": "23.92.19.165, 23.92.19.165",
+  "url": "https://httpbin.service.oyoclass.com/post"
+}
+```
+
 #### Using a Client to Share Request Parameters
 
-If you want a set of parameteres to be shared across a range of requests, you should use a request client:
+If you want a set of parameters to be shared across a range of requests, you should use a request client:
 
 ```python
 import pprint
@@ -72,7 +144,7 @@ print('\nRequest2:')
 pprint.pprint(resp2.json())
 ```
 
-Output (extra headers have been removed to make output more clear):
+Output _(extra headers have been removed to make output more clear)_:
 
 ```text
 Request 1:
@@ -88,7 +160,7 @@ Request2:
 
 #### asyncio Support
 
-**HTTPX** offers an async client which works with Python's builtin **asyncio**:
+HTTPX offers an async client which works with Python's builtin **asyncio**:
 
 ```python
 import asyncio

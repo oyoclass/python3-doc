@@ -98,7 +98,7 @@ This will print out the data:
 (1, 'Karen', None)
 ```
 
-It's our student that we inserted before! They were given an `id` of **1** and since we did not specify a `lastname` for our student, it has been left null (**None** in Python)
+It's our student that we inserted before! They were given an `id` of **1** and since we did not specify a `lastname` for our student, it has been left null ([None](../../core/none) in Python)
 
 #### Update a Row
 
