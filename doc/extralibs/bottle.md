@@ -6,6 +6,8 @@ Bottle is an ultra-lightweight web framework that works with just the Python Sta
 
 #### Say Hello
 
+Let's create a simple server with two endpoints. Copy and paste the code below to the Python3 Editor:
+
 ```python
 from bottle import route, run, template
 
@@ -22,7 +24,7 @@ def hello(name):
 run(host='0.0.0.0', port=8080)
 ```
 
-Copy and paste the above code to the Python3 Editor and click run, you will see the website running on the right.
+When you click run, you will see the website running to the right of your code.
 
 When you visit "/", you will see a page like this:
 <img src="../../assets/img/bottle-hello-index.png" width="400px">

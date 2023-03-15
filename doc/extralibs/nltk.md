@@ -78,18 +78,18 @@ You can find a complete list in nltk's documentation
 #### Identify Proper Nouns
 
 <div class="notebox notebox-info">
-  <p class="notebox-title">
-    Note
-  </p>
-  <p>
-    This example requires 
-    <a href="/extralibs/numpy">
-      <b>
-        NumPy
-      </b>
-    </a> 
-    to be installed in your project.
-  </p>
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        This example requires 
+        <a href="../numpy">
+            <b>
+                NumPy
+            </b>
+        </a> 
+        to be installed in your project.
+    </p>
 </div>
 
 We can tokenize a sentence, then use nltk to extract named entities from the sentence:

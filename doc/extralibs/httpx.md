@@ -12,7 +12,7 @@ HTTPX is an HTTP client for Python, similar to [Requests](../requests) which can
     </p>
     <p>
         Typical web requests can be performed exactly the same way as they can with the 
-        <a href="/extralibs/requests">
+        <a href="../requests">
             <b>Requests</b>
         </a>
         package. The examples on that page can work exactly the same with <b>HTTPX</b>, just replace the package name.

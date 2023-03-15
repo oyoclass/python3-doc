@@ -8,7 +8,7 @@ FastAPI is a web framework that's designed to help programmers create API quickl
     </p>
     <p>
         Since FastAPI is built on Starlette, an ASGI web server is needed. We will be using
-        <a href="/extralibs/uvicorn/">
+        <a href="../uvicorn/">
             <b>
                 Uvicorn
             </b>

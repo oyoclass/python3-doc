@@ -2,6 +2,16 @@
 
 Python-Multipart is a library for handling `multipart/form-data` POST requests. This is usually only needed or used when running a web server and you have a place where users can upload files.
 
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        This library is needed for handling POST requests with 
+        <a href="../starlette"><b>Starlette</b></a>.
+    </p>
+</div>
+
 ### Example
 
 #### Handling a Multipart Request

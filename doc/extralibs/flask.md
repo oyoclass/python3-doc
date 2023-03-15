@@ -6,7 +6,7 @@ Flask is a micro web framwork. Flask is similar to [Bottle](../bottle/), but it 
 
 #### Say Hello
 
-Let's create a simple server using Flask. This creates a simple server that says "Welcome to Flask!" when visiting the index page:
+Let's create a simple server using Flask. This creates a server that says "Welcome to Flask!" when visiting the index page:
 
 ```python
 from flask import Flask
