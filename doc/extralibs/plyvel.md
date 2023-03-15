@@ -11,24 +11,51 @@ Using `db.put` to write to the same key multiple times will simply overwrite the
 ```python
 import plyvel
 
-db = plyvel.DB('testdb', create_if_missing=True)
+db = plyvel.DB('exampledb', create_if_missing=True)
 db.put(b'example_key', b'example_value1')
 print(db.get(b'example_key'))
 db.put(b'example_key', b'example_value2')
 print(db.get(b'example_key'))
-
 ```
 
+Output:
+
+```text
+b'example_value1'
+b'example_value2'
+```
+
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        In our example, we used the argument <code>create_if_missing=True</code>. This will automatically create the database folder and put into your project's file list if it doesn't already exist. Since we used <code>'exampledb'</code> in our code above, you can see it added in your project's file list to the left: 
+    </p>
+    <p>
+        <img src="../../assets/img/plyvel-filelist.png" width="300px"/>
+    </p>
+</div>
+
 #### Delete Keys
+
+You can also delete keys with the `db.delete()` method:
 
 ```python
 import plyvel
 
-db = plyvel.DB('testdb', create_if_missing=True)
+db = plyvel.DB('exampledb', create_if_missing=True)
 db.put(b'example_key', b'example_value')
 print(db.get(b'example_key'))
 db.delete(b'example_key')
 print(db.get(b'example_key'))
+```
+
+Output:
+
+```text
+b'example_value'
+None
 ```
 
 #### Iterate Over All Keys
@@ -38,7 +65,7 @@ When a new key is insterted into the database, it is stored (and later returned)
 ```python
 import plyvel
 
-db = plyvel.DB('testdb', create_if_missing=True)
+db = plyvel.DB('exampledb', create_if_missing=True)
 db.put(b'z', b'zval')
 db.put(b'A', b'Aval')
 db.put(b'2', b'2val')

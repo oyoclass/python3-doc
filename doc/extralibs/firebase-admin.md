@@ -114,7 +114,7 @@ Output:
 
 #### Updating a Document
 
-We can update a document key by simply overwriting it:
+We can update a document key by using a reference's `update()` method:
 
 ```python
 import firebase_admin
@@ -124,30 +124,27 @@ cred_obj = firebase_admin.credentials.Certificate('cred.json')
 default_app = firebase_admin.initialize_app(cred_obj, {
 	'databaseURL': 'https://<YOUR DATABASE URL>.firebaseio.com/'
 })
-ref = db.reference("/")
+
+# We only want to update Cat1
+cat1_ref = db.reference("/Cat1")
 
 # Before read
-cat1 = ref.get()['Cat1']
-print(cat1)
+print(cat1_ref.get())
 
 # Perform update
 data = {
-    'Cat1': {
-        'Name': 'Simba',
-        'Age': 13
-    }
+    'Age': 13
 }
-ref.set(data)
+cat1_ref.update(data)
 
 # After read
-cat1 = ref.get()['Cat1']
-print(cat1)
+print(cat1_ref.get())
 ```
 
 Output:
 
 ```text
-{'Age': 11, 'Name': 'Simba'}
+{'Age': 12, 'Name': 'Simba'}
 {'Age': 13, 'Name': 'Simba'}
 ```
 

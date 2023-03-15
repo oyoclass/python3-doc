@@ -53,6 +53,18 @@ id | last_name | first_name | age | gpa
 
 The "id" field we set up is special as it is the **INTEGER PRIMARY KEY**. This field will automatically increment each time we insert a row into this table.
 
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        When you try to open a database that doesn't exist, it will automatically be created and put into your filelist. Since we used <code>'example.db'</code> in our code above, you can see it added in your project's file list to the left: 
+    </p>
+    <p>
+        <img src="../../assets/img/sqlite-filelist.png" width="300px"/>
+    </p>
+</div>
+
 #### Inserting Data Into the Table
 
 Now that we have a table, let's write another statement to insert some data into it:

@@ -20,6 +20,31 @@ for entry in iter(db):
 
 Each time you run this program, another entry with the key `runtime` will be inserted with the current `time.time()`, and all the previous times the program was ran will also be printed.
 
+First run:
+
+```text
+{'runtime': 1678895895.8667424}
+```
+
+Second run:
+
+```text
+{'runtime': 1678895895.8667424}
+{'runtime': 1678895897.6668615}
+```
+
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        When you try to open a database that doesn't exist, it will automatically be created and put into your filelist. Since we used <code>'runtimes.json'</code> in our code above, you can see it added in your project's file list to the left: 
+    </p>
+    <p>
+        <img src="../../assets/img/tinydb-filelist.png" width="300px"/>
+    </p>
+</div>
+
 #### Search Database Entries
 
 We can search through our database and only pull certain values that meet some specific critera with a **Query**:
