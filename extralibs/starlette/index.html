@@ -105,6 +105,8 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#basic-asgi-server">Basic ASGI Server</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#handling-post-requests">Handling POST requests</a>
+    </li>
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
@@ -225,6 +227,53 @@ if __name__ == '__main__':
 <img src="../../assets/img/starlette-greetings-index.png" width="400px"></p>
 <p>And when you visit "/greetings/jordan", you will see a page like this:
 <img src="../../assets/img/starlette-greetings-jordan.png" width="400px"/></p>
+<h4 id="handling-post-requests">Handling POST requests</h4>
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        To handle POST requests with Starlette, you need to have an additional library <a href="../python-multipart"><b>Python-Multipart</b></a> installed in your project. Then, we can access POST data with the <code>request.form()</code> method.
+    </p>
+</div>
+
+<p>Here's a project that creates a file upload input and returns the content as an undecoded string:</p>
+<pre><code class="language-python">from starlette.applications import Starlette
+from starlette.responses import HTMLResponse, PlainTextResponse
+from starlette.routing import Route
+import uvicorn
+
+
+async def homepage(request):
+    return HTMLResponse('''
+        &lt;form action=&quot;/upload-file&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;
+          &lt;input type=&quot;file&quot; name=&quot;file&quot;&gt;
+          &lt;br&gt;
+          &lt;input type=&quot;submit&quot;/&gt;
+        &lt;/form&gt;
+    ''')
+
+
+async def upload_file(request):
+    form = await request.form()
+    if 'file' in form and form['file']:
+        file_content = await form['file'].read()
+        return PlainTextResponse(str(file_content))
+    return PlainTextResponse('no file uploaded')
+
+
+app = Starlette(debug=True, routes=[
+    Route('/', homepage),
+    Route('/upload-file', upload_file, methods=['post'])
+])
+
+
+if __name__ == &quot;__main__&quot;:
+    uvicorn.run(app, host='0.0.0.0', port=8000)
+</code></pre>
+<p>Your output will vary depending on what file you upload, but a simple <code>.txt</code> file will print out similar to this:</p>
+<pre><code class="language-text">b&quot;I'm uploading this text file.\r\n2nd line\r\n3rd line&quot;
+</code></pre>
 <h3 id="reference">Reference</h3>
 <ul>
 <li><a href="https://www.starlette.io/">Starlette</a> at <em>starlette.io</em></li>

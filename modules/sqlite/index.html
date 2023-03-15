@@ -240,6 +240,18 @@ conn.close()
 ---------------------------------------
 </code></pre>
 <p>The "id" field we set up is special as it is the <strong>INTEGER PRIMARY KEY</strong>. This field will automatically increment each time we insert a row into this table.</p>
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        When you try to open a database that doesn't exist, it will automatically be created and put into your file list. Since we used <code>'example.db'</code> in our code above, you can see it added in your project's file list to the left: 
+    </p>
+    <p>
+        <img src="../../assets/img/sqlite-filelist.png" width="300px"/>
+    </p>
+</div>
+
 <h4 id="inserting-data-into-the-table">Inserting Data Into the Table</h4>
 <p>Now that we have a table, let's write another statement to insert some data into it:</p>
 <pre><code class="language-python">import sqlite3

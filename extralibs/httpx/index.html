@@ -115,6 +115,12 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#basic-web-requests">Basic Web Requests</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#access-a-public-api">Access a Public API</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#using-the-oyoclass-proxy">Using the OYOclass Proxy</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#post-data-to-a-webpage">POST Data to a Webpage</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#using-a-client-to-share-request-parameters">Using a Client to Share Request Parameters</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#asyncio-support">asyncio Support</a>
@@ -197,7 +203,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h2 id="httpx">HTTPX</h2>
-<p>HTTPX is an HTTP client for Python, similar to <a href="../requests">Requests</a> which can be used synchronously and asynchronously.</p>
+<p>HTTPX is an HTTP client for Python, similar to <a href="../requests">Requests</a>, which can be used synchronously and asynchronously.</p>
 <h3 id="examples">Examples</h3>
 <h4 id="basic-web-requests">Basic Web Requests</h4>
 <div class="notebox notebox-info">
@@ -206,7 +212,7 @@
     </p>
     <p>
         Typical web requests can be performed exactly the same way as they can with the 
-        <a href="/extralibs/requests">
+        <a href="../requests">
             <b>Requests</b>
         </a>
         package. The examples on that page can work exactly the same with <b>HTTPX</b>, just replace the package name.
@@ -241,8 +247,62 @@ print(resp.text)
   &quot;url&quot;: &quot;https://httpbin.service.oyoclass.com/get?exampleKey=exampleValue&quot;
 }
 </code></pre>
+<h4 id="access-a-public-api">Access a Public API</h4>
+<p>Let's access <em>coingecko.com</em>'s public API for getting the current price of bitcoin in USD:</p>
+<pre><code class="language-python">import httpx
+
+url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&amp;vs_currencies=usd'
+resp = httpx.get(url)
+print(resp.text)
+</code></pre>
+<p>Output <em>(your results will vary depending on the current price of BTC)</em>:</p>
+<pre><code class="language-text">{&quot;bitcoin&quot;:{&quot;usd&quot;:24218}}
+</code></pre>
+<h4 id="using-the-oyoclass-proxy">Using the OYOclass Proxy</h4>
+<p>If the above API is being blocked, you can try adding <code>https://proxy.oyoclass.com/</code> to the beginning of your URL:</p>
+<pre><code class="language-python">import httpx
+
+url = 'https://proxy.oyoclass.com/https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&amp;vs_currencies=usd'
+resp = httpx.get(url)
+print(resp.text)
+</code></pre>
+<h4 id="post-data-to-a-webpage">POST Data to a Webpage</h4>
+<p>We can also POST data to webpages with HTTPX. This action is like submitting form data or logging into a webpage, not trying to load a page:</p>
+<pre><code class="language-python">import httpx
+
+post_data = {'exampleKey': 'exampleValue'}
+resp = httpx.post('https://httpbin.service.oyoclass.com/post', data=post_data)
+
+print(resp.text)
+</code></pre>
+<p>The target URL in the example is also a special echo endpoint:</p>
+<pre><code class="language-text">{
+  &quot;args&quot;: {},
+  &quot;data&quot;: &quot;&quot;,
+  &quot;files&quot;: {},
+  &quot;form&quot;: {
+    &quot;exampleKey&quot;: &quot;exampleValue&quot;
+  },
+  &quot;headers&quot;: {
+    &quot;Accept&quot;: &quot;*/*&quot;,
+    &quot;Accept-Encoding&quot;: &quot;gzip&quot;,
+    &quot;Cdn-Loop&quot;: &quot;cloudflare&quot;,
+    &quot;Cf-Connecting-Ip&quot;: &quot;23.92.19.165&quot;,
+    &quot;Cf-Ipcountry&quot;: &quot;US&quot;,
+    &quot;Cf-Ray&quot;: &quot;7a8654b9fd6278df-EWR&quot;,
+    &quot;Cf-Visitor&quot;: &quot;{\&quot;scheme\&quot;:\&quot;https\&quot;}&quot;,
+    &quot;Content-Length&quot;: &quot;23&quot;,
+    &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,
+    &quot;Host&quot;: &quot;httpbin.service.oyoclass.com&quot;,
+    &quot;User-Agent&quot;: &quot;python-httpx/0.23.3&quot;
+  },
+  &quot;json&quot;: null,
+  &quot;origin&quot;: &quot;23.92.19.165, 23.92.19.165&quot;,
+  &quot;url&quot;: &quot;https://httpbin.service.oyoclass.com/post&quot;
+}
+</code></pre>
 <h4 id="using-a-client-to-share-request-parameters">Using a Client to Share Request Parameters</h4>
-<p>If you want a set of parameteres to be shared across a range of requests, you should use a request client:</p>
+<p>If you want a set of parameters to be shared across a range of requests, you should use a request client:</p>
 <pre><code class="language-python">import pprint
 import httpx
 
@@ -256,7 +316,7 @@ pprint.pprint(resp1.json())
 print('\nRequest2:')
 pprint.pprint(resp2.json())
 </code></pre>
-<p>Output (extra headers have been removed to make output more clear):</p>
+<p>Output <em>(extra headers have been removed to make output more clear)</em>:</p>
 <pre><code class="language-text">Request 1:
 {'args': {'num': '1'},
  'headers': {'User-Agent': 'example-app/1.0'},
@@ -268,7 +328,7 @@ Request2:
  'url': 'https://httpbin.service.oyoclass.com/get?num=2'}
 </code></pre>
 <h4 id="asyncio-support">asyncio Support</h4>
-<p><strong>HTTPX</strong> offers an async client which works with Python's builtin <strong>asyncio</strong>:</p>
+<p>HTTPX offers an async client which works with Python's builtin <strong>asyncio</strong>:</p>
 <pre><code class="language-python">import asyncio
 import httpx
 

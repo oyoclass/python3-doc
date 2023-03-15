@@ -291,7 +291,7 @@ print(cat1)
 <pre><code class="language-text">{'Age': 12, 'Name': 'Simba'}
 </code></pre>
 <h4 id="updating-a-document">Updating a Document</h4>
-<p>We can update a document key by simply overwriting it:</p>
+<p>We can update a document key by using a reference's <code>update()</code> method:</p>
 <pre><code class="language-python">import firebase_admin
 from firebase_admin import db
 
@@ -299,27 +299,24 @@ cred_obj = firebase_admin.credentials.Certificate('cred.json')
 default_app = firebase_admin.initialize_app(cred_obj, {
     'databaseURL': 'https://&lt;YOUR DATABASE URL&gt;.firebaseio.com/'
 })
-ref = db.reference(&quot;/&quot;)
+
+# We only want to update Cat1
+cat1_ref = db.reference(&quot;/Cat1&quot;)
 
 # Before read
-cat1 = ref.get()['Cat1']
-print(cat1)
+print(cat1_ref.get())
 
 # Perform update
 data = {
-    'Cat1': {
-        'Name': 'Simba',
-        'Age': 13
-    }
+    'Age': 13
 }
-ref.set(data)
+cat1_ref.update(data)
 
 # After read
-cat1 = ref.get()['Cat1']
-print(cat1)
+print(cat1_ref.get())
 </code></pre>
 <p>Output:</p>
-<pre><code class="language-text">{'Age': 11, 'Name': 'Simba'}
+<pre><code class="language-text">{'Age': 12, 'Name': 'Simba'}
 {'Age': 13, 'Name': 'Simba'}
 </code></pre>
 <h4 id="deleting-a-document">Deleting a Document</h4>

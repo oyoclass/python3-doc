@@ -111,6 +111,10 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#get-content-from-a-webpage">GET Content from a Webpage</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#access-a-public-api">Access a Public API</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#using-the-oyoclass-proxy">Using the OYOclass Proxy</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#post-data-to-a-webpage">POST Data to a Webpage</a>
     </li>
         </ul>
@@ -225,6 +229,25 @@ print(resp.text)
   &quot;origin&quot;: &quot;23.92.19.165, 23.92.19.165&quot;,
   &quot;url&quot;: &quot;https://httpbin.service.oyoclass.com/get?exampleKey=exampleValue&quot;
 }
+</code></pre>
+<h4 id="access-a-public-api">Access a Public API</h4>
+<p>Let's access <em>coingecko.com</em>'s public API for getting the current price of bitcoin in USD:</p>
+<pre><code class="language-python">import requests
+
+url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&amp;vs_currencies=usd'
+resp = requests.get(url)
+print(resp.text)
+</code></pre>
+<p>Output <em>(your results will vary depending on the current price of BTC)</em>:</p>
+<pre><code class="language-text">{&quot;bitcoin&quot;:{&quot;usd&quot;:24218}}
+</code></pre>
+<h4 id="using-the-oyoclass-proxy">Using the OYOclass Proxy</h4>
+<p>If the above API is being blocked, you can try adding <code>https://proxy.oyoclass.com/</code> to the beginning of your URL:</p>
+<pre><code class="language-python">import requests
+
+url = 'https://proxy.oyoclass.com/https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&amp;vs_currencies=usd'
+resp = requests.get(url)
+print(resp.text)
 </code></pre>
 <h4 id="post-data-to-a-webpage">POST Data to a Webpage</h4>
 <p>We can also POST data to webpages with Requests. This action is like submitting form data or logging into a webpage, not trying to load a page:</p>
