@@ -193,8 +193,8 @@
 <p>Python 3.0 (also called "Python 3000" or "Py3K") was released on December 3, 2008. It was designed to rectify fundamental design flaws in the language—the changes required could not be implemented while retaining full backwards compatibility with the 2.x series, which necessitated a new major version number. The guiding principle of Python 3 was: "reduce feature duplication by removing old ways of doing things".</p>
 </blockquote>
 <p>Python2 won't be maintained after January 1, 2020. If you are new to programming, you should learn Python3 instead of Python2. However, if you are already familiar with Python2, learning Python3 will be very easy for you.</p>
-<h2 id="about-oyoclass-python3-editor">About OYOclass' Python3 Editor</h2>
-<p>The Python3 Editor is an application built into the OYOclass platform, which can be used to write Python3 code. OYOclass' Python3 Editor uses Python version 3.6 behind the scenes. You can use any of the standard Python3 libraries in Python3 Editor, except the <code>Turtle</code> and <code>tkinter</code> graphic libraries. If you want to use the <code>Turtle</code> library with Python, check out the <strong>Python Mini</strong> app on OYOclass platform.</p>
+<h2 id="about-oyoclass-python3-editor-beta">About OYOclass' Python3 Editor (Beta)</h2>
+<p>The Python3 Editor (Beta) is an application built into the OYOclass platform, which can be used to write Python3 code. OYOclass' Python3 Editor uses Python version 3.11 behind the scenes.</p>
 <p>The following links from Python's official website can help you get started.</p>
 <ul>
 <li><a href="https://docs.python.org/3.6/tutorial/index.html">The Python Tutorial</a></li>
@@ -222,28 +222,16 @@ print(f&quot;Hello {name}, you are {age} years old&quot;)
 <pre><code class="language-python">from urllib.request import urlopen
 import json
 
-req = urlopen(&quot;https://aws.random.cat/meow&quot;)
+req = urlopen(&quot;https://cataas.com/cat?json=true&quot;)
 data = json.loads(req.read())
-print(f&quot;Open the URL below, you will see a cat: \n{data['file']}&quot;)
+print(f&quot;Open the URL to see a cat: \n https://cataas.com{data['url']}&quot;)
 </code></pre>
-<h2 id="beyond-oyoclass-python3-editor">Beyond OYOclass' Python3 Editor</h2>
+<h2 id="beyond-oyoclass-python3-editor-beta">Beyond OYOclass' Python3 Editor (Beta)</h2>
 <p>If you would like to do more with Python and go beyond the capabilities of OYOclass' Python3 Editor, please download and install the Python:</p>
 <ul>
-<li><a href="https://www.python.org/downloads/">Download Python</a>: The version you download from Python's website is most likely greater than or equal to version 3.7. Although OYOclass' Python3 Editor uses Pythonv3.6 behind the scenes, there are not many differences between Python 3.6 and Python 3.7.</li>
+<li><a href="https://www.python.org/downloads/">Download Python</a>: The version you download from Python's website is most likely greater than or equal to version 3.11. </li>
 <li><a href="https://docs.python.org/3/">Python3's Official Documentation</a></li>
-<li><a href="https://docs.python.org/3/library/2to3.html">Automated Python 2 to 3 code translation</a></li>
-<li><a href="https://pypi.org/project/six/">Six Library</a>: Six is a Python 2 and 3 compatibility library. It provides utility functions to smooth over the differences between the Python versions. The goal is to write Python code that is compatible in both Python versions. See the documentation for more information on what is provided.</li>
 <li><a href="https://github.com/vinta/awesome-python">Resources in Awesome Python's Repository</a></li>
-</ul>
-<p><strong> Renamed modules</strong></p>
-<ul>
-<li>Python2 <code>import SimpleHTTPServer</code> to Python3 <code>import http.server</code></li>
-<li>Python2 <code>import ConfigParser</code>     to Python3 <code>import configparser</code></li>
-<li>Python2 <code>import SocketServer</code>     to Python3 <code>import socketserver</code></li>
-<li>Python2 <code>import Tkinter</code>          to Python3 <code>import tkinter</code></li>
-<li>Python2 <code>import urllib</code>           to Python3 <code>import urllib.request, urllib.parse, urllib.error</code></li>
-<li>Python2 <code>import urllib2</code>          to Python3 <code>import ullib.request, urllib.error</code></li>
-<li>Python2 <code>import urlparse</code>         to Python3 <code>import urllib.parse</code></li>
 </ul>
               
             </div>
@@ -292,5 +280,5 @@ print(f&quot;Open the URL below, you will see a cat: \n{data['file']}&quot;)
 
 <!--
 MkDocs version : 1.4.2
-Build Date UTC : 2023-03-15 17:16:18.131300+00:00
+Build Date UTC : 2023-04-18 18:43:33.564418+00:00
 -->
