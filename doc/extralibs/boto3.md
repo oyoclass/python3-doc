@@ -16,6 +16,15 @@ Boto3 is a Python library written by Amazon to interact with their cloud service
     </p>
 </div>
 
+<div class="notebox notebox-danger">
+    <p class="notebox-title">
+        Warning
+    </p>
+    <p>
+        When including private S3 credentials in your code, make sure you <b>DO NOT</b> make your project <b>"Open Source"</b> when you share it.
+    </p>
+</div>
+
 ### Examples
 
 In all the following examples, **you must replace all the credentials marked with pointed brackets (<>) with your own**. You can find them by following the guide linked above.

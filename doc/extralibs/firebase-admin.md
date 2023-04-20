@@ -18,6 +18,15 @@ firebase-admin is a Python library that allows for accessing and interacting wit
     </p>
 </div>
 
+<div class="notebox notebox-danger">
+    <p class="notebox-title">
+        Warning
+    </p>
+    <p>
+        When including private database credentials in your code, make sure you <b>DO NOT</b> make your project <b>"Open Source"</b> when you share it.
+    </p>
+</div>
+
 ### Connecting to Your Realtime Database
 
 To use this library, **you must have an active and setup Firebase account with a realtime database set up**. You can create one and set it up following the guide linked above.

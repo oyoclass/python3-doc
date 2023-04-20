@@ -21,6 +21,15 @@ PyMongo is a Python library that provides an interface for using MongoDB. MongoD
     </p>
 </div>
 
+<div class="notebox notebox-danger">
+    <p class="notebox-title">
+        Warning
+    </p>
+    <p>
+        When including private database credentials in your code, make sure you <b>DO NOT</b> make your project <b>"Open Source"</b> when you share it.
+    </p>
+</div>
+
 ### Connecting to Your Database
 
 Before we can write or read anything to our new cloud database, we need to actually have our code connect to it. Mongo provides a pre-built connection URL that you can copy and paste into your code. To find this URL, do the following:

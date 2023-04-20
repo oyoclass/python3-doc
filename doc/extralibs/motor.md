@@ -15,6 +15,15 @@ Motor is an asyncio driver for MongoDB databases in Python.
     </p>
 </div>
 
+<div class="notebox notebox-danger">
+    <p class="notebox-title">
+        Warning
+    </p>
+    <p>
+        When including private database credentials in your code, make sure you <b>DO NOT</b> make your project <b>"Open Source"</b> when you share it.
+    </p>
+</div>
+
 ### Examples
 
 #### Using the asyncio Client
