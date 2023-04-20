@@ -40,6 +40,7 @@ nav:
         - 'jinja2': 'extralibs/jinja2.md'
         - 'pillow': 'extralibs/pillow.md'
         - 'tinydb': 'extralibs/tinydb.md'
+        - 'dataset': 'extralibs/dataset.md'
         - 'pymongo': 'extralibs/pymongo.md'
         - 'motor': 'extralibs/motor.md'
         - 'plyvel': 'extralibs/plyvel.md'
