@@ -119,6 +119,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dataset/">dataset</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../pymongo/">pymongo</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../motor/">motor</a>
@@ -184,6 +186,15 @@
                 <h2 id="openai">OpenAI</h2>
 <p>The OpenAI Python library provides convenient access to the OpenAI API from applications written in the Python language. It includes a pre-defined set of classes for API resources that initialize themselves dynamically from API responses which makes it compatible with a wide range of versions of the OpenAI API <sup>[1]</sup>.</p>
 <p>To use the openAI's API, you first need to have your openAI's API key. To do so, you could register your account in <a href="https://platform.openai.com/">https://platform.openai.com/</a>, then go to your <a href="https://platform.openai.com/account/api-keys">account API-key settings</a>, click <em>"+ Create new secret key"</em> to generate an API key, then you copy the key and use it in the sample code below.</p>
+<div class="notebox notebox-danger">
+    <p class="notebox-title">
+        Warning
+    </p>
+    <p>
+        When including private API keys in your code, make sure you <b>DO NOT</b> make your project <b>"Open Source"</b> when you share it.
+    </p>
+</div>
+
 <h3 id="examples">Examples</h3>
 <h4 id="built-ai-to-answer-question">Built AI to answer question</h4>
 <pre><code class="language-python">import openai

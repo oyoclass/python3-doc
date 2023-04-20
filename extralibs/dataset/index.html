@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>matplotlib - Python3 Editor Documentation</title>
+    <title>dataset - Python3 Editor Documentation</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "matplotlib";
-        var mkdocs_page_input_path = "extralibs/matplotlib.md";
+        var mkdocs_page_name = "dataset";
+        var mkdocs_page_input_path = "extralibs/dataset.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -119,7 +119,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../tinydb/">tinydb</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../dataset/">dataset</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">dataset</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#example-simple-student-roster">Example: Simple Student Roster</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../pymongo/">pymongo</a>
                   </li>
@@ -139,19 +145,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../scipy/">scipy</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">matplotlib</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#plot-a-simple-line">Plot a Simple Line</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#plot-a-histogram">Plot a Histogram</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../matplotlib/">matplotlib</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../seaborn/">seaborn</a>
                   </li>
@@ -187,7 +181,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Extra Python Libraries &raquo;</li>
-      <li>matplotlib</li>
+      <li>dataset</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -196,53 +190,61 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="matplotlib">Matplotlib</h2>
-<p>Matplotlib is a library for creating various data visualizations in Python. You can render many different kinds of graphs and charts with a simple interface. This library works closely with <a href="../numpy/">NumPy</a> to handle its datasets.</p>
-<h3 id="examples">Examples</h3>
-<h4 id="plot-a-simple-line">Plot a Simple Line</h4>
-<p>Let's make a basic straight line segment graph:</p>
-<pre><code class="language-python">import matplotlib.pyplot as plt
-# define the 1st point's coordinate (x=1, y=2)
-pt1 = [1, 2]
-# define the 2nd point's coordinate (x=3, y=8)
-pt2 = [3, 8]
-# draw a line from point1 to point2, also mark these 2 points
-plt.plot(pt1, pt2, marker='o')
-plt.show()
+                <h2 id="dataset">Dataset</h2>
+<p>The "dataset" library makes reading and writing data in SQLite databases as simple as reading and writing JSON files.</p>
+<h3 id="example-simple-student-roster">Example: Simple Student Roster</h3>
+<p>We can rewrite the example in the <a href="../../modules/sqlite">SQLite documentation</a> with this <code>dataset</code> library.</p>
+<pre><code class="language-python">import dataset
+
+db = dataset.connect('sqlite:///example.db')
+
+table = db[&quot;students&quot;]
+table.insert({
+    &quot;last_name&quot;: &quot;Doe&quot;,
+    &quot;first_name&quot;: &quot;John&quot;,
+    &quot;age&quot;: 16,
+    &quot;gpa&quot;: 3.2
+})
+table.insert({
+    &quot;last_name&quot;: &quot;Doe&quot;,
+    &quot;first_name&quot;: &quot;Jane&quot;,
+    &quot;age&quot;: 13,
+    &quot;gpa&quot;: 3.8
+})
+table.insert({
+    &quot;last_name&quot;: &quot;Smith&quot;,
+    &quot;first_name&quot;: &quot;Ronald&quot;,
+    &quot;age&quot;: 14,
+    &quot;gpa&quot;: 2.7
+})
+
+# find all students that age &gt; 15
+students = table.find(age={&quot;&gt;&quot;: 15})
+for student in students:
+    print(student)
+
+
+# find one student whose first name is &quot;Jane&quot;
+jane = table.find_one(first_name=&quot;Jane&quot;)
+print(jane)
 </code></pre>
-<p>Output:</p>
-<p><img src="../../assets/img/matplotlib-line.png" width="400px"/></p>
-<h4 id="plot-a-histogram">Plot a Histogram</h4>
-<pre><code class="language-python">import matplotlib.pyplot as plt
-import numpy as np
+<p>Run the code:</p>
+<pre><code>Students with age &gt; 13:
+OrderedDict([('id', 1), ('last_name', 'Doe'), ('first_name', 'John'), ('age', 16), ('gpa', 3.2)])
+OrderedDict([('id', 3), ('last_name', 'Smith'), ('first_name', 'Ronald'), ('age', 14), ('gpa', 2.7)])
 
-plt.style.use('_mpl-gallery')
-
-np.random.seed(1)  # set random seed
-x = 4 + np.random.normal(0, 1.5, 200)  # Create a random normal distribution
-
-# plot:
-fig, ax = plt.subplots()
-
-ax.hist(x, bins=8, linewidth=0.5, edgecolor=&quot;white&quot;)  # Create histogram
-
-ax.set(xlim=(0, 8), xticks=np.arange(1, 8),
-       ylim=(0, 56), yticks=np.linspace(0, 56, 9))  # Set legend constraints
-
-plt.show()
+Student with name Jane:
+OrderedDict([('id', 2), ('last_name', 'Doe'), ('first_name', 'Jane'), ('age', 13), ('gpa', 3.8)])
 </code></pre>
-<p>Output:</p>
-<p><img src="../../assets/img/matplotlib-histogram.png" width="200px"/></p>
+<p>In the above example, we first connect to a database file named "example.db", if the file doesn't exist, <code>dataset</code> will automatically create this file, then we insert 3 students into the table, then we query all students whose age is greater than 13. We also made a query to find a student whose name is "Jane". You can see that with the <code>dataset</code> library, we don't need to write SQL statements like <code>SELECT</code>, <code>INSERT</code>, it makes the operation much easier.</p>
 <h3 id="reference">Reference</h3>
-<ul>
-<li><a href="https://matplotlib.org/stable/index.html">Matplotlib</a> at <em>matplotlib.org</em></li>
-</ul>
+<p>For more examples on query, insert, update and delete, please head to the <code>dataset</code> official documentation: <a href="https://dataset.readthedocs.io/">https://dataset.readthedocs.io/</a></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../scipy/" class="btn btn-neutral float-left" title="scipy"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../seaborn/" class="btn btn-neutral float-right" title="seaborn">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../tinydb/" class="btn btn-neutral float-left" title="tinydb"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../pymongo/" class="btn btn-neutral float-right" title="pymongo">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -265,10 +267,10 @@ plt.show()
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../scipy/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../tinydb/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../seaborn/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../pymongo/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
