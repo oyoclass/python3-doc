@@ -53,6 +53,7 @@ nav:
         - 'matplotlib': 'extralibs/matplotlib.md'
         - 'seaborn': 'extralibs/seaborn.md'
         - 'pandas': 'extralibs/pandas.md'
+        - 'numba': 'extralibs/numba.md'
         - 'nltk': 'extralibs/nltk.md'
         - 'scikit-learn': 'extralibs/scikit-learn.md'
         - 'pysimplegui': 'extralibs/pysimplegui.md'
