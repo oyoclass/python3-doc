@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>plyvel - Python3 Editor Documentation</title>
+    <title>numba - Python3 Editor Documentation</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "plyvel";
-        var mkdocs_page_input_path = "extralibs/plyvel.md";
+        var mkdocs_page_name = "numba";
+        var mkdocs_page_input_path = "extralibs/numba.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -125,21 +125,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../motor/">motor</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">plyvel</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#create-update-and-read-keys">Create, Update, and Read Keys</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#delete-keys">Delete Keys</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#iterate-over-all-keys">Iterate Over All Keys</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../plyvel/">plyvel</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../boto3/">boto3</a>
                   </li>
@@ -159,7 +145,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../pandas/">pandas</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../numba/">numba</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">numba</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../nltk/">nltk</a>
                   </li>
@@ -191,7 +183,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Extra Python Libraries &raquo;</li>
-      <li>plyvel</li>
+      <li>numba</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -200,80 +192,36 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="plyvel">Plyvel</h2>
-<p>Plyvel is a Python library that provides an interface to LevelDB. LevelDB is a simple datastore which exlusively maps byte strings to byte strings. This database is best used when you will always know the keys you will be accessing and don't need advanced database features like querying.</p>
+                <h2 id="numba">numba</h2>
+<p><code>numba</code> is a Just-In-Time compiler for Python array and numerical functions that gives you the power to speed up your applications with high performance functions written directly in Python<sup>[1]</sup>.</p>
 <h3 id="examples">Examples</h3>
-<h4 id="create-update-and-read-keys">Create, Update, and Read Keys</h4>
-<p>Using <code>db.put</code> to write to the same key multiple times will simply overwrite the value in the database, so create and update operations are done the exact same way:</p>
-<pre><code class="language-python">import plyvel
+<p>The following sample code is taken from the <code>numba</code> official documentation<sup>[2]</sup>. It first defines a <code>go_fast</code> function with using the <code>tanh</code> function of <code>numpy</code>, then simply adds a <code>@jit</code> decorator to speed up the code execution.</p>
+<pre><code class="language-python">from numba import jit
+import numpy as np
 
-db = plyvel.DB('exampledb', create_if_missing=True)
-db.put(b'example_key', b'example_value1')
-print(db.get(b'example_key'))
-db.put(b'example_key', b'example_value2')
-print(db.get(b'example_key'))
-</code></pre>
-<p>Output:</p>
-<pre><code class="language-text">b'example_value1'
-b'example_value2'
-</code></pre>
-<div class="notebox notebox-info">
-    <p class="notebox-title">
-        Note
-    </p>
-    <p>
-        In our example, we used the argument <code>create_if_missing=True</code>. This will automatically create the database folder and put into your project's file list if it doesn't already exist. Since we used <code>'exampledb'</code> in our code above, you can see it added in your project's file list to the left: 
-    </p>
-    <p>
-        <img src="../../assets/img/plyvel-filelist.png" width="300px"/>
-    </p>
-</div>
+x = np.arange(100).reshape(10, 10)
 
-<h4 id="delete-keys">Delete Keys</h4>
-<p>You can also delete keys with the <code>db.delete()</code> method:</p>
-<pre><code class="language-python">import plyvel
+@jit(nopython=True) 
+def go_fast(a):
+    trace = 0.0
+    for i in range(a.shape[0]):   # Numba likes loops
+        trace += np.tanh(a[i, i]) # Numba likes NumPy functions
+    return a + trace              # Numba likes NumPy broadcasting
 
-db = plyvel.DB('exampledb', create_if_missing=True)
-db.put(b'example_key', b'example_value')
-print(db.get(b'example_key'))
-db.delete(b'example_key')
-print(db.get(b'example_key'))
+print(go_fast(x))
 </code></pre>
-<p>Output:</p>
-<pre><code class="language-text">b'example_value'
-None
-</code></pre>
-<h4 id="iterate-over-all-keys">Iterate Over All Keys</h4>
-<p>When a new key is insterted into the database, it is stored (and later returned) in <strong>lexicographical order</strong>:</p>
-<pre><code class="language-python">import plyvel
-
-db = plyvel.DB('exampledb', create_if_missing=True)
-db.put(b'z', b'zval')
-db.put(b'A', b'Aval')
-db.put(b'2', b'2val')
-db.put(b'1', b'1val')
-db.put(b'a', b'aval')
-
-for key, value in db:
-    print(key, value)
-</code></pre>
-<p>Output from print:</p>
-<pre><code class="language-text">b'1' b'1val'
-b'2' b'2val'
-b'A' b'Aval'
-b'a' b'aval'
-b'z' b'zval'
-</code></pre>
+<p>For more examples, please head to <code>numba</code> official documentation<sup>[2]</sup>.</p>
 <h3 id="reference">Reference</h3>
 <ul>
-<li><a href="https://plyvel.readthedocs.io/en/latest/index.html">Plyvel</a> at <em>plyvel.redthedocs.io</em></li>
+<li>[1]: <a href="https://numba.readthedocs.io/en/stable/user/overview.html">https://numba.readthedocs.io/en/stable/user/overview.html</a></li>
+<li>[2]: <a href="https://numba.readthedocs.io/">https://numba.readthedocs.io/</a></li>
 </ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../motor/" class="btn btn-neutral float-left" title="motor"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../boto3/" class="btn btn-neutral float-right" title="boto3">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../pandas/" class="btn btn-neutral float-left" title="pandas"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../nltk/" class="btn btn-neutral float-right" title="nltk">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -296,10 +244,10 @@ b'z' b'zval'
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../motor/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../pandas/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../boto3/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../nltk/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
