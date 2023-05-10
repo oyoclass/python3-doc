@@ -2,7 +2,9 @@
 
 The OpenAI Python library provides convenient access to the OpenAI API from applications written in the Python language. It includes a pre-defined set of classes for API resources that initialize themselves dynamically from API responses which makes it compatible with a wide range of versions of the OpenAI API <sup>\[1\]</sup>.
 
-To use the openAI's API, you first need to have your openAI's API key. To do so, you could register your account in [https://platform.openai.com/](https://platform.openai.com/), then go to your [account API-key settings](https://platform.openai.com/account/api-keys), click _"+ Create new secret key"_ to generate an API key, then you copy the key and use it in the sample code below.
+To use the openAI's API, you first need to have your openAI's API key. To do so, you could register your account in [https://platform.openai.com/](https://platform.openai.com/), then go to your [account API-key settings](https://platform.openai.com/account/api-keys), click _"+ Create new secret key"_ to generate an API key, then you copy the key and use it in the sample code below. 
+
+For a step-by-step tutorial on how to obtain the API key, please <a href="https://docs.oyoclass.com/cloudservices/ai/openai/" target="_blank">click here</a>.
 
 <div class="notebox notebox-danger">
     <p class="notebox-title">
