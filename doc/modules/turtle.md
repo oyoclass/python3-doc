@@ -24,8 +24,7 @@ Copy the above code to Python3 editor in OYOclass, then click "Run", you will se
 
 <img src="../../assets/img/turtle-square.png" width="400px"/>
 
-
-#### 2, Draw with a filled color 
+#### 2, Draw with a filled color
 
 ```python
 from turtle import *
@@ -47,4 +46,5 @@ Copy the above code to Python3 editor in OYOclass, then click "Run", you will se
 <img src="../../assets/img/turtle-square-filled.png" width="400px"/>
 
 ### Reference
-* https://docs.python.org/3/library/turtle.html
+
+-   [Turtle Module](https://docs.python.org/3/library/turtle.html) at _docs.python.org_
