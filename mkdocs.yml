@@ -61,3 +61,4 @@ nav:
         - 'arcade': 'extralibs/arcade.md'
         - 'pyxel': 'extralibs/pyxel.md'
         - 'pydub': 'extralibs/pydub.md'
+        - 'openai': 'extralibs/openai.md'
