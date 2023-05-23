@@ -11,9 +11,9 @@ Currently Python has two versions: Python2 and Python3. Python3 is the new versi
 Python2 won't be maintained after January 1, 2020. If you are new to programming, you should learn Python3 instead of Python2. However, if you are already familiar with Python2, learning Python3 will be very easy for you.
 
 
-## About OYOclass' Python3 Editor (Beta)
+## About OYOclass' Python3 IDE (Beta)
 
-The Python3 Editor (Beta) is an application built into the OYOclass platform, which can be used to write Python3 code. OYOclass' Python3 Editor uses Python version 3.11 behind the scenes.
+The Python3 IDE (Beta) is an application built into the OYOclass platform, which can be used to write Python3 code. OYOclass' Python3 IDE uses Python version 3.11 behind the scenes. The term "IDE" stands for "Integrated Development Environment", it provides a set of tools for programmers to write, edit and compile code efficiently. 
 
 The following links from Python's official website can help you get started.
 
