@@ -82,4 +82,4 @@ print(my_add(1, 2))  # 3
 
 ### Reference
 
-* [Built-in functions](https://docs.python.org/3/library/functions.html) at *docs.python.org*
+* [Built-in Functions](https://docs.python.org/3/library/functions.html) at *docs.python.org*

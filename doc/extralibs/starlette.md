@@ -1,6 +1,6 @@
 ## Starlette
 
-Starlette is an ASGI framework that allows for ease of building async web services in Python. To work properly, it must be used together with an ASGI server to run the service such as [Uvicorn](../uvicorn/).
+Starlette is an ASGI framework that allows for ease of building async web services in Python. To work properly, it must be used together with an ASGI server to run the service, such as [Uvicorn](../uvicorn/).
 
 ### Examples
 
@@ -30,7 +30,7 @@ app = Starlette(debug=True, routes=[
 ])
 
 if __name__ == '__main__':
-    # host must be 0.0.0.0 to work in the Python3 Editor
+    # host must be 0.0.0.0 to work in the Python3 IDE
     uvicorn.run(app, host='0.0.0.0', port=8000)
 ```
 

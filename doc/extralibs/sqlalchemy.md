@@ -38,7 +38,7 @@ CREATE TABLE students (
         Note
     </p>
     <p>
-        The <code>'sqlite:///'</code> URI indicates that we're using a SQLite database in a relative path. For Python3 Editor, that means your project's file list.
+        The <code>'sqlite:///'</code> URI indicates that we're using a SQLite database in a relative path. For Python3 IDE, that means your project's file list.
     </p>
     <p>
         When you try to open a database that doesn't exist, it will automatically be created and put into your file list. Since we used <code>'sqlite:///college.db'</code> in our code above, you can see that <b>college.db</b> was added in your project's file list to the left: 
@@ -71,7 +71,7 @@ conn.execute(ins)
 trans.commit()
 ```
 
-We can't see our result immedaitely, but we will read from this table in the next example to see the student we inserted.
+We can't see our result immediately, but we will read from this table in the next example to see the student we inserted.
 
 #### Read a Row
 
@@ -98,7 +98,7 @@ This will print out the data:
 (1, 'Karen', None)
 ```
 
-It's our student that we inserted before! They were given an `id` of **1** and since we did not specify a `lastname` for our student, it has been left null ([None](../../core/none) in Python)
+It's our student that we inserted before! They were given an `id` of **1** and since we did not specify a `lastname` for our student, it has been left null ([None](../../core/none) in Python).
 
 #### Update a Row
 

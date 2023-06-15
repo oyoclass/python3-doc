@@ -16,7 +16,7 @@ SELECT last_name, first_name, age FROM students WHERE age>15;
 select last_name, first_name, age from students where age>15;
 ```
 
-Usually key words like **SELECT**, **FROM**, **WHERE**, and so on are capitalized to differntiate them from the custom database table and column names.
+Usually key words like **SELECT**, **FROM**, **WHERE**, and so on are capitalized to differentiate them from the custom database table and column names.
 
 ### Example: Simple Student Roster
 
@@ -102,7 +102,7 @@ Note how we didn't specify an id, and it was automatically added for us.
 
 #### Searching For Specific Students
 
-And now that our table has data from it, we want a specific set of data. Let's run the first example query used at the beginning of this guide:
+Now that our table has data from it, we want a specific set of data. Let's run the first example query used at the beginning of this guide:
 
 ```python
 import sqlite3
@@ -178,7 +178,7 @@ id | last_name | first_name | age | gpa
 
 #### Delete Data from a Table
 
-Final of the main four operations, we can delete a row of data that is no longer needed. Keep in mind that like updates, you cannot undo a delete once it is committed:
+Last of the four main operations, we can delete a row of data that is no longer needed. Keep in mind that like updates, you cannot undo a delete once it is committed:
 
 ```python
 import sqlite3

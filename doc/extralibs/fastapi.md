@@ -1,6 +1,6 @@
 ## FastAPI
 
-FastAPI is a web framework that's designed to help programmers create API quickly and cleanly while being self-documenting. It is based on [Starlette](../starlette/). It's made to be easy to understand and ready for production releases and is currently being used in many real-world applications by major companies like Microsoft.
+FastAPI is a web framework that's designed to help programmers create API quickly and cleanly while being self-documenting. It is based on [Starlette](../starlette/). It's made to be easy to understand and ready for production releases, and is currently being used in many real-world applications by major companies like Microsoft.
 
 <div class="notebox notebox-info">
     <p class="notebox-title">
@@ -60,7 +60,7 @@ Then, when you click on the **Execute** button, you will get all your request's 
 
 #### More Robust API Definitions with Python Typehints
 
-FastAPI really shines when, and is designed to be used with, [Python Typehints](https://docs.python.org/3/library/typing.html). Even though Python is a dynamically typed language where you don't need to assign a type (like _str_, _int_, and so on) to each variable when declaring them like Java. However, Python supports **typehints**, which is a tool for programmers to communicate what kind of variables functions are _expecting_ and what they will return.
+FastAPI really shines when, and is designed to be used with, [Python Typehints](https://docs.python.org/3/library/typing.html). Python is a dynamically typed language where you don't need to assign a type (like _str_, _int_, and so on) to each variable when declaring them like Java. However, Python supports **typehints**, which is a tool for programmers to communicate what kind of variables functions are _expecting_ and what they will return.
 
 They are optional, but can help in creating easier to understand and maintainable code. Let's see how that works with FastAPI with this example:
 

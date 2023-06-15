@@ -250,7 +250,7 @@ Your output will generate 3 separate windows showing the original image, the red
         Note
     </p>
     <p>
-        When there are multiple windows in an output in Python3 Editor, you can use your mouse to click and drag the windows around to reposition them.
+        When there are multiple windows in an output in Python3 IDE, you can use your mouse to click and drag the windows around to reposition them.
     </p>
 </div>
 

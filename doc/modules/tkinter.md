@@ -1,9 +1,9 @@
 ## tkinter
+Tkinter is a GUI framework that is built into the Python Standard Library. This framework works cross-platform so it works regardless of OS.
 
+### Quick Example
 
-### Quick Examples
-
-#### 1, Simple messsage box
+#### Simple Message Box
 
 ```python
 from tkinter import *
@@ -21,6 +21,10 @@ lbl.grid(column=0, row=0)
 window.mainloop()
 ```
 
-Copy the above code to Python3 editor in OYOclass, then click "Run", you will see the running result like fhe following:
+Copy the above code to the Python3 IDE in OYOclass, then click "Run", you will see a running result like the following:
 
 <img src="../../assets/img/tkinter-msgbox.png" width="400px"/>
+
+### Reference
+
+-   [Tkinter Module](https://docs.python.org/3/library/tkinter.html#tkinter-modules) at _docs.python.org_

@@ -1,6 +1,6 @@
 ## Pyxel
 
-Pyxel is a retro game engine made for Python. There are some intentional limitations to the game engine, such as only being allowed to display 16 colors on the screen at any given time and only 4 sounds can be playing simultaneously.
+Pyxel is a retro game engine made for Python. There are some intentional limitations to the game engine, such as only being allowed to display 16 colors on the screen at any given time and only 4 sounds can be played simultaneously.
 
 These limitations are meant to help games made in it stay true to the retro-gaming era the library is aiming at recreating, and it can also be a good exercise in keeping your projects small and focused.
 

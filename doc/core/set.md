@@ -75,5 +75,5 @@ print(a.union(b))        # {1, 2, 3}
 
 ### Reference
 
-* [Sets](https://docs.python.org/3/tutorial/datastructures.html#sets) as a **Data Structure** on *docs.python.org*.
-* [Set](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset) as a **Built-in Type** on *docs.python.org*. 
+* [Sets as a Data Structure](https://docs.python.org/3/tutorial/datastructures.html#sets) on *docs.python.org*.
+* [Set as a Built-in Type](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset) on *docs.python.org*. 

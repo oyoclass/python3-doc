@@ -41,7 +41,7 @@ Your output will look like this:
 
 #### Getting Player Input
 
-Getting player input requires we read it from the built in `on_key_press` function. We can do this by creating our own class that extends from arcade's `arcade.Window` class:
+Getting player input requires we read it from the built-in `on_key_press` function. We can do this by creating our own class that extends from arcade's `arcade.Window` class:
 
 ```python
 import arcade

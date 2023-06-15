@@ -54,7 +54,7 @@ def index_post():
 
     return ret
 
-# host must be 0.0.0.0 to work in the Python3 Editor
+# host must be 0.0.0.0 to work in the Python3 IDE
 run(host='0.0.0.0', port=8000)
 ```
 

@@ -28,11 +28,11 @@ async def app(scope, receive, send):
     })
 
 if __name__ == "__main__":
-    # host must be 0.0.0.0 to work in the Python3 Editor
+    # host must be 0.0.0.0 to work in the Python3 IDE
     uvicorn.run('main:app', host='0.0.0.0', port=8000, log_level='info')
 ```
 
-On the right, we will see our page:
+On the right side of the Python3 IDE, we will see our page:
 
 <img src="../../assets/img/uvicorn-helloworld.png" width="400px"/>
 
@@ -76,7 +76,7 @@ async def app(scope, receive, send):
         await greet(send, scope['path'][7:])
 
 if __name__ == "__main__":
-    # host must be 0.0.0.0 to work in the Python3 Editor
+    # host must be 0.0.0.0 to work in the Python3 IDE
     uvicorn.run('main:app', host='0.0.0.0', port=8000, log_level='info')
 ```
 

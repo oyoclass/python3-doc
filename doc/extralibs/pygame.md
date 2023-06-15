@@ -13,7 +13,7 @@ import pygame.examples.aliens
 pygame.examples.aliens.main()
 ```
 
-You will get a game window open to the right of your code, you can use the left and right arrow keys to move, and space to shoot:
+You will get a game window open to the right of your code. You can use the left and right arrow keys to move and space to shoot:
 
 <img src="../../assets/img/pygame-aliens-demo.png">
 
@@ -84,7 +84,7 @@ while True:
     pygame.display.flip()
 ```
 
-You will get a game window open to the right of your code, you can use the arrow keys to move the ball up, down, left, and right:
+You will get a game window open to the right of your code. You can use the arrow keys to move the ball up, down, left, and right:
 
 <img src="../../assets/img/pygame-keyboard-ball.png">
 

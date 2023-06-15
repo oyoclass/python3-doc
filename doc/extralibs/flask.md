@@ -1,6 +1,6 @@
 ## Flask
 
-Flask is a micro web framwork. Flask is similar to [Bottle](../bottle/), but it has more functionality out of the box and scales easier. Flask is better suited for larger projects that can span across mulitple Python files.
+Flask is a micro web framework. Flask is similar to [Bottle](../bottle/), but it has more functionality out of the box and scales easier. Flask is better suited for larger projects that can span across multiple Python files.
 
 ### Example
 
@@ -18,11 +18,11 @@ def index():
     return 'Welcome to Flask!'
 
 if __name__ == '__main__':
-    # host must be 0.0.0.0 to work in the Python3 Editor
+    # host must be 0.0.0.0 to work in the Python3 IDE
     app.run(host='0.0.0.0', port=8080)
 ```
 
-When we run our code, we get the folllowing output on the right:
+When we run our code, we get the folllowing output:
 
 <img src="../../assets/img/flask-helloworld.png" width="400px">
 
@@ -38,7 +38,7 @@ Then, name it "templates" in the window that pops up:
 
 <img src="../../assets/img/flask-new-folder-name.png" width="300px">
 
-Add a new file to your project and name it `welcome.html`. Paste the following HTML into the file then put it inside of your `templates` folder that we just created:
+Add a new file to your project and name it `welcome.html`. Paste the following HTML into the file, then put it inside of the `templates` folder that we just created:
 
 ```html
 <!DOCTYPE html>
@@ -74,7 +74,7 @@ def welcome(name):
     )
 
 if __name__ == '__main__':
-    # host must be 0.0.0.0 to work in the Python3 Editor
+    # host must be 0.0.0.0 to work in the Python3 IDE
     app.run(host='0.0.0.0', port=8080)
 ```
 

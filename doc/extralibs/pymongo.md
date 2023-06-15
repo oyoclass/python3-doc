@@ -7,10 +7,10 @@ PyMongo is a Python library that provides an interface for using MongoDB. MongoD
         Note
     </p>
     <p>
-        Python3 Editor does not provide access to a locally running Mongo database. You can, however, connect to a Mongo cloud database using the Python3 Editor. Mongo provides a free tier for their cloud database service and you can get one by making an account with them.
+        Python3 IDE does not provide access to a locally running Mongo database. You can, however, connect to a Mongo cloud database using the Python3 IDE. Mongo provides a free tier for their cloud database service and you can get one by making an account with them.
     </p>
     <p>
-        We have written a short guide on how to properly set up a Mongo cloud instance to work with Python3 Editor. You can check it out here:
+        We have written a short guide on how to properly set up a Mongo cloud instance to work with Python3 IDE. You can check it out here:
     </p>
     <p>
         <a href="https://docs.oyoclass.com/cloudservices/datastores/mongo">

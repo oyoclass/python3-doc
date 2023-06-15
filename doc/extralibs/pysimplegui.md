@@ -6,7 +6,7 @@ PySimpleGUI is a meta-library, as in it combines several other GUI libraries int
 
 #### Rendering Text
 
-First thing we will do is simply get a window with text rendered on it. All PythonSimpleGUI projects will have similar structures where we will define elements, put them in a layout list, then render them to a window:
+First thing we will do is simply get a window with text rendered on it. All PythonSimpleGUI projects will have a similar structure where we will define elements, put them in a layout list, then render them to a window:
 
 ```python
 import PySimpleGUI as pg
@@ -78,7 +78,7 @@ while True:
 window.close()
 ```
 
-Then we can see the window rendered to the right like we expect:
+Then, we can see the window rendered like we expect:
 
 <img src="../../assets/img/pysimplegui-btnlayout.png">
 

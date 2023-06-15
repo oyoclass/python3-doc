@@ -33,7 +33,7 @@ To use this library, **you must have an active and setup Firebase account with a
 
 #### Downloading Your Credentials JSON
 
-First, go to the left side of the Firebase UI and find the gear icon next to the **Project Overview** label. Then, click on **Project Settings**:
+First, go to the left side of the Firebase UI and find the gear icon next to the **Project Overview** label. Then, click on **Project settings**:
 
 <img src="../../assets/img/firebase-project-settings.png" width="400px">
 

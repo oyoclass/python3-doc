@@ -1,6 +1,6 @@
 ## Plyvel
 
-Plyvel is a Python library that provides an interface to LevelDB. LevelDB is a simple datastore which exlusively maps byte strings to byte strings. This database is best used when you will always know the keys you will be accessing and don't need advanced database features like querying.
+Plyvel is a Python library that provides an interface to LevelDB. LevelDB is a simple datastore which exclusively maps byte strings to byte strings. This database is best used when you will always know the keys you will be accessing and don't need advanced database features like querying.
 
 ### Examples
 
@@ -60,7 +60,7 @@ None
 
 #### Iterate Over All Keys
 
-When a new key is insterted into the database, it is stored (and later returned) in **lexicographical order**:
+When a new key is inserted into the database, it is stored (and later returned) in **lexicographical order**:
 
 ```python
 import plyvel
@@ -88,4 +88,4 @@ b'z' b'zval'
 
 ### Reference
 
--   [Plyvel](https://plyvel.readthedocs.io/en/latest/index.html) at _plyvel.redthedocs.io_
+-   [Plyvel](https://plyvel.readthedocs.io/en/latest/index.html) at _plyvel.readthedocs.io_

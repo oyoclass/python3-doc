@@ -57,4 +57,4 @@ The **long** type in Python has been removed. There are no long-type integers in
 
 
 ### Reference
-* [Numeric Types](https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex) at docs.python.org
+* [Numeric Types](https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex) at *docs.python.org*

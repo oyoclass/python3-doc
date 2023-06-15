@@ -13,7 +13,7 @@ Python2 won't be maintained after January 1, 2020. If you are new to programming
 
 ## About OYOclass' Python3 IDE (Beta)
 
-The Python3 IDE (Beta) is an application built into the OYOclass platform, which can be used to write Python3 code. OYOclass' Python3 IDE uses Python version 3.11 behind the scenes. The term "IDE" stands for "Integrated Development Environment", it provides a set of tools for programmers to write, edit and compile code efficiently. 
+The Python3 IDE (Beta) is an application built into the OYOclass platform, which can be used to write Python3 code. OYOclass' Python3 IDE uses Python version 3.11 behind the scenes. The term "IDE" stands for "Integrated Development Environment", and it provides a set of tools for programmers to write, edit, and compile code efficiently. 
 
 The following links from Python's official website can help you get started.
 
@@ -27,7 +27,6 @@ The following links from Python's official website can help you get started.
 Copy the following code samples to OYOclass' Python3 Editor. Then, click the "Run" button.
 
 **Print**
-
 ```python
 print("Hello World")
 print(123)
@@ -63,7 +62,7 @@ print(f"Open the URL to see a cat: \n https://cataas.com{data['url']}")
 
 ## Beyond OYOclass' Python3 Editor (Beta)
   
-If you would like to do more with Python and go beyond the capabilities of OYOclass' Python3 Editor, please download and install the Python:
+If you would like to do more with Python and go beyond the capabilities of OYOclass' Python3 Editor, please download and install Python on your local machine:
 
 * [Download Python](https://www.python.org/downloads/): The version you download from Python's website is most likely greater than or equal to version 3.11. 
 * [Python3's Official Documentation](https://docs.python.org/3/)

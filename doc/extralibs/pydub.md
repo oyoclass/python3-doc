@@ -64,7 +64,7 @@ Run the following code and your program will begin playing audio:
     Note
   </p>
   <p>
-    make sure your file format matches the file you uploaded. If you uploaded an mp3, make sure you change the format to <code>"mp3"</code>
+    Make sure your file format matches the file you uploaded. If you uploaded an mp3, make sure you change the format to <code>"mp3"</code>.
   </p>
 </div>
 
@@ -90,7 +90,7 @@ nan    :  0.000 fd=   0 aq=    0KB vq=    0KB Input #0, wav, from '/tmp/tmpxyn84
    ...
 ```
 
-This is the raw text output of processing the audio stream. To actually hear the audio, you must click on the speaker icon on the top right of your running project:
+This is the raw text output of processing the audio stream. To actually hear the audio, you must click on the speaker icon at the top-right corner of your running project:
 
 <img src="../../assets/img/pydub-enable-audio1.png" width="400px"/>
 

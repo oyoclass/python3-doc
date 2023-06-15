@@ -85,4 +85,4 @@ print(b.format("Albert", "Einstein"))    # hello Albert Einstein
 
 ### Reference
 
-* [String methods](https://docs.python.org/3/library/stdtypes.html#string-methods) at *docs.python.org*
+* [String Methods](https://docs.python.org/3/library/stdtypes.html#string-methods) at *docs.python.org*

@@ -6,7 +6,7 @@ Bottle is an ultra-lightweight web framework that works with just the Python Sta
 
 #### Say Hello
 
-Let's create a simple server with two endpoints. Copy and paste the code below to the Python3 Editor:
+Let's create a simple server with two endpoints. Copy and paste the code below to the Python3 IDE:
 
 ```python
 from bottle import route, run, template
@@ -20,7 +20,7 @@ def index():
 def hello(name):
     return template('<b>Hello {{name}}</b>!', name=name)
 
-# host must be 0.0.0.0 to work in the Python3 Editor
+# host must be 0.0.0.0 to work in the Python3 IDE
 run(host='0.0.0.0', port=8080)
 ```
 

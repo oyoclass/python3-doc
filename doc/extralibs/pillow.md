@@ -8,7 +8,7 @@ Pillow is an image processing library for Python. It enables you to load picture
 
 The first thing we need to do to use this package is have an image to work with. We're going to use an image of OYObot in the following examples, <a download="oyobot.png" href="../../assets/img/oyobot.png" title="Download image">click here</a> to download a copy.
 
-After it's downloaded, open up the Python3 Editor and select **Upload File** from the dropdown at the top of your project's file list:
+After it's downloaded, open up the Python3 IDE and select **Upload File** from the dropdown at the top of your project's file list:
 
 <img src="../../assets/img/pillow-upload-image1.png" width="400px"/>
 
@@ -54,7 +54,7 @@ You will get an ImageMagick window rendered to the right of your code that looks
 
 <img src="../../assets/img/pillow-render.png" width="400px"/>
 
-You can use your mouse and keyboard to interact with this window. The second smaller window allows you to pan around the image by clicking and dragging since it will most likely be too big to fit on one screen.
+You can use your mouse and keyboard to interact with this window. The second smaller window allows you to pan around the image by clicking and dragging, since it will most likely be too big to fit on one screen.
 
 #### Apply a Filter to an Image
 
@@ -84,7 +84,7 @@ img = img.filter(ImageFilter.GaussianBlur(20))
 img.save('oyobot_blurred.png')
 ```
 
-You will see that the file will appear automatically to the left of your code in your projects file list:
+You will see that the file will appear automatically to the left of your code in your project's file list:
 
 <img src="../../assets/img/pillow-save-image.png" width="300px"/>
 

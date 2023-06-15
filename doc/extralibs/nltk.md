@@ -73,7 +73,7 @@ There are many supported parts of speech, but for this example the tags that app
 9. IN - Preposition
 10. DT - Determiner
 
-You can find a complete list in nltk's documentation
+You can find a complete list in nltk's documentation.
 
 #### Identify Proper Nouns
 

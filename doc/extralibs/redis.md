@@ -7,10 +7,10 @@ Redis is an in-memory datastore which boasts high speed data storage and access.
         Note
     </p>
     <p>
-        Python3 Editor does not provide access to a locally running Redis instance. You can, however, connect to a Redis cloud database using the Python3 Editor. Redis provides a free tier for their cloud database service and you can get one by making an account with them.
+        Python3 IDE does not provide access to a locally running Redis instance. You can, however, connect to a Redis cloud database using the Python3 IDE. Redis provides a free tier for their cloud database service and you can get one by making an account with them.
     </p>
     <p>
-        We have written a short guide on how to properly set up a Redis cloud instance to work with Python3 Editor. You can check it out here:
+        We have written a short guide on how to properly set up a Redis cloud instance to work with Python3 IDE. You can check it out here:
     </p>
     <p>
         <a href="https://docs.oyoclass.com/cloudservices/datastores/redis">
@@ -40,7 +40,7 @@ In the following list, click on **Redis Client**:
 
 <img src="../../assets/img/redis-connect2.png" width="400px">
 
-In the menu that appears, select **Python** as your client, then copy the code into your Python3 Editor project:
+In the menu that appears, select **Python** as your client, then copy the code into your Python3 IDE project:
 
 <img src="../../assets/img/redis-connect3.png" width="400px">
 
@@ -62,7 +62,7 @@ In the menu that appears, select **Python** as your client, then copy the code i
     </p>
 </div>
 
-Congratulations! You're now ready to use your Redis cloud with Python3 Editor.
+Congratulations! You're now ready to use your Redis cloud with Python3 IDE.
 
 ### Examples
 

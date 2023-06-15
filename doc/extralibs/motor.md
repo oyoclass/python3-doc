@@ -7,7 +7,7 @@ Motor is an asyncio driver for MongoDB databases in Python.
         Note
     </p>
     <p>
-        This package assumes you already know how to create a Mongo database and connect to it with Python3 Editor. If you don't know how to do this, follow the "Setting Up Your Database" section of the
+        This package assumes you already know how to create a Mongo database and connect to it with Python3 IDE. If you don't know how to do this, follow the "Setting Up Your Database" section of the
         <a href="../pymongo/#setting-up-your-database">
             <b>PyMongo</b>
         </a>
@@ -30,7 +30,7 @@ Motor is an asyncio driver for MongoDB databases in Python.
 
 Since motor is an async package, we need to perform database operations in async functions. Let's make a simple function that inserts 50 documents into a collection in our database:
 
-_Make sure you replace the mongodb server url with the one from your cloud MongoDB_
+_Make sure you replace the mongodb server url with the one from your cloud MongoDB._
 
 ```python
 import asyncio

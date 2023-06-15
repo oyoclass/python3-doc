@@ -35,7 +35,7 @@ stdout.write(str(arr))
         Note
     </p>
     <p>
-        The parameter of <code>write</code> must be a String
+        The parameter of <code>write</code> must be a String.
     </p>
 </div>
 
