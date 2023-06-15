@@ -203,7 +203,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h2 id="fastapi">FastAPI</h2>
-<p>FastAPI is a web framework that's designed to help programmers create API quickly and cleanly while being self-documenting. It is based on <a href="../starlette/">Starlette</a>. It's made to be easy to understand and ready for production releases and is currently being used in many real-world applications by major companies like Microsoft.</p>
+<p>FastAPI is a web framework that's designed to help programmers create API quickly and cleanly while being self-documenting. It is based on <a href="../starlette/">Starlette</a>. It's made to be easy to understand and ready for production releases, and is currently being used in many real-world applications by major companies like Microsoft.</p>
 <div class="notebox notebox-info">
     <p class="notebox-title">
         Note
@@ -247,7 +247,7 @@ uvicorn.run(app, host='0.0.0.0', port=8000)
 <p>Then, when you click on the <strong>Execute</strong> button, you will get all your request's info presented directly in this window:</p>
 <p><img src="../../assets/img/fastapi-docs3.png" width="400px"></p>
 <h4 id="more-robust-api-definitions-with-python-typehints">More Robust API Definitions with Python Typehints</h4>
-<p>FastAPI really shines when, and is designed to be used with, <a href="https://docs.python.org/3/library/typing.html">Python Typehints</a>. Even though Python is a dynamically typed language where you don't need to assign a type (like <em>str</em>, <em>int</em>, and so on) to each variable when declaring them like Java. However, Python supports <strong>typehints</strong>, which is a tool for programmers to communicate what kind of variables functions are <em>expecting</em> and what they will return.</p>
+<p>FastAPI really shines when, and is designed to be used with, <a href="https://docs.python.org/3/library/typing.html">Python Typehints</a>. Python is a dynamically typed language where you don't need to assign a type (like <em>str</em>, <em>int</em>, and so on) to each variable when declaring them like Java. However, Python supports <strong>typehints</strong>, which is a tool for programmers to communicate what kind of variables functions are <em>expecting</em> and what they will return.</p>
 <p>They are optional, but can help in creating easier to understand and maintainable code. Let's see how that works with FastAPI with this example:</p>
 <pre><code class="language-python">import uvicorn
 from fastapi import FastAPI

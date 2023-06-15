@@ -201,7 +201,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h2 id="flask">Flask</h2>
-<p>Flask is a micro web framwork. Flask is similar to <a href="../bottle/">Bottle</a>, but it has more functionality out of the box and scales easier. Flask is better suited for larger projects that can span across mulitple Python files.</p>
+<p>Flask is a micro web framework. Flask is similar to <a href="../bottle/">Bottle</a>, but it has more functionality out of the box and scales easier. Flask is better suited for larger projects that can span across multiple Python files.</p>
 <h3 id="example">Example</h3>
 <h4 id="say-hello">Say Hello</h4>
 <p>Let's create a simple server using Flask. This creates a server that says "Welcome to Flask!" when visiting the index page:</p>
@@ -214,10 +214,10 @@ def index():
     return 'Welcome to Flask!'
 
 if __name__ == '__main__':
-    # host must be 0.0.0.0 to work in the Python3 Editor
+    # host must be 0.0.0.0 to work in the Python3 IDE
     app.run(host='0.0.0.0', port=8080)
 </code></pre>
-<p>When we run our code, we get the folllowing output on the right:</p>
+<p>When we run our code, we get the folllowing output:</p>
 <p><img src="../../assets/img/flask-helloworld.png" width="400px"></p>
 <h4 id="basic-web-server-with-templates">Basic Web Server with Templates</h4>
 <p>Flask will look for template files in the <code>templates</code> directory by default, so first, create a new folder named <code>templates</code>, then add a file named <code>welcome.html</code>.</p>
@@ -225,7 +225,7 @@ if __name__ == '__main__':
 <p><img src="../../assets/img/flask-new-folder.png" width="300px"></p>
 <p>Then, name it "templates" in the window that pops up:</p>
 <p><img src="../../assets/img/flask-new-folder-name.png" width="300px"></p>
-<p>Add a new file to your project and name it <code>welcome.html</code>. Paste the following HTML into the file then put it inside of your <code>templates</code> folder that we just created:</p>
+<p>Add a new file to your project and name it <code>welcome.html</code>. Paste the following HTML into the file, then put it inside of the <code>templates</code> folder that we just created:</p>
 <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -254,7 +254,7 @@ def welcome(name):
     )
 
 if __name__ == '__main__':
-    # host must be 0.0.0.0 to work in the Python3 Editor
+    # host must be 0.0.0.0 to work in the Python3 IDE
     app.run(host='0.0.0.0', port=8080)
 </code></pre>
 <p>When you visit "/", you will see a page like this:

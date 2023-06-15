@@ -211,7 +211,7 @@
 <h3 id="examples">Examples</h3>
 <h4 id="upload-an-image-to-your-project">Upload an Image to Your Project</h4>
 <p>The first thing we need to do to use this package is have an image to work with. We're going to use an image of OYObot in the following examples, <a download="oyobot.png" href="../../assets/img/oyobot.png" title="Download image">click here</a> to download a copy.</p>
-<p>After it's downloaded, open up the Python3 Editor and select <strong>Upload File</strong> from the dropdown at the top of your project's file list:</p>
+<p>After it's downloaded, open up the Python3 IDE and select <strong>Upload File</strong> from the dropdown at the top of your project's file list:</p>
 <p><img src="../../assets/img/pillow-upload-image1.png" width="400px"/></p>
 <p><img src="../../assets/img/pillow-upload-image2.png" width="400px"/></p>
 <p>Find the picture you downloaded in your file browser, then confirm the upload was successful by finding the image in your project's file list:</p>
@@ -239,7 +239,7 @@ img.show()
 </code></pre>
 <p>You will get an ImageMagick window rendered to the right of your code that looks like this:</p>
 <p><img src="../../assets/img/pillow-render.png" width="400px"/></p>
-<p>You can use your mouse and keyboard to interact with this window. The second smaller window allows you to pan around the image by clicking and dragging since it will most likely be too big to fit on one screen.</p>
+<p>You can use your mouse and keyboard to interact with this window. The second smaller window allows you to pan around the image by clicking and dragging, since it will most likely be too big to fit on one screen.</p>
 <h4 id="apply-a-filter-to-an-image">Apply a Filter to an Image</h4>
 <p>We can also use Pillow to apply various filters and transforms to images. Here's a simple example where we apply a gaussian blur to our OYObot picture:</p>
 <pre><code class="language-python">from PIL import Image, ImageFilter
@@ -258,7 +258,7 @@ img = img.filter(ImageFilter.GaussianBlur(20))
 # original image!
 img.save('oyobot_blurred.png')
 </code></pre>
-<p>You will see that the file will appear automatically to the left of your code in your projects file list:</p>
+<p>You will see that the file will appear automatically to the left of your code in your project's file list:</p>
 <p><img src="../../assets/img/pillow-save-image.png" width="300px"/></p>
 <p>From here, you can simply click on the picture in your file list to open it and see a preview directly in your editor window:</p>
 <p><img src="../../assets/img/pillow-save-image-open.png" width="400px"/></p>

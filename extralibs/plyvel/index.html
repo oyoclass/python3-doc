@@ -203,7 +203,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h2 id="plyvel">Plyvel</h2>
-<p>Plyvel is a Python library that provides an interface to LevelDB. LevelDB is a simple datastore which exlusively maps byte strings to byte strings. This database is best used when you will always know the keys you will be accessing and don't need advanced database features like querying.</p>
+<p>Plyvel is a Python library that provides an interface to LevelDB. LevelDB is a simple datastore which exclusively maps byte strings to byte strings. This database is best used when you will always know the keys you will be accessing and don't need advanced database features like querying.</p>
 <h3 id="examples">Examples</h3>
 <h4 id="create-update-and-read-keys">Create, Update, and Read Keys</h4>
 <p>Using <code>db.put</code> to write to the same key multiple times will simply overwrite the value in the database, so create and update operations are done the exact same way:</p>
@@ -246,7 +246,7 @@ print(db.get(b'example_key'))
 None
 </code></pre>
 <h4 id="iterate-over-all-keys">Iterate Over All Keys</h4>
-<p>When a new key is insterted into the database, it is stored (and later returned) in <strong>lexicographical order</strong>:</p>
+<p>When a new key is inserted into the database, it is stored (and later returned) in <strong>lexicographical order</strong>:</p>
 <pre><code class="language-python">import plyvel
 
 db = plyvel.DB('exampledb', create_if_missing=True)
@@ -268,7 +268,7 @@ b'z' b'zval'
 </code></pre>
 <h3 id="reference">Reference</h3>
 <ul>
-<li><a href="https://plyvel.readthedocs.io/en/latest/index.html">Plyvel</a> at <em>plyvel.redthedocs.io</em></li>
+<li><a href="https://plyvel.readthedocs.io/en/latest/index.html">Plyvel</a> at <em>plyvel.readthedocs.io</em></li>
 </ul>
               
             </div>

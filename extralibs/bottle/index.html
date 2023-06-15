@@ -202,7 +202,7 @@
 <p>Bottle is an ultra-lightweight web framework that works with just the Python Standard Library. Bottle also supports html template frameworks like <a href="../jinja2/">Jinja2</a> for building more robust websites.</p>
 <h3 id="examples">Examples</h3>
 <h4 id="say-hello">Say Hello</h4>
-<p>Let's create a simple server with two endpoints. Copy and paste the code below to the Python3 Editor:</p>
+<p>Let's create a simple server with two endpoints. Copy and paste the code below to the Python3 IDE:</p>
 <pre><code class="language-python">from bottle import route, run, template
 
 @route('/')
@@ -214,7 +214,7 @@ def index():
 def hello(name):
     return template('&lt;b&gt;Hello {{name}}&lt;/b&gt;!', name=name)
 
-# host must be 0.0.0.0 to work in the Python3 Editor
+# host must be 0.0.0.0 to work in the Python3 IDE
 run(host='0.0.0.0', port=8080)
 </code></pre>
 <p>When you click run, you will see the website running to the right of your code.</p>

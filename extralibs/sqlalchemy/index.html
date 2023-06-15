@@ -236,7 +236,7 @@ meta.create_all(engine)
         Note
     </p>
     <p>
-        The <code>'sqlite:///'</code> URI indicates that we're using a SQLite database in a relative path. For Python3 Editor, that means your project's file list.
+        The <code>'sqlite:///'</code> URI indicates that we're using a SQLite database in a relative path. For Python3 IDE, that means your project's file list.
     </p>
     <p>
         When you try to open a database that doesn't exist, it will automatically be created and put into your file list. Since we used <code>'sqlite:///college.db'</code> in our code above, you can see that <b>college.db</b> was added in your project's file list to the left: 
@@ -265,7 +265,7 @@ conn.execute(ins)
 # Commit the transaction
 trans.commit()
 </code></pre>
-<p>We can't see our result immedaitely, but we will read from this table in the next example to see the student we inserted.</p>
+<p>We can't see our result immediately, but we will read from this table in the next example to see the student we inserted.</p>
 <h4 id="read-a-row">Read a Row</h4>
 <p>We can read an entire table with a <code>select()</code> call:</p>
 <pre><code class="language-python">import sqlalchemy as db
@@ -284,7 +284,7 @@ for row in res.fetchall():
 <p>This will print out the data:</p>
 <pre><code class="language-text">(1, 'Karen', None)
 </code></pre>
-<p>It's our student that we inserted before! They were given an <code>id</code> of <strong>1</strong> and since we did not specify a <code>lastname</code> for our student, it has been left null (<a href="../../core/none">None</a> in Python)</p>
+<p>It's our student that we inserted before! They were given an <code>id</code> of <strong>1</strong> and since we did not specify a <code>lastname</code> for our student, it has been left null (<a href="../../core/none">None</a> in Python).</p>
 <h4 id="update-a-row">Update a Row</h4>
 <p>Let's write a program to update a student with <code>id==1</code> to have the <code>lastname</code> <strong>Karenston</strong>:</p>
 <pre><code class="language-python">import sqlalchemy as db
