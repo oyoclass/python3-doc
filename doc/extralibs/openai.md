@@ -23,12 +23,12 @@ For a step-by-step tutorial on how to obtain the API key, please <a href="https:
 import openai
 
 api_key = input("🤖 What's your openAI's API Key?\n")
-openai.api_key = api_key
+client = openai.OpenAI(api_key=api_key)
 
 question = input("🤖 What's your question?\n")
 print("🤖 Please wait a second ...")
 
-completion = openai.ChatCompletion.create(
+completion = client.chat.completions.create(
   model="gpt-3.5-turbo",
   messages=[
         {"role": "system", "content": "You are ChatGPT"},
@@ -36,7 +36,7 @@ completion = openai.ChatCompletion.create(
     ]
 )
 
-answer = completion["choices"][0]["message"]["content"]
+answer = completion.choices[0].message.content
 print("🤖", answer)
 ```
 
