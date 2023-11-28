@@ -216,12 +216,12 @@
 <pre><code class="language-python">import openai
 
 api_key = input(&quot;🤖 What's your openAI's API Key?\n&quot;)
-openai.api_key = api_key
+client = openai.OpenAI(api_key=api_key)
 
 question = input(&quot;🤖 What's your question?\n&quot;)
 print(&quot;🤖 Please wait a second ...&quot;)
 
-completion = openai.ChatCompletion.create(
+completion = client.chat.completions.create(
   model=&quot;gpt-3.5-turbo&quot;,
   messages=[
         {&quot;role&quot;: &quot;system&quot;, &quot;content&quot;: &quot;You are ChatGPT&quot;},
@@ -229,7 +229,7 @@ completion = openai.ChatCompletion.create(
     ]
 )
 
-answer = completion[&quot;choices&quot;][0][&quot;message&quot;][&quot;content&quot;]
+answer = completion.choices[0].message.content
 print(&quot;🤖&quot;, answer)
 </code></pre>
 <p>For more information on how to use the openAI library, see the <a href="https://platform.openai.com/docs/introduction">official openAI documentation</a> <sup>[2]</sup>.</p>
