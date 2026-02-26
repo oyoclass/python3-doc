@@ -7,7 +7,7 @@ Flask-Session is an extension for Flask that adds support for server-side sessio
         Info
     </p>
     <p>
-    When save session to local file system, you will need to also install the <b>cachelib</b> package.
+    When saving session to the local file system, you will also need to install the <b>cachelib</b> package.
     </p>
 </div>
 
