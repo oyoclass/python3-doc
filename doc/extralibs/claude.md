@@ -38,3 +38,8 @@ message = client.messages.create(
 
 print("🤖", message.content[0].text)
 ```
+
+### Reference
+
+* [Claude Python SDK API Reference](https://platform.claude.com/docs/en/api/sdks/python)
+* [Github: anthropic-sdk-python source code](https://github.com/anthropics/anthropic-sdk-python)

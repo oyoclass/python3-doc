@@ -32,3 +32,8 @@ response = client.models.generate_content(
 )
 print("🤖", response.text)
 ```
+
+### Reference
+
+* [Google Gemini API Reference](https://ai.google.dev/gemini-api/docs#python) 
+* [Gemini Models](https://ai.google.dev/gemini-api/docs/models)
