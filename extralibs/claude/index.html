@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>firebase-admin - Python3 Editor Documentation</title>
+    <title>anthropic - Python3 Editor Documentation</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "firebase-admin";
-        var mkdocs_page_input_path = "extralibs/firebase-admin.md";
+        var mkdocs_page_name = "anthropic";
+        var mkdocs_page_input_path = "extralibs/claude.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -133,31 +133,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../boto3/">boto3</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">firebase-admin</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#connecting-to-your-realtime-database">Connecting to Your Realtime Database</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#downloading-your-credentials-json">Downloading Your Credentials JSON</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#uploading-your-credentials-json-to-your-project">Uploading Your Credentials JSON to Your Project</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#creating-a-document">Creating a Document</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#reading-a-document">Reading a Document</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#updating-a-document">Updating a Document</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#deleting-a-document">Deleting a Document</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../firebase-admin/">firebase-admin</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../redis/">redis</a>
                   </li>
@@ -191,7 +167,11 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../openai/">openai</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../claude/">anthropic</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">anthropic</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../gemini/">google-genai</a>
                   </li>
@@ -211,7 +191,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Extra Python Libraries &raquo;</li>
-      <li>firebase-admin</li>
+      <li>anthropic</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -220,157 +200,47 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="firebase-admin">firebase-admin</h2>
-<p>firebase-admin is a Python library that allows for accessing and interacting with Firebase projects. In particular, Firebase offers a free realtime database service that we can use to store and access data from Python3 Editor projects.</p>
-<div class="notebox notebox-info">
-    <p class="notebox-title">
-        Note
-    </p>
-    <p>
-        You need to have an active Google account and project on Firebase to use this package. For a guide on how to set one up with a realtime database activated, check our cloud services guide to Firebase:
-    </p>
-    <p>
-        <a href="https://docs.oyoclass.com/cloudservices/datastores/firebase">
-            <b>
-                Free Google Account and Firebase Setup
-            </b>
-        </a>
-    </p>
-</div>
-
+                <h2 id="anthropic-claude">Anthropic Claude</h2>
+<p>The Anthropic Python library provides convenient access to the 
+Anthropic Claude API from applications written in the Python language. </p>
+<p>To use the Anthropic Claude API, you first need to have your Anthropic Claude API key.</p>
 <div class="notebox notebox-danger">
     <p class="notebox-title">
         Warning
     </p>
     <p>
-        When including private database credentials in your code, make sure you <b>DO NOT</b> make your project <b>"Open Source"</b> when you share it.
+        When including private API keys in your code, make sure you <b>DO NOT</b> make your project <b>"Open Source"</b> when you share it.
     </p>
 </div>
 
-<h3 id="connecting-to-your-realtime-database">Connecting to Your Realtime Database</h3>
-<p>To use this library, <strong>you must have an active and setup Firebase account with a realtime database set up</strong>. You can create one and set it up following the guide linked above.</p>
-<h4 id="downloading-your-credentials-json">Downloading Your Credentials JSON</h4>
-<p>First, go to the left side of the Firebase UI and find the gear icon next to the <strong>Project Overview</strong> label. Then, click on <strong>Project settings</strong>:</p>
-<p><img src="../../assets/img/firebase-project-settings.png" width="400px"></p>
-<p>From there, click on the <strong>Service Accounts</strong> tab on the top, make sure <strong>Firebase Admin SDK</strong> is selected, then click on <strong>Generate new private key</strong>. This will download a <code>.json</code> file that we will need to upload to the Python3 Editor:</p>
-<p><img src="../../assets/img/firebase-credentials.png" width="600px"></p>
-<div class="notebox notebox-info">
-    <p class="notebox-title">
-        Note
-    </p>
-    <p>
-        <b>Do not share this file with anybody else.</b> It would give them full access to your database in a way you cannot control.
-    </p>
-</div>
-
-<h4 id="uploading-your-credentials-json-to-your-project">Uploading Your Credentials JSON to Your Project</h4>
-<p>At the top of your project's file list in Python3 Editor, click on the dropdown menu and select <strong>Upload File</strong>:</p>
-<p><img src="../../assets/img/firebase-upload1.png" width="300px"></p>
-<p><img src="../../assets/img/firebase-upload2.png" width="300px"></p>
-<p>Find the credentials file in your computer's file browser, and we can rename it to <strong>cred.json</strong>:</p>
-<p><img src="../../assets/img/firebase-upload3.png" width="300px"></p>
 <h3 id="examples">Examples</h3>
-<p>In all the following examples, <strong>you must have a credentials JSON file uploaded to your project somewhere</strong>. To keep it simple, we're using a file named <strong>cred.json</strong> in our project's root path.</p>
-<h4 id="creating-a-document">Creating a Document</h4>
-<p>Let's create a couple of documents to insert into our Firebase. We can add documents in dictionary form:</p>
-<pre><code class="language-python">import firebase_admin
-from firebase_admin import db
+<pre><code class="language-python">from anthropic import Anthropic
 
-cred_obj = firebase_admin.credentials.Certificate('cred.json')
-default_app = firebase_admin.initialize_app(cred_obj, {
-    'databaseURL': 'https://&lt;YOUR DATABASE URL&gt;.firebaseio.com/'
-})
-ref = db.reference('/')
+api_key = input(&quot;🤖 What's your Anthropic API Key?\n&quot;)
+client = Anthropic(api_key=api_key)
 
-data = {
-    &quot;Cat1&quot;: {
-        &quot;Name&quot;: 'Simba',
-        &quot;Age&quot;: 12
-    },
-    &quot;Cat2&quot;: {
-        &quot;Name&quot;: 'Chickpea',
-        &quot;Age&quot;: 3
-    }
-}
-ref.set(data)
+question = input(&quot;🤖 What's your question?\n&quot;)
+print(&quot;🤖 Please wait a second ...&quot;)
+
+message = client.messages.create(
+    max_tokens=1024,
+    messages=[
+        {
+            &quot;role&quot;: &quot;user&quot;,
+            &quot;content&quot;: question,
+        }
+    ],
+    model=&quot;claude-sonnet-4-6&quot;,
+)
+
+print(&quot;🤖&quot;, message.content[0].text)
 </code></pre>
-<p>If we look at our Firebase now, we can see the data has been inserted:</p>
-<p><img src="../../assets/img/firebase-write-result.png" width="200px"></p>
-<h4 id="reading-a-document">Reading a Document</h4>
-<p>We can retrieve our data with the db reference's <code>get()</code> method:</p>
-<pre><code class="language-python">import firebase_admin
-from firebase_admin import db
-
-cred_obj = firebase_admin.credentials.Certificate('cred.json')
-default_app = firebase_admin.initialize_app(cred_obj, {
-    'databaseURL': 'https://&lt;YOUR DATABASE URL&gt;.firebaseio.com/'
-})
-ref = db.reference('/')
-
-cat1 = ref.get()['Cat1']
-print(cat1)
-</code></pre>
-<p>Output:</p>
-<pre><code class="language-text">{'Age': 12, 'Name': 'Simba'}
-</code></pre>
-<h4 id="updating-a-document">Updating a Document</h4>
-<p>We can update a document key by using a reference's <code>update()</code> method:</p>
-<pre><code class="language-python">import firebase_admin
-from firebase_admin import db
-
-cred_obj = firebase_admin.credentials.Certificate('cred.json')
-default_app = firebase_admin.initialize_app(cred_obj, {
-    'databaseURL': 'https://&lt;YOUR DATABASE URL&gt;.firebaseio.com/'
-})
-
-# We only want to update Cat1
-cat1_ref = db.reference(&quot;/Cat1&quot;)
-
-# Before read
-print(cat1_ref.get())
-
-# Perform update
-data = {
-    'Age': 13
-}
-cat1_ref.update(data)
-
-# After read
-print(cat1_ref.get())
-</code></pre>
-<p>Output:</p>
-<pre><code class="language-text">{'Age': 12, 'Name': 'Simba'}
-{'Age': 13, 'Name': 'Simba'}
-</code></pre>
-<h4 id="deleting-a-document">Deleting a Document</h4>
-<p>Finally, we can delete a document by calling the <code>delete()</code> method on a reference to it:</p>
-<pre><code class="language-python">import firebase_admin
-from firebase_admin import db
-
-cred_obj = firebase_admin.credentials.Certificate('cred.json')
-default_app = firebase_admin.initialize_app(cred_obj, {
-    'databaseURL': 'https://example-project-b8372-default-rtdb.firebaseio.com/'
-})
-
-cat1_ref = db.reference(&quot;Cat1&quot;)  # Get our Cat1
-print(cat1_ref.get())  # Print it out
-cat1_ref.delete()  # Delete from Firebase
-print(cat1_ref.get())  # Try to read it again
-</code></pre>
-<p>Output:</p>
-<pre><code class="language-text">{'Age': 13, 'Name': 'Simba'}
-None
-</code></pre>
-<h3 id="reference">Reference</h3>
-<ul>
-<li><a href="https://firebase.google.com/docs/reference/admin/python">Firebase Admin Python SDK</a> at <em>firebase.google.com</em></li>
-</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../boto3/" class="btn btn-neutral float-left" title="boto3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../redis/" class="btn btn-neutral float-right" title="redis">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../openai/" class="btn btn-neutral float-left" title="openai"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../gemini/" class="btn btn-neutral float-right" title="google-genai">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -393,10 +263,10 @@ None
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../boto3/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../openai/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../redis/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../gemini/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
