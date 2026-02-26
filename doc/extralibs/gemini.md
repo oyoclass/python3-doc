@@ -20,7 +20,7 @@ To use the Google Gemini API, you first need to have your Google Gemini API key.
 ```python
 from google import genai
 
-api_key = input("🤖 What's your Anthropic API Key?\n")
+api_key = input("🤖 What's your Gemini API Key?\n")
 client = genai.Client(api_key=api_key)
 
 question = input("🤖 What's your question?\n")
