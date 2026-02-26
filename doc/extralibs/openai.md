@@ -29,7 +29,7 @@ question = input("🤖 What's your question?\n")
 print("🤖 Please wait a second ...")
 
 completion = client.chat.completions.create(
-  model="gpt-3.5-turbo",
+  model="gpt-5-mini",
   messages=[
         {"role": "system", "content": "You are ChatGPT"},
         {"role": "user", "content": question},

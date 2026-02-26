@@ -1,64 +1,68 @@
 site_name: Python3 Editor Documentation
 theme: readthedocs
-docs_dir: 'doc'
+docs_dir: "doc"
 extra_css: [css/custom.css]
 nav:
-    - 'Home': 'index.md'
-    - 'Core':
-        - 'Comments': 'core/comments.md'
-        - 'Boolean': 'core/boolean.md'
-        - 'Number': 'core/number.md'
-        - 'Comparison': 'core/comparison.md'
-        - 'None': 'core/none.md'
-        - 'String': 'core/string.md'
-        - 'Function': 'core/function.md'
-        - 'List & Tuple': 'core/listtuple.md'
-        - 'Set': 'core/set.md'
-        - 'Dictionary': 'core/dictionary.md'
-        - 'Standard Input & Output': 'core/inputoutput.md'
-    - 'Standard Python Libraries':
-        - 'Intro': 'modules/index.md'
-        - 'math': 'modules/math.md'
-        - 'random': 'modules/random.md'
-        - 'string': 'modules/string.md'
-        - 'time': 'modules/time.md'
-        - 'urllib': 'modules/urllib.md'
-        - 'turtle': 'modules/turtle.md'
-        - 'tkinter': 'modules/tkinter.md'
-        - 'sqlite': 'modules/sqlite.md'
-    - 'Extra Python Libraries':
-        - 'Intro': 'extralibs/index.md'
-        - 'bottle': 'extralibs/bottle.md'
-        - 'flask': 'extralibs/flask.md'
-        - 'starlette': 'extralibs/starlette.md'
-        - 'uvicorn': 'extralibs/uvicorn.md'
-        - 'fastapi': 'extralibs/fastapi.md'
-        - 'requests': 'extralibs/requests.md'
-        - 'beautifulsoup4': 'extralibs/beautifulsoup.md'
-        - 'httpx': 'extralibs/httpx.md'
-        - 'python-multipart': 'extralibs/python-multipart.md'
-        - 'jinja2': 'extralibs/jinja2.md'
-        - 'pillow': 'extralibs/pillow.md'
-        - 'tinydb': 'extralibs/tinydb.md'
-        - 'dataset': 'extralibs/dataset.md'
-        - 'pymongo': 'extralibs/pymongo.md'
-        - 'motor': 'extralibs/motor.md'
-        - 'plyvel': 'extralibs/plyvel.md'
-        - 'boto3': 'extralibs/boto3.md'
-        - 'firebase-admin': 'extralibs/firebase-admin.md'
-        - 'redis': 'extralibs/redis.md'
-        - 'sqlalchemy': 'extralibs/sqlalchemy.md'
-        - 'numpy': 'extralibs/numpy.md'
-        - 'scipy': 'extralibs/scipy.md'
-        - 'matplotlib': 'extralibs/matplotlib.md'
-        - 'seaborn': 'extralibs/seaborn.md'
-        - 'pandas': 'extralibs/pandas.md'
-        - 'numba': 'extralibs/numba.md'
-        - 'nltk': 'extralibs/nltk.md'
-        - 'scikit-learn': 'extralibs/scikit-learn.md'
-        - 'pysimplegui': 'extralibs/pysimplegui.md'
-        - 'pygame': 'extralibs/pygame.md'
-        - 'arcade': 'extralibs/arcade.md'
-        - 'pyxel': 'extralibs/pyxel.md'
-        - 'pydub': 'extralibs/pydub.md'
-        - 'openai': 'extralibs/openai.md'
+    - "Home": "index.md"
+    - "Core":
+          - "Comments": "core/comments.md"
+          - "Boolean": "core/boolean.md"
+          - "Number": "core/number.md"
+          - "Comparison": "core/comparison.md"
+          - "None": "core/none.md"
+          - "String": "core/string.md"
+          - "Function": "core/function.md"
+          - "List & Tuple": "core/listtuple.md"
+          - "Set": "core/set.md"
+          - "Dictionary": "core/dictionary.md"
+          - "Standard Input & Output": "core/inputoutput.md"
+    - "Standard Python Libraries":
+          - "Intro": "modules/index.md"
+          - "math": "modules/math.md"
+          - "random": "modules/random.md"
+          - "string": "modules/string.md"
+          - "time": "modules/time.md"
+          - "urllib": "modules/urllib.md"
+          - "turtle": "modules/turtle.md"
+          - "tkinter": "modules/tkinter.md"
+          - "sqlite": "modules/sqlite.md"
+    - "Extra Python Libraries":
+          - "Intro": "extralibs/index.md"
+          - "bottle": "extralibs/bottle.md"
+          - "flask": "extralibs/flask.md"
+          - "flask-session": "extralibs/flask-session.md"
+          - "starlette": "extralibs/starlette.md"
+          - "uvicorn": "extralibs/uvicorn.md"
+          - "fastapi": "extralibs/fastapi.md"
+          - "requests": "extralibs/requests.md"
+          - "beautifulsoup4": "extralibs/beautifulsoup.md"
+          - "httpx": "extralibs/httpx.md"
+          - "python-multipart": "extralibs/python-multipart.md"
+          - "python-dotenv": "extralibs/python-dotenv.md"
+          - "jinja2": "extralibs/jinja2.md"
+          - "pillow": "extralibs/pillow.md"
+          - "tinydb": "extralibs/tinydb.md"
+          - "dataset": "extralibs/dataset.md"
+          - "pymongo": "extralibs/pymongo.md"
+          - "motor": "extralibs/motor.md"
+          - "plyvel": "extralibs/plyvel.md"
+          - "boto3": "extralibs/boto3.md"
+          - "firebase-admin": "extralibs/firebase-admin.md"
+          - "redis": "extralibs/redis.md"
+          - "sqlalchemy": "extralibs/sqlalchemy.md"
+          - "numpy": "extralibs/numpy.md"
+          - "scipy": "extralibs/scipy.md"
+          - "matplotlib": "extralibs/matplotlib.md"
+          - "seaborn": "extralibs/seaborn.md"
+          - "pandas": "extralibs/pandas.md"
+          - "numba": "extralibs/numba.md"
+          - "nltk": "extralibs/nltk.md"
+          - "scikit-learn": "extralibs/scikit-learn.md"
+          - "pysimplegui": "extralibs/pysimplegui.md"
+          - "pygame": "extralibs/pygame.md"
+          - "arcade": "extralibs/arcade.md"
+          - "pyxel": "extralibs/pyxel.md"
+          - "pydub": "extralibs/pydub.md"
+          - "openai": "extralibs/openai.md"
+          - "anthropic": "extralibs/claude.md"
+          - "google-genai": "extralibs/gemini.md"
