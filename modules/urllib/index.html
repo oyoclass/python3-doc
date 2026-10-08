@@ -92,8 +92,6 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#example-3-calling-api">Example 3) Calling API</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#use-oyoclass-proxy">Use OYOclass Proxy</a>
-    </li>
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#urllibparse">urllib.parse</a>
@@ -275,27 +273,6 @@ print(&quot;Approx. Location:&quot;, location[&quot;city&quot;], location[&quot;
 <p>Run it (suppose we want to query the IP 67.84.146.84):</p>
 <pre><code class="language-markdown">Input the IP you want to query: 67.84.146.84
 Approx. Location: Ronkonkoma NY
-</code></pre>
-<h4 id="use-oyoclass-proxy">Use OYOclass Proxy</h4>
-<p>Some schools may have firewalls that block domains. For example, if your school blocks access to the "ip-api.com" domain, you won't get data returned like the above. In these cases, you can use our proxy by simply prepending <code>https://proxy.oyoclass.com/</code> to any URL that you want to fetch data from.</p>
-<pre><code class="language-python">from urllib.request import urlopen
-import json
-
-ip = input(&quot;Input the IP you want to query: &quot;)
-url = f&quot;https://proxy.oyoclass.com/http://ip-api.com/json/{ip}&quot;
-location = json.loads(urlopen(url).read())
-print(&quot;Approx. Location:&quot;, location[&quot;city&quot;], location[&quot;region&quot;])
-</code></pre>
-<p>Here is another example. This is an API you can use to get the bitcoin price in USD: <code>https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&amp;vs_currencies=usd</code>.</p>
-<p>Suppose your school blocks the "coingecho.com" domain, you can just prepend <code>https://proxy.oyoclass.com/</code> to it:</p>
-<pre><code class="language-python">from urllib.request import urlopen
-import json
-url = &quot;https://proxy.oyoclass.com/https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&amp;vs_currencies=usd&quot;
-data = json.loads(urlopen(url).read())
-print(data)
-</code></pre>
-<p>Run it:</p>
-<pre><code>{'bitcoin': {'usd': 65274}}
 </code></pre>
 <h3 id="urllibparse">urllib.parse</h3>
 <p>This submodule can help parse a URL string and split it into different components. <a href="https://docs.python.org/3.6/library/urllib.parse.html#module-urllib.parse">Read more &gt;&gt;</a>.</p>
